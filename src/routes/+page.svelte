@@ -1,8 +1,10 @@
-<h1 class="text-3xl font-bold underline">Hello World</h1>
+<script>
+	import Dropdown from '$lib/components/design/dropdown';
+</script>
+
+<div class="p-10">
+	<Dropdown />
+</div>
 
 <style lang="postcss">
-	@reference "tailwindcss";
-	:global(html) {
-		background-color: theme(--color-gray-100);
-	}
 </style>
