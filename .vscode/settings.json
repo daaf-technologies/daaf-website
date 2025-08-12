@@ -1,3 +1,7 @@
 {
-	"conventionalCommits.scopes": ["#2", "#15"]
+    "cSpell.words": [
+        "DAAF",
+        "vercel",
+        "vite"
+    ]
 }
