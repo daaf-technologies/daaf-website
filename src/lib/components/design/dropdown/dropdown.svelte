@@ -11,9 +11,20 @@
 		selectLanguage: (lang: string) => void;
 		value: string;
 		icon?: Component;
+		dropdownControlClassname?: string;
+		dropdownMenuClassname?: string;
+		dropdownItemClassname?: string;
 	}
 
-	let { options, selectLanguage, value, icon: LeftIcon }: DropdownPropsType = $props();
+	let {
+		options,
+		selectLanguage,
+		value,
+		icon: LeftIcon,
+		dropdownControlClassname,
+		dropdownMenuClassname,
+		dropdownItemClassname
+	}: DropdownPropsType = $props();
 
 	let open = $state(false);
 
@@ -30,7 +41,13 @@
 </script>
 
 <div class="dropdown">
-	<button class="dropdown-menu" onclick={toggle}>
+	<button
+		aria-haspopup="menu"
+		aria-expanded={open}
+		aria-controls="lang-menu"
+		class={`dropdown-control ${dropdownControlClassname ?? ''}`}
+		onclick={toggle}
+	>
 		<span>
 			<LeftIcon />
 		</span>
@@ -39,10 +56,10 @@
 			<ChevronDown />
 		</span>
 	</button>
-	<div class="dropdown-options" class:open>
+	<div id="lang-menu" class={`dropdown-menu ${dropdownMenuClassname ?? ''}`} role="menu" class:open>
 		{#each options as { label, value: selectedValue, icon: Icon }}
 			<button
-				class="dropdown-item"
+				class={`dropdown-item ${dropdownItemClassname ?? ''}`}
 				class:selectedItem={value === selectedValue}
 				role="menuitem"
 				onclick={() => {
@@ -63,39 +80,64 @@
 
 ```ts
 interface DropdownPropsType {
-    options: { icon: Component; label: string; value: string }[];
-    selectLanguage: (lang: string) => void;
-    value: string;
-    icon?: Component;
+  options: { icon: Component; label: string; value: string }[];
+  selectLanguage: (lang: string) => void;
+  value: string;
+  icon?: Component;
+  dropdownControlClassname?: string; // extra classes for the top "control"
+  dropdownMenuClassname?: string;    // extra classes for the bottom "menu"
+  dropdownItemClassname?: string;    // extra classes applied to each "item"
 }
 
-options: array – each item has icon (Svelte component), label (string), value (string)
+- options: array – each item has icon (Svelte component), label (string), value (string)
 
-selectLanguage: function – called when an option is selected
+- selectLanguage: function – called when an item is selected
 
-value: string – currently selected value (two-way bindable)
+- value: string – currently selected value (two-way bindable)
 
-icon: Component – optional icon displayed on the left of the trigger
+- icon: Component – optional icon shown in the control
+
+- dropdownControlClassname: string – add custom classes to the control
+
+- dropdownMenuClassname: string – add custom classes to the menu container
+
+- dropdownItemClassname: string – add custom classes to each item
 
 Example usage:
+
 <script lang="ts">
-    import Dropdown from '$lib/components/dropdown.svelte';
-    import UK from '$lib/assets/icons/uk.svelte';
-    import Dubai from '$lib/assets/icons/dubai.svelte';
+  import Dropdown from '$lib/components/dropdown.svelte';
+  import UK from '$lib/assets/icons/uk.svelte';
+  import Dubai from '$lib/assets/icons/dubai.svelte';
 
-    let options = [
-        { icon: UK, label: 'English', value: 'English' },
-        { icon: Dubai, label: 'Arabic', value: 'Arabic' }
-    ];
+  let options = [
+    { icon: UK, label: 'English', value: 'English' },
+    { icon: Dubai, label: 'Arabic', value: 'Arabic' }
+  ];
 
-    let value = $state('English');
+  let value = $state('English');
 
-    function selectLanguage(lang: string) {
-        value = lang;
-    }
+  function selectLanguage(lang: string) {
+    value = lang;
+  }
 </script>
 
-<Dropdown {options} {selectLanguage} bind:value icon={UK} />
+<Dropdown
+  {options}
+  {selectLanguage}
+  bind:value
+  icon={UK}
+  dropdownControlClassname="w-32"
+  dropdownMenuClassname="w-44"
+  dropdownItemClassname="text-sm"
+/>
+
+
+Notes:
+
+Top section = control; bottom = menu; each entry = item.
+
+Control exposes aria-haspopup="menu" and aria-expanded.
 -->
 
 <style>
@@ -104,7 +146,7 @@ Example usage:
 		width: 120px;
 	}
 
-	.dropdown-menu {
+	.dropdown-control {
 		background-color: #21231e;
 		color: #ffffff;
 		border-radius: 8px;
@@ -116,7 +158,7 @@ Example usage:
 		cursor: pointer;
 	}
 
-	.dropdown-options {
+	.dropdown-menu {
 		width: 176px;
 		position: absolute;
 		left: 0;
