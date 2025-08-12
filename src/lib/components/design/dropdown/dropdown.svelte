@@ -1,6 +1,7 @@
 <script lang="ts">
-	import ChevronDown from '$lib/assets/icons/chevron-down.svelte';
-	import { onMount, type Component, type Snippet } from 'svelte';
+	import { type Component } from 'svelte';
+	import DropdownAlternate from './dropdown-alternate.svelte';
+	import DropdownBasic from './dropdown-basic.svelte';
 
 	interface DropdownPropsType {
 		options: {
@@ -10,126 +11,14 @@
 		}[];
 		selectLanguage: (lang: string) => void;
 		value: string;
-		left?: Snippet;
+		icon?: Component;
 	}
 
-	let { options, selectLanguage, value, left }: DropdownPropsType = $props();
-
-	let open = $state(false);
-
-	const toggle = () => (open = !open);
-
-	const handleClickOutside = (e: MouseEvent) => {
-		if (!(e.target as HTMLElement).closest('.dropdown')) {
-			open = false;
-		}
-	};
-
-	onMount(() => {
-		document.addEventListener('click', handleClickOutside);
-		return () => document.removeEventListener('click', handleClickOutside);
-	});
+	let { options, selectLanguage, value, icon }: DropdownPropsType = $props();
 </script>
 
-<div class="dropdown">
-	{@render left?.()}
-	<button
-		class="dropdown-menu"
-		type="button"
-		aria-haspopup="true"
-		aria-expanded={open}
-		aria-controls="lang-menu"
-		onclick={toggle}
-	>
-		{value}
-		<span class:icon-open={open} class:icon-close={!open}>
-			<ChevronDown />
-		</span>
-	</button>
-	<div id="lang-menu" class="dropdown-options open" class:open>
-		{#each options as { label, value, icon: Icon }}
-			<button
-				type="button"
-				class="dropdown-item"
-				role="menuitem"
-				onclick={() => {
-					selectLanguage(value);
-					open = false;
-				}}
-			>
-				<Icon />
-				{label}
-			</button>
-		{/each}
-	</div>
-</div>
-
-<style>
-	.dropdown {
-		position: relative;
-		width: 67px;
-	}
-
-	.dropdown-menu {
-		background-color: #21231e;
-		color: #ffffff;
-		border: 1px solid #696969;
-		border-radius: 8px;
-		padding: 6px 12px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 10px;
-		cursor: pointer;
-	}
-
-	.dropdown-options {
-		width: 250px;
-		position: absolute;
-		left: 0;
-		top: calc(100% + 24px);
-		background-color: #21231e;
-		color: #ffffff;
-		padding: 8px;
-		border: 2px solid #696969;
-		border-radius: 20px;
-		backdrop-filter: blur(54px);
-		-webkit-backdrop-filter: blur(54px);
-		opacity: 0;
-		pointer-events: none;
-		transform: translateY(-10px);
-		transition:
-			opacity 150ms ease-in-out,
-			transform 150ms ease-in-out;
-	}
-
-	.open {
-		opacity: 1;
-		transform: translateY(0);
-		pointer-events: auto;
-	}
-
-	.dropdown-item {
-		width: 100%;
-		padding: 16px;
-		border-radius: 14px;
-		cursor: pointer;
-		display: flex;
-		align-items: center;
-		gap: 8px;
-	}
-
-	.dropdown-item:hover {
-		background-color: #323332;
-	}
-
-	.icon-open {
-		transform: rotate(180deg);
-		transition: transform 150ms ease;
-	}
-
-	.icon-close {
-		transform: rotate(0deg);
-		transition: transform 150ms ease;
-	}
-</style>
+{#if icon}
+	<DropdownAlternate {options} {selectLanguage} {value} {icon} />
+{:else}
+	<DropdownBasic {options} {selectLanguage} {value} />
+{/if}
