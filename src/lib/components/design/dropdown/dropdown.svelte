@@ -59,89 +59,43 @@
 </div>
 
 <!-- @component
-### Dropdown — Language Selector
+### Takes in these props
 
-A compact, mouse-first dropdown built with Svelte 5 `$props` and `$state`. It toggles a menu, lets the user pick an option, calls a callback, updates `value`, and closes. Click-outside is handled via a document listener.
-
-#### Props (TypeScript)
 ```ts
 interface DropdownPropsType {
-  options: { icon: Component; label: string; value: string }[]; // list items to render
-  selectLanguage: (lang: string) => void;                       // called on selection
-  value: string;                                                // current selected value (two-way bindable)
-  icon?: Component;                                             // optional left icon in trigger
+    options: { icon: Component; label: string; value: string }[];
+    selectLanguage: (lang: string) => void;
+    value: string;
+    icon?: Component;
 }
-options: Array of items with icon (Svelte component), label (string), value (string)
 
-selectLanguage: (value) => void — fires before the dropdown closes
+options: array – each item has icon (Svelte component), label (string), value (string)
 
-value: string — current value; component mutates it on select; supports bind:value
+selectLanguage: function – called when an option is selected
 
-icon: optional Svelte component rendered on the left side of the trigger
+value: string – currently selected value (two-way bindable)
 
-Behavior
-Click trigger → toggles open/close
+icon: Component – optional icon displayed on the left of the trigger
 
-Click outside → closes
-
-Click an item → calls selectLanguage(selectedValue), sets value = selectedValue, closes
-
-No custom events are dispatched (if you need on:change, wire one up—see “Extending”)
-
-Example Usage
-
+Example usage:
 <script lang="ts">
-  import Dropdown from '$lib/components/dropdown.svelte';
-  import UK from '$lib/assets/icons/uk.svelte';
-  import Dubai from '$lib/assets/icons/dubai.svelte';
+    import Dropdown from '$lib/components/dropdown.svelte';
+    import UK from '$lib/assets/icons/uk.svelte';
+    import Dubai from '$lib/assets/icons/dubai.svelte';
 
-  let options = [
-    { icon: UK, label: 'English', value: 'English' },
-    { icon: Dubai, label: 'Arabic', value: 'Arabic' }
-  ];
+    let options = [
+        { icon: UK, label: 'English', value: 'English' },
+        { icon: Dubai, label: 'Arabic', value: 'Arabic' }
+    ];
 
-  let value = $state('English');
+    let value = $state('English');
 
-  function selectLanguage(lang: string) {
-    value = lang;
-  }
+    function selectLanguage(lang: string) {
+        value = lang;
+    }
 </script>
 
 <Dropdown {options} {selectLanguage} bind:value icon={UK} />
-
-Alternate value mapping example:
-
-let options = [
-  { icon: UK, label: 'English', value: 'EN' },
-  { icon: Dubai, label: 'Arabic', value: 'AR' }
-];
-
-let value = $state('EN');
-
-function selectLanguage(lang: string) {
-  value = lang;
-}
-Classes / Styling hooks
-.dropdown — wrapper (positioning context)
-
-.dropdown-menu — trigger button
-
-.dropdown-options — menu container
-
-.open — applied to .dropdown-options when visible
-
-.dropdown-item — each option row
-
-.selectedItem — applied when value === option.value
-
-.icon-open / .icon-close — chevron rotation state
-
-Notes / Gotchas
-options[].icon and icon must be Svelte components (not raw SVG strings)
-
-The component mutates value internally. Use bind:value to keep parent state in sync
-
-Click-outside uses a document.addEventListener('click', …); ensure only one dropdown is listening if you render many
 -->
 
 <style>
