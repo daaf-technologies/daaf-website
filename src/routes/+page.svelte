@@ -19,6 +19,8 @@
 
 	function selectLanguage(lang: string) {
 		value = lang;
+
+		console.log(value, 'val');
 	}
 </script>
 

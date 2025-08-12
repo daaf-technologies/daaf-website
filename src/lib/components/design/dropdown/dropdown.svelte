@@ -1,14 +1,38 @@
 <script lang="ts">
 	import ChevronDown from '$lib/assets/icons/chevron-down.svelte';
+	import { onMount, type Component, type Snippet } from 'svelte';
 
-	let { options, selectLanguage, value } = $props();
+	interface DropdownPropsType {
+		options: {
+			icon: Component;
+			label: string;
+			value: string;
+		}[];
+		selectLanguage: (lang: string) => void;
+		value: string;
+		left?: Snippet;
+	}
+
+	let { options, selectLanguage, value, left }: DropdownPropsType = $props();
 
 	let open = $state(false);
 
 	const toggle = () => (open = !open);
+
+	const handleClickOutside = (e: MouseEvent) => {
+		if (!(e.target as HTMLElement).closest('.dropdown')) {
+			open = false;
+		}
+	};
+
+	onMount(() => {
+		document.addEventListener('click', handleClickOutside);
+		return () => document.removeEventListener('click', handleClickOutside);
+	});
 </script>
 
 <div class="dropdown">
+	{@render left?.()}
 	<button
 		class="dropdown-menu"
 		type="button"
@@ -28,7 +52,10 @@
 				type="button"
 				class="dropdown-item"
 				role="menuitem"
-				onclick={() => selectLanguage(value)}
+				onclick={() => {
+					selectLanguage(value);
+					open = false;
+				}}
 			>
 				<Icon />
 				{label}
@@ -40,6 +67,7 @@
 <style>
 	.dropdown {
 		position: relative;
+		width: 67px;
 	}
 
 	.dropdown-menu {
@@ -52,15 +80,17 @@
 		align-items: center;
 		justify-content: center;
 		gap: 10px;
+		cursor: pointer;
 	}
 
 	.dropdown-options {
+		width: 250px;
 		position: absolute;
 		left: 0;
 		top: calc(100% + 24px);
 		background-color: #21231e;
 		color: #ffffff;
-		padding: 16px;
+		padding: 8px;
 		border: 2px solid #696969;
 		border-radius: 20px;
 		backdrop-filter: blur(54px);
@@ -80,12 +110,12 @@
 	}
 
 	.dropdown-item {
+		width: 100%;
 		padding: 16px;
 		border-radius: 14px;
 		cursor: pointer;
 		display: flex;
 		align-items: center;
-		justify-content: center;
 		gap: 8px;
 	}
 
