@@ -1,29 +1,11 @@
 <script lang="ts">
-	import { Dubai, UK } from '$lib/assets/icons';
 	import ChevronDown from '$lib/assets/icons/chevron-down.svelte';
 
+	let { options, selectLanguage, value } = $props();
+
 	let open = $state(false);
+
 	const toggle = () => (open = !open);
-
-	let value = $state('En');
-
-	function selectLanguage(lang: string) {
-		value = lang;
-		open = false;
-	}
-
-	let options = [
-		{
-			icon: UK,
-			label: 'English',
-			value: 'En'
-		},
-		{
-			icon: Dubai,
-			label: 'Arabic',
-			value: 'Ar'
-		}
-	];
 </script>
 
 <div class="dropdown">
@@ -36,7 +18,7 @@
 		onclick={toggle}
 	>
 		{value}
-		<span>
+		<span class:icon-open={open} class:icon-close={!open}>
 			<ChevronDown />
 		</span>
 	</button>
@@ -109,5 +91,15 @@
 
 	.dropdown-item:hover {
 		background-color: #323332;
+	}
+
+	.icon-open {
+		transform: rotate(180deg);
+		transition: transform 150ms ease;
+	}
+
+	.icon-close {
+		transform: rotate(0deg);
+		transition: transform 150ms ease;
 	}
 </style>

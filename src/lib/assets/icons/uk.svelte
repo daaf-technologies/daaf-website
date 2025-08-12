@@ -1,9 +1,10 @@
 <script lang="ts">
+	const { width = '24', height = '16' } = $props();
 </script>
 
 <svg
-	width="24"
-	height="16"
+	{width}
+	{height}
 	viewBox="0 0 24 16"
 	fill="none"
 	xmlns="http://www.w3.org/2000/svg"
