@@ -2,7 +2,7 @@
 	import Dropdown from '$lib/components/design/dropdown';
 	import { Dubai, Globe, UK } from '$lib/assets/icons';
 
-	let options = [
+	let secondaryOptions = [
 		{
 			icon: UK,
 			label: 'English',
@@ -15,32 +15,51 @@
 		}
 	];
 
-	let value = $state('English');
+	let secondaryValue = $state('English');
 
-	// let options = [
-	// 	{
-	// 		icon: UK,
-	// 		label: 'English',
-	// 		value: 'EN'
-	// 	},
-	// 	{
-	// 		icon: Dubai,
-	// 		label: 'Arabic',
-	// 		value: 'AR'
-	// 	}
-	// ];
+	function secondarySelectLanguage(lang: string) {
+		secondaryValue = lang;
+	}
 
-	// let value = $state('EN');
+	let primaryOptions = [
+		{
+			icon: UK,
+			label: 'English',
+			value: 'EN'
+		},
+		{
+			icon: Dubai,
+			label: 'Arabic',
+			value: 'AR'
+		}
+	];
 
-	function selectLanguage(lang: string) {
-		value = lang;
+	let primaryValue = $state('EN');
+
+	function primarySelectLanguage(lang: string) {
+		primaryValue = lang;
 	}
 </script>
 
-<div class="p-60">
-	<Dropdown {options} {selectLanguage} {value} icon={Globe} />
-	<!-- <Dropdown {options} {selectLanguage} {value} /> -->
+{#snippet left()}
+	<Globe />
+{/snippet}
+
+<div class="flex gap-48 p-60">
+	<Dropdown
+		options={primaryOptions}
+		selectLanguage={primarySelectLanguage}
+		value={primaryValue}
+		variant="primary"
+	/>
+	<Dropdown
+		options={secondaryOptions}
+		selectLanguage={secondarySelectLanguage}
+		value={secondaryValue}
+		variant="secondary"
+		{left}
+	/>
 </div>
 
-<style lang="postcss">
+<style>
 </style>
