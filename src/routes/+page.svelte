@@ -1,8 +1,18 @@
-<h1 class="text-3xl font-bold underline">Hello World</h1>
+<script>
+	import Collapse from '$lib/components/collapse/collapse.svelte';
 
-<style lang="postcss">
-	@reference "tailwindcss";
-	:global(html) {
-		background-color: theme(--color-gray-100);
-	}
+	const items = [
+		{
+			id: '1',
+			title: 'Company',
+			body: 'Body'
+		}
+	];
+</script>
+
+<div>
+	<Collapse />
+</div>
+
+<style>
 </style>
