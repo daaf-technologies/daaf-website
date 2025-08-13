@@ -1,8 +1,14 @@
-<h1 class="text-3xl font-bold underline">Hello World</h1>
+<script>
+	import Header from '$lib/components/ui/header';
+</script>
 
-<style lang="postcss">
-	@reference "tailwindcss";
-	:global(html) {
-		background-color: theme(--color-gray-100);
+<div class="wrapper">
+	<Header />
+</div>
+
+<style>
+	.wrapper {
+		width: 646px;
+		margin: 200px;
 	}
 </style>
