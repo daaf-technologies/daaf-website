@@ -1,18 +1,7 @@
 <script>
-	import Collapse from '$lib/components/collapse/collapse.svelte';
-
-	const items = [
-		{
-			id: '1',
-			title: 'Company',
-			body: 'Body'
-		}
-	];
+	import Collapse from '$lib/components/design/collapse';
 </script>
 
 <div>
-	<Collapse />
+	<Collapse variant="primary" />
 </div>
-
-<style>
-</style>
