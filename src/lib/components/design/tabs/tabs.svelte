@@ -72,6 +72,9 @@
 		width: 100%;
 		justify-content: center;
 		align-items: center;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
 	}
 
 	.tabs-header {
@@ -79,6 +82,7 @@
 		gap: 12px;
 		overflow-x: auto;
 		white-space: nowrap;
+		/* padding: 0 48px; */
 	}
 
 	.tab-item {

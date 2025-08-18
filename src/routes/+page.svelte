@@ -3,6 +3,6 @@
 	import { tabs } from '$lib/constants/tabs';
 </script>
 
-<div class="px-[200px] pt-[200px]">
+<div class="bg-[#F1F1F1] px-[200px] py-[150px]">
 	<Tabs {tabs} />
 </div>
