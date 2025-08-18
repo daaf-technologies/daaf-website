@@ -1,8 +1,8 @@
-<h1 class="text-3xl font-bold underline">Hello World</h1>
+<script>
+	import Tabs from '$lib/components/design/tabs/tabs.svelte';
+	import { tabs } from '$lib/constants/tabs';
+</script>
 
-<style lang="postcss">
-	@reference "tailwindcss";
-	:global(html) {
-		background-color: theme(--color-gray-100);
-	}
-</style>
+<div class="px-[200px] pt-[200px]">
+	<Tabs {tabs} />
+</div>
