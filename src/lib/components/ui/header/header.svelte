@@ -1,5 +1,24 @@
 <script lang="ts">
-	import { DAFF } from '$lib/assets/icons';
+	import { DAFF, Dubai, UK } from '$lib/assets/icons';
+	import Button from '$lib/components/design/button';
+	import Dropdown from '$lib/components/design/dropdown';
+
+	let options = [
+		{
+			icon: UK,
+			label: 'English',
+			value: 'EN'
+		},
+		{
+			icon: Dubai,
+			label: 'Arabic',
+			value: 'AR'
+		}
+	];
+	let value = $state('En');
+	function selectLanguage(lang: string) {
+		value = lang;
+	}
 </script>
 
 <div class="header">
@@ -7,9 +26,9 @@
 		<DAFF />
 	</span>
 	<div class="nav">
-		<p>About us</p>
-		<p>En</p>
-		<p>Contact us</p>
+		<p class="about">About us</p>
+		<Dropdown variant="primary" {options} {selectLanguage} {value} />
+		<Button variant="secondary">Contact us</Button>
 	</div>
 </div>
 
@@ -22,10 +41,16 @@
 		border-radius: 20px;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 	}
 
 	.nav {
 		display: flex;
+		align-items: center;
 		gap: 12px;
+	}
+
+	.about {
+		font-size: 14px;
 	}
 </style>
