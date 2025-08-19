@@ -70,11 +70,11 @@
 
 	.icon {
 		transform: rotate(-180deg);
-		transition: transform 150ms ease;
+		transition: transform 400ms ease;
 	}
 
 	.icon.open {
 		transform: rotate(0deg);
-		transition: transform 200ms ease;
+		transition: transform 400ms ease;
 	}
 </style>

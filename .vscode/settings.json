@@ -1,4 +1,4 @@
 {
-	"conventionalCommits.scopes": ["#2", "#20"],
-	"cSpell.words": ["DAAF"]
+	"cSpell.words": ["DAAF"],
+	"conventionalCommits.scopes": ["#2", "#14", "#15", "#20", "#22"]
 }
