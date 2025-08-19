@@ -5,11 +5,11 @@
 </script>
 
 <div class="flex flex-col gap-6">
-	<p>For any questions related to these Terms of Use, please contact us at:</p>
+	<p>For any questions or concerns regarding this policy or your data, please contact:</p>
 
 	<div>
-		{#each contacts as contact}
-			<div class="ml-[26px] flex items-center gap-4">
+		{#each contacts as contact, index}
+			<div class={`ml-[26px] flex items-center gap-4 ${index === 0 ? 'font-semibold' : ''}`}>
 				<span>
 					<Arrow />
 				</span>

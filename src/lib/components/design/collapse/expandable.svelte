@@ -54,14 +54,14 @@
 		opacity: 0;
 		transform: translateY(-10px);
 		transition:
-			max-height 200ms ease,
-			opacity 200ms ease,
-			transform 200ms ease,
-			padding-bottom 200ms ease;
+			max-height 300ms ease,
+			opacity 300ms ease,
+			transform 300ms ease,
+			padding-bottom 300ms ease;
 	}
 
 	.collapse-body.open {
-		max-height: 500px;
+		max-height: 400px;
 		padding-bottom: 24px;
 		pointer-events: auto;
 		opacity: 1;

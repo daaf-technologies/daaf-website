@@ -3,5 +3,5 @@
 </script>
 
 <div>
-	<Collapse variant="primary" />
+	<Collapse variant="secondary" />
 </div>
