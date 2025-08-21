@@ -145,7 +145,9 @@ Control exposes aria-haspopup="menu" and aria-expanded.
 	}
 
 	.dropdown-control {
+		height: 32px;
 		background-color: #21231e;
+		border: 1px solid #696969;
 		color: #ffffff;
 		border-radius: 8px;
 		padding: 6px 8px;
@@ -154,12 +156,13 @@ Control exposes aria-haspopup="menu" and aria-expanded.
 		justify-content: center;
 		gap: 8px;
 		cursor: pointer;
+		font-size: 14px;
 	}
 
 	.dropdown-menu {
 		position: absolute;
 		left: 0;
-		top: calc(100% + 8px);
+		top: calc(100% + 24px);
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
