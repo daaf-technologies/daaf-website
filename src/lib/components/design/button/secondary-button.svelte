@@ -43,9 +43,6 @@
 		border-radius: 8px;
 		background: #76f349;
 		border: 2.5px solid #21231e;
-		box-shadow:
-			0px 8px 24px rgba(0, 0, 0, 0.45),
-			0px -4px 8px rgba(57, 59, 55, 0.6) inset;
 	}
 
 	button[disabled],
