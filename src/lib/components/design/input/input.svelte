@@ -20,6 +20,10 @@
 		border-radius: 8px;
 	}
 
+	.input:focus {
+		outline: none;
+	}
+
 	.input::placeholder {
 		color: #51636f;
 		font-size: 14px;

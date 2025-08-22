@@ -5,7 +5,7 @@
 	import Header from '$lib/components/ui/header';
 </script>
 
-<div class="wrapper">
+<div class="contact-wrapper">
 	<Header minimal={true} className="header" />
 	<div class="container">
 		<div class="description">
@@ -47,7 +47,7 @@
 
 			<textarea class="query" name="query" rows="6" placeholder="Write your query here*"></textarea>
 
-			<div class="button">
+			<div class="submit-button">
 				<Button variant="primary" type="submit" class="submit">Submit</Button>
 			</div>
 		</div>
@@ -55,7 +55,7 @@
 </div>
 
 <style>
-	.wrapper {
+	.contact-wrapper {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -178,7 +178,7 @@
 		align-items: center;
 	}
 
-	.button {
+	.submit-button {
 		display: flex;
 		justify-content: end;
 	}
@@ -189,5 +189,11 @@
 
 	:global(.phone) {
 		padding-left: 80px !important;
+	}
+
+	@media (max-width: 480px) {
+		:global(.header) {
+			width: 343px;
+		}
 	}
 </style>
