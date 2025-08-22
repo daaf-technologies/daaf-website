@@ -6,12 +6,12 @@
 
 <div class="wrapper">
 	<div class="header">
-		<Header minimal={true} />
+		<Header minimal={true} className="header" />
 	</div>
 
 	<div class="body">
 		<div class="mascot">
-			<img src={ComingSoon} alt="mascot" />
+			<img src={ComingSoon} alt="mascot" height="60" width="60" />
 		</div>
 
 		<div class="text">
@@ -31,14 +31,14 @@
 
 <style>
 	.wrapper {
-		background-color: #edffe9;
-		width: 100%;
+		background: linear-gradient(170deg, #e1fbdc 0%, #e1fbdc 60%, #b3da41b2 100%);
+		backdrop-filter: blur(620px);
+		width: 100vw;
 		height: 100%;
 		padding: 50px 0 200px;
 		display: flex;
 		gap: 190px;
 		flex-direction: column;
-		justify-content: center;
 		align-items: center;
 		height: 100vh;
 	}
@@ -90,7 +90,6 @@
 		gap: 16px;
 		justify-content: center;
 		align-items: center;
-		/* width: 466px; */
 	}
 
 	.body {
@@ -103,5 +102,42 @@
 
 	.first-letter {
 		font-family: 'Departure mono';
+		font-weight: 400;
+	}
+
+	@media (max-width: 480px) {
+		.wrapper {
+			padding: 16px;
+			display: flex;
+			flex-direction: column;
+			gap: 160px;
+		}
+
+		:global(.header) {
+			width: 343px !important;
+			gap: 72px !important;
+		}
+
+		.input {
+			width: 343px;
+		}
+
+		.title {
+			font-size: 30px;
+			font-weight: 500;
+		}
+
+		.first-letter {
+			font-weight: 400;
+		}
+
+		.content {
+			font-size: 16px;
+			width: 280px;
+		}
+
+		.mail::placeholder {
+			font-size: 14px;
+		}
 	}
 </style>

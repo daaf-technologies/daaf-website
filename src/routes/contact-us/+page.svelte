@@ -67,7 +67,6 @@
 		padding: 50px 200px;
 		background: linear-gradient(170deg, #e1fbdc 0%, #e1fbdc 60%, #b3da41b2 100%);
 		backdrop-filter: blur(620px);
-		-webkit-backdrop-filter: blur(620px);
 	}
 
 	:global(.header) {
