@@ -1,7 +1,10 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import { DAFF, Dubai, UK } from '$lib/assets/icons';
 	import Button from '$lib/components/design/button';
 	import Dropdown from '$lib/components/design/dropdown';
+
+	let { minimal, className }: { minimal?: boolean; className?: string } = $props();
 
 	let options = [
 		{
@@ -15,20 +18,24 @@
 			value: 'AR'
 		}
 	];
+
 	let value = $state('En');
+
 	function selectLanguage(lang: string) {
 		value = lang;
 	}
 </script>
 
-<div class="header">
+<div class={`${className} header`}>
 	<span class="logo">
 		<DAFF />
 	</span>
 	<div class="nav">
-		<p class="about">About us</p>
-		<Dropdown variant="primary" {options} {selectLanguage} {value} />
-		<Button variant="secondary">Contact us</Button>
+		{#if !minimal}
+			<a href="*" class="about">About us</a>
+			<Dropdown variant="primary" {options} {selectLanguage} {value} />
+		{/if}
+		<Button variant="secondary" onclick={() => goto('/contact-us')}>Contact us</Button>
 	</div>
 </div>
 
@@ -40,10 +47,14 @@
 		border: 2px solid #696969;
 		border-radius: 20px;
 		display: flex;
+		gap: 200px;
 		justify-content: space-between;
 		align-items: center;
 	}
 
+	.logo {
+		cursor: pointer;
+	}
 	.nav {
 		display: flex;
 		align-items: center;
@@ -52,5 +63,6 @@
 
 	.about {
 		font-size: 14px;
+		cursor: pointer;
 	}
 </style>

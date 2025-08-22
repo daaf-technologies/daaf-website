@@ -1,1 +1,249 @@
 @import 'tailwindcss';
+
+/* Departure Mono (just regular) */
+@font-face {
+	font-family: 'Departure Mono';
+	src:
+		url('/src/lib/assets/fonts/departure_mono/DepartureMono-Regular.woff2') format('woff2'),
+		url('/src/lib/assets/fonts/departure_mono/DepartureMono-Regular.woff') format('woff'),
+		url('/src/lib/assets/fonts/departure_mono/DepartureMono-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Neurial Grotesk (from font_spring) */
+/* Regular */
+@font-face {
+	font-family: 'Neurial Grotesk';
+	src: url('/src/lib/assets/fonts/font_spring/neurialgrotesk-regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Italic */
+@font-face {
+	font-family: 'Neurial Grotesk';
+	src: url('/src/lib/assets/fonts/font_spring/neurialgrotesk-italic.otf') format('opentype');
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+/* Light + Italic */
+@font-face {
+	font-family: 'Neurial Grotesk';
+	src: url('/src/lib/assets/fonts/font_spring/neurialgrotesk-light.otf') format('opentype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Neurial Grotesk';
+	src: url('/src/lib/assets/fonts/font_spring/neurialgrotesk-lightitalic.otf') format('opentype');
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
+/* Medium + Italic */
+@font-face {
+	font-family: 'Neurial Grotesk';
+	src: url('/src/lib/assets/fonts/font_spring/neurialgrotesk-medium.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Neurial Grotesk';
+	src: url('/src/lib/assets/fonts/font_spring/neurialgrotesk-mediumitalic.otf') format('opentype');
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+
+/* Bold + Italic */
+@font-face {
+	font-family: 'Neurial Grotesk';
+	src: url('/src/lib/assets/fonts/font_spring/neurialgrotesk-bold.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Neurial Grotesk';
+	src: url('/src/lib/assets/fonts/font_spring/neurialgrotesk-bolditalic.otf') format('opentype');
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+}
+
+/* ExtraBold + Italic */
+@font-face {
+	font-family: 'Neurial Grotesk';
+	src: url('/src/lib/assets/fonts/font_spring/neurialgrotesk-extrabold.otf') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Neurial Grotesk';
+	src: url('/src/lib/assets/fonts/font_spring/neurialgrotesk-extrabolditalic.otf')
+		format('opentype');
+	font-weight: 800;
+	font-style: italic;
+	font-display: swap;
+}
+
+/* Inter Variable (variable font)  */
+/* whole range  */
+@font-face {
+	font-family: 'Inter Variable';
+	src: url('/src/lib/assets/fonts/inter_variable/Inter Variable.ttf') format('truetype');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter Variable';
+	src: url('/src/lib/assets/fonts/inter_variable/Inter Variable Italic.ttf') format('truetype');
+	font-weight: 100 900;
+	font-style: italic;
+	font-display: swap;
+}
+
+/* Recoleta Regular */
+@font-face {
+	font-family: 'Recoleta';
+	src: url('/src/lib/assets/fonts/recoleta/recoleta-regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Recoleta Light */
+@font-face {
+	font-family: 'Recoleta';
+	src: url('/src/lib/assets/fonts/recoleta/recoleta-light.otf') format('opentype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Recoleta Medium */
+@font-face {
+	font-family: 'Recoleta';
+	src: url('/src/lib/assets/fonts/recoleta/recoleta-medium.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Recoleta Semibold */
+@font-face {
+	font-family: 'Recoleta';
+	src: url('/src/lib/assets/fonts/recoleta/recoleta-semibold.otf') format('opentype');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Recoleta Bold */
+@font-face {
+	font-family: 'Recoleta';
+	src: url('/src/lib/assets/fonts/recoleta/recoleta-bold.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Recoleta Black */
+@font-face {
+	font-family: 'Recoleta';
+	src: url('/src/lib/assets/fonts/recoleta/recoleta-black.otf') format('opentype');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Recoleta Thin */
+@font-face {
+	font-family: 'Recoleta';
+	src: url('/src/lib/assets/fonts/recoleta/recoleta-thin.otf') format('opentype');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Recoleta Alternate Variants */
+@font-face {
+	font-family: 'Recoleta Alt';
+	src: url('/src/lib/assets/fonts/recoleta/recoletaalt-regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Recoleta Alt';
+	src: url('/src/lib/assets/fonts/recoleta/recoletaalt-light.otf') format('opentype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Recoleta Alt';
+	src: url('/src/lib/assets/fonts/recoleta/recoletaalt-medium.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Recoleta Alt';
+	src: url('/src/lib/assets/fonts/recoleta/recoletaalt-semibold.otf') format('opentype');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Recoleta Alt';
+	src: url('/src/lib/assets/fonts/recoleta/recoletaalt-bold.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Recoleta Alt';
+	src: url('/src/lib/assets/fonts/recoleta/recoletaalt-black.otf') format('opentype');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Recoleta Alt';
+	src: url('/src/lib/assets/fonts/recoleta/recoletaalt-thin.otf') format('opentype');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+body {
+	font-family:
+		'Inter Variable', 'Recoleta', 'Recoleta Alt', 'Departure Mono', 'Neurial Grotesk', system-ui,
+		sans-serif, monospace;
+}
+
+/* html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+} */
