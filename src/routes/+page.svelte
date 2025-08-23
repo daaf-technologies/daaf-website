@@ -5,9 +5,9 @@
 </script>
 
 <div
-	class="wrapper flex h-screen w-screen flex-col items-center gap-[160px] px-4 py-[50px] backdrop-blur-[620px] lg:gap-[190px] lg:px-0"
+	class="wrapper flex h-full w-screen flex-col items-center gap-[160px] px-4 py-[50px] backdrop-blur-[620px] lg:gap-[190px] lg:px-0"
 >
-	<Header minimal={true} className="header w-[343px] lg:w-[646px] !gap-[72px]" />
+	<Header minimal={true} className="w-[343px] lg:w-[646px] !gap-[72px]" />
 
 	<div class="flex flex-col items-center justify-center gap-[30px]">
 		<img src={ComingSoon} alt="mascot" height="60" width="60" />
@@ -32,7 +32,7 @@
 			<Button
 				variant="primary"
 				type="submit"
-				class="button absolute top-2.5 right-2.5 w-[120px] !rounded-[20px] !px-[26px] !py-2.5 text-nowrap"
+				class="absolute top-2.5 right-2.5 w-[120px] !rounded-[20px] !px-[26px] !py-2.5 text-nowrap"
 				>Notify me</Button
 			>
 		</div>

@@ -5,33 +5,37 @@
 	import Header from '$lib/components/ui/header';
 </script>
 
-<div class="contact-wrapper">
-	<Header minimal={true} className="header" />
-	<div class="container">
-		<div class="description">
-			<div class="title">
+<div class="wrapper flex h-full flex-col items-center px-4 py-[50px] lg:gap-[140px] lg:px-[200px]">
+	<Header minimal={true} className="header w-[343px] lg:w-[646px] !gap-[72px]" />
+	<div class="container lg:flex">
+		<div
+			class="description flex flex-col gap-3 pt-[70px] pb-[40px] lg:w-[530px] lg:gap-5 lg:pt-0 lg:pb-0"
+		>
+			<div class="title text-center text-[30px] font-semibold lg:text-left lg:text-[50px]">
 				Whether it’s a small step or a bold idea <span class="special">-</span> the door’s always open
 			</div>
-			<div class="content">
+			<div class="content text-center text-[16px] font-medium lg:text-left lg:text-[22px]">
 				One message is all it takes to set your vision in motion. Let's create the solutions your
 				business needs to thrive today and tomorrow.
 			</div>
 		</div>
 
-		<div class="contact-form">
+		<div
+			class="contact-form flex flex-col gap-5 rounded-xl border border-[#C4C8CC] px-4 py-6 shadow-[inset_0px_4px_4px_0px_#ffffff40] lg:w-[432px] lg:border-none lg:px-0 lg:py-0"
+		>
 			<p class="caption">Please fill these details For Enquiry</p>
 
-			<div class="contacts">
-				<div class="details">
+			<div class="flex flex-col gap-5">
+				<div class="flex flex-col gap-5 lg:flex-row lg:gap-4">
 					<Input placeholder="Name*" type="text" name="name" />
 					<Input placeholder="E-mail address*" type="email" name="mail" />
 				</div>
-				<div class="telephone-number">
+				<div class="relative flex">
 					<div class="prefix">
 						<Dubai />
 						<p class="countrycode">+971</p>
 					</div>
-					<Input type="tel" placeholder="- phone number" className="phone" name="phone" />
+					<Input type="tel" placeholder="- phone number" className="!pl-[80px]" name="phone" />
 				</div>
 			</div>
 
@@ -48,48 +52,27 @@
 			<textarea class="query" name="query" rows="6" placeholder="Write your query here*"></textarea>
 
 			<div class="submit-button">
-				<Button variant="primary" type="submit" class="submit">Submit</Button>
+				<Button variant="primary" type="submit" class="lg:w-[130px]">Submit</Button>
 			</div>
 		</div>
 	</div>
 </div>
 
 <style>
-	.contact-wrapper {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 140px;
-		background-color: #e1fbdc;
-		height: 100vh;
+	.wrapper {
+		overflow-y: auto;
 		max-width: 100vw;
-		padding: 50px 200px;
 		background: linear-gradient(170deg, #e1fbdc 0%, #e1fbdc 60%, #b3da41b2 100%);
 		backdrop-filter: blur(620px);
 	}
 
-	:global(.header) {
-		width: 646px;
-	}
-
 	.container {
-		display: flex;
 		gap: 118px;
-	}
-
-	.description {
-		width: 530px;
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
 	}
 
 	.title {
 		font-family: 'recoleta alt';
 		color: #21231e;
-		font-size: 50px;
-		font-weight: 600;
 		line-height: 120%;
 	}
 
@@ -99,14 +82,8 @@
 	}
 
 	.content {
-		font-size: 22px;
-		font-weight: 500;
 		color: #51636f;
 		line-height: 140%;
-	}
-
-	.details {
-		display: flex;
 	}
 
 	.safety {
@@ -122,17 +99,6 @@
 		font-size: 14px;
 	}
 
-	.contacts {
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
-	}
-
-	.details {
-		display: flex;
-		gap: 16px;
-	}
-
 	.caption {
 		color: #21231e;
 		font-size: 14px;
@@ -140,10 +106,7 @@
 	}
 
 	.contact-form {
-		width: 432px;
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
+		box-shadow: 0px 4px 4px 0px #ffffff40 inset;
 	}
 
 	.query {
@@ -163,11 +126,6 @@
 		font-size: 14px;
 	}
 
-	.telephone-number {
-		position: relative;
-		display: flex;
-	}
-
 	.prefix {
 		position: absolute;
 		top: 13px;
@@ -181,19 +139,5 @@
 	.submit-button {
 		display: flex;
 		justify-content: end;
-	}
-
-	:global(.submit) {
-		width: 130px;
-	}
-
-	:global(.phone) {
-		padding-left: 80px !important;
-	}
-
-	@media (max-width: 480px) {
-		:global(.header) {
-			width: 343px;
-		}
 	}
 </style>
