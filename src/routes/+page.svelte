@@ -2,13 +2,6 @@
 	import Header from '$lib/components/ui/header';
 </script>
 
-<div class="wrapper">
+<div class="flex justify-center py-4">
 	<Header />
 </div>
-
-<style>
-	.wrapper {
-		width: 646px;
-		margin: 200px;
-	}
-</style>
