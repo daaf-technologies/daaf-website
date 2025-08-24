@@ -1,5 +1,5 @@
 {
-	"cSpell.words": ["DAAF"],
+	"cSpell.words": ["Afroze", "DAAF", "Dharan", "Dharani"],
 	"conventionalCommits.scopes": [
 		"#2",
 		"#8",
@@ -11,6 +11,7 @@
 		"#20",
 		"#22",
 		"#28",
-		"#5"
+		"#5",
+		"#3"
 	]
 }
