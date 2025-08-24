@@ -16,6 +16,7 @@
 	<div class="flex flex-col gap-[50px] lg:relative">
 		<div class="top-[150px] w-[360px] lg:absolute lg:right-0">
 			<FounderCard
+				href="https://www.linkedin.com/in/dharani-dharan-pm/"
 				className="rotate-[-4deg] "
 				src={Dharani}
 				name="Dharani Dharan"
@@ -26,6 +27,7 @@
 
 		<div class="w-[360px] lg:absolute lg:top-[40px] lg:left-[-40px]">
 			<FounderCard
+				href="https://www.linkedin.com/in/afrze-ali/"
 				className="rotate-[4deg] w-full"
 				src={Afroze}
 				name="Afroze Ali"

@@ -2,6 +2,7 @@
 	import Button from '$lib/components/design/button/button.svelte';
 
 	interface FounderPropsType {
+		href: string;
 		src: any;
 		name: string;
 		designation: string;
@@ -9,10 +10,10 @@
 		imgClassname: string;
 	}
 
-	const { src, name, designation, className, imgClassname }: FounderPropsType = $props();
+	const { href, src, name, designation, className, imgClassname }: FounderPropsType = $props();
 </script>
 
-<div class={`flex flex-col gap-2 border-[1.6px] border-white bg-white ${className}`}>
+<a {href} class={`flex flex-col gap-2 border-[1.6px] border-white bg-white ${className}`}>
 	<img {src} alt="afroze" class={imgClassname} />
 
 	<div class="flex justify-between px-3">
@@ -23,4 +24,4 @@
 
 		<Button variant="primary">Visit</Button>
 	</div>
-</div>
+</a>
