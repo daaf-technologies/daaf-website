@@ -9,6 +9,9 @@ import Globe from './globe.svelte';
 import Facebook from './facebook.svelte';
 import LinkedIn from './linked-in.svelte';
 import Instagram from './instagram.svelte';
+import HamburgerMenu from './hamburger-menu.svelte';
+import Close from './close.svelte';
+import Shield from './shield.svelte';
 import Arrow from './arrow.svelte';
 import X from './x.svelte';
 
@@ -25,5 +28,8 @@ export {
 	Plus,
 	Minus,
 	Mail,
-	Arrow
+	Arrow,
+	HamburgerMenu,
+	Close,
+	Shield
 };

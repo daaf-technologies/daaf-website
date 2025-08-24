@@ -16,6 +16,7 @@
 		dropdownControlClassname?: string;
 		dropdownMenuClassname?: string;
 		dropdownItemClassname?: string;
+		dropdownClassname?: string;
 	}
 
 	let {
@@ -24,6 +25,7 @@
 		selectLanguage,
 		value,
 		left,
+		dropdownClassname,
 		dropdownControlClassname,
 		dropdownMenuClassname,
 		dropdownItemClassname
@@ -36,6 +38,7 @@
 		{selectLanguage}
 		{value}
 		{left}
+		{dropdownClassname}
 		{dropdownControlClassname}
 		{dropdownMenuClassname}
 		{dropdownItemClassname}
