@@ -85,6 +85,9 @@
 		/* padding: 0 48px; */
 	}
 
+	.tabs-content {
+		padding: 0 150px;
+	}
 	.tab-item {
 		padding: 10px 12px;
 		border: 1px solid #c4c8cc;
