@@ -5,13 +5,14 @@
 		src: any;
 		name: string;
 		designation: string;
+		className: string;
 		imgClassname: string;
 	}
 
-	const { src, designation, name, imgClassname }: FounderPropsType = $props();
+	const { src, name, designation, className, imgClassname }: FounderPropsType = $props();
 </script>
 
-<div class="flex flex-col gap-2 border-[1.6px] border-white bg-white">
+<div class={`flex flex-col gap-2 border-[1.6px] border-white bg-white ${className}`}>
 	<img {src} alt="afroze" class={imgClassname} />
 
 	<div class="flex justify-between px-3">
