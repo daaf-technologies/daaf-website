@@ -1,5 +1,5 @@
 <script>
-	import Founders from '$lib/components/ui/founder/founders.svelte';
+	import GetInTouch from '$lib/components/ui/get-in-touch/get-in-touch.svelte';
 </script>
 
-<Founders />
+<GetInTouch />
