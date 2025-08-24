@@ -3,7 +3,7 @@
 		leftTitle: string;
 		leftContent: string;
 		rightTopTitle: string;
-		rightTopContent: string;
+		rightTopContent: string[];
 		rightBottomTitle: string;
 		rightBottomContent: string;
 	}
@@ -31,7 +31,9 @@
 				{rightTopTitle}
 			</p>
 			<p class="right-top-content">
-				{rightTopContent}
+				{#each rightTopContent as item}
+					<span class="border px-3 py-2">{item}</span>
+				{/each}
 			</p>
 		</div>
 		<div class="right-bottom">
@@ -39,7 +41,9 @@
 				{rightBottomTitle}
 			</p>
 			<p class="right-bottom-content">
-				{rightBottomContent}
+				{#each rightBottomContent as item}
+					<span class="border px-3 py-2">{item}</span>
+				{/each}
 			</p>
 		</div>
 	</div>
@@ -56,6 +60,7 @@
 		border-radius: 12px;
 		box-shadow: 0px 4px 4px 0px #ffffff40 inset;
 		padding: 90px 60px;
+		background: linear-gradient(135deg, #c4ffc9 0%, #ffffff 20%);
 	}
 
 	.left {
@@ -93,6 +98,17 @@
 	.right-top-content {
 		font-size: 16px;
 		color: #51636f;
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 16px;
+		row-gap: 12px;
+		width: 490px;
+	}
+
+	.right-top-content span {
+		padding: 6px 12px;
+		border: 1px solid #e2e2e2;
+		border-radius: 8px;
 	}
 
 	.right-bottom {
@@ -109,5 +125,16 @@
 	.right-bottom-content {
 		font-size: 16px;
 		color: #51636f;
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 16px;
+		row-gap: 12px;
+		width: 500px;
+	}
+
+	.right-bottom-content span {
+		padding: 6px 12px;
+		border: 1px solid #e2e2e2;
+		border-radius: 8px;
 	}
 </style>
