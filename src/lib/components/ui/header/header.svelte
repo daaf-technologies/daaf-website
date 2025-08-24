@@ -60,7 +60,7 @@
 			<a class="about" href="*">
 				<p class="text-base">About us</p>
 				<span>
-					<Arrow />
+					<Arrow width="12" height="12" fill="#C4C8CC" />
 				</span>
 			</a>
 			<Dropdown
