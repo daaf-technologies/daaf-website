@@ -32,8 +32,10 @@
 
 <style>
 	button {
+		width: 100%;
 		height: 32px;
 		display: flex;
+		justify-content: center;
 		align-items: center;
 		text-align: center;
 		cursor: pointer;
