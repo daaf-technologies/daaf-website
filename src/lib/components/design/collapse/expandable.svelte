@@ -4,7 +4,7 @@
 
 	let open = $state(false);
 
-	let { id, title, children } = $props();
+	let { id, title, children, bodyClassName = '' } = $props();
 </script>
 
 <div>
@@ -23,7 +23,7 @@
 			</div>
 		</button>
 
-		<div class="collapse-body" class:open>
+		<div class={`collapse-body ${open ? bodyClassName : ''}`} class:open>
 			{@render children()}
 		</div>
 	</div>
@@ -39,7 +39,7 @@
 	}
 	.collapse-header {
 		cursor: pointer;
-		color: #21231e;
+		color: #51636f;
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
