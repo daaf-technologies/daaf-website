@@ -1,5 +1,5 @@
 <script>
-	import GetInTouch from '$lib/components/ui/get-in-touch/get-in-touch.svelte';
+	import Technologies from '$lib/components/ui/technologies/technologies.svelte';
 </script>
 
-<GetInTouch />
+<Technologies />
