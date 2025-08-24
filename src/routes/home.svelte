@@ -2,13 +2,13 @@
 	import Footer from '$lib/components/ui/footer/footer.svelte';
 	import Founders from '$lib/components/ui/founder/founders.svelte';
 	import GetInTouch from '$lib/components/ui/get-in-touch/get-in-touch.svelte';
-	import Header from '$lib/components/ui/header/header.svelte';
+	import Hero from '$lib/components/ui/hero';
 	import Services from '$lib/components/ui/services';
 	import Technologies from '$lib/components/ui/technologies/technologies.svelte';
 </script>
 
 <div class="flex w-full flex-col items-center justify-center">
-	<Header />
+	<Hero />
 	<Services />
 	<Founders />
 	<Technologies />
