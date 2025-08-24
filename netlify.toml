@@ -1,0 +1,10 @@
+[build]
+command = "npm run build"
+publish = ".netlify/static"
+
+# (Optional) functions dir (SvelteKit sets this for you, but this is explicit)
+functions = ".netlify/functions"
+
+# (Optional) lock Node version used by Netlify
+[build.environment]
+NODE_VERSION = "20"
