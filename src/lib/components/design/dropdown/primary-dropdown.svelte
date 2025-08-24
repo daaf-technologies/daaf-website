@@ -11,6 +11,7 @@
 		selectLanguage: (lang: string) => void;
 		value: string;
 		left?: Snippet;
+		dropdownClassname?: string;
 		dropdownControlClassname?: string;
 		dropdownMenuClassname?: string;
 		dropdownItemClassname?: string;
@@ -21,6 +22,7 @@
 		selectLanguage,
 		value,
 		left,
+		dropdownClassname,
 		dropdownControlClassname,
 		dropdownMenuClassname,
 		dropdownItemClassname
@@ -40,7 +42,7 @@
 	});
 </script>
 
-<div class="dropdown">
+<div class={`dropdown ${dropdownClassname ?? ''}`}>
 	<button
 		aria-haspopup="menu"
 		aria-expanded={open}
@@ -211,5 +213,21 @@ Control exposes aria-haspopup="menu" and aria-expanded.
 	.icon-close {
 		transform: rotate(0deg);
 		transition: transform 150ms ease;
+	}
+
+	@media (max-width: 768px) {
+		.dropdown-menu {
+			display: none;
+		}
+
+		.dropdown-menu.open {
+			display: flex;
+			position: static;
+			margin-bottom: 12px;
+		}
+
+		.dropdown-item {
+			width: 100%;
+		}
 	}
 </style>

@@ -48,11 +48,14 @@
 		class={`dropdown-control ${dropdownControlClassname ?? ''}`}
 		onclick={toggle}
 	>
-		{@render left?.()}
+		<div class="dropdown-value">
+			{@render left?.()}
 
-		<p class="dropdown-control-lang">
-			{value}
-		</p>
+			<p class="dropdown-control-lang">
+				{value}
+			</p>
+		</div>
+
 		<span class:icon-open={open} class:icon-close={!open}>
 			<ChevronDown />
 		</span>
@@ -214,5 +217,11 @@ Control exposes aria-haspopup="menu" and aria-expanded.
 	.icon-close {
 		transform: rotate(0deg);
 		transition: transform 150ms ease;
+	}
+
+	.dropdown-value {
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
 	}
 </style>
