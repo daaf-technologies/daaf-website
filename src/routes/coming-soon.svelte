@@ -1,13 +1,13 @@
 <script>
 	import Button from '$lib/components/design/button/button.svelte';
-	import Header from '$lib/components/ui/header';
 	import ComingSoon from '$lib/assets/images/coming-soon.svg';
+	import SecondaryHeader from '$lib/components/ui/header/secondary-header.svelte';
 </script>
 
 <div
 	class="wrapper flex h-full w-screen flex-col items-center gap-[160px] px-4 py-[50px] backdrop-blur-[620px] lg:gap-[190px] lg:px-0"
 >
-	<Header minimal={true} className="w-[343px] lg:w-[646px] !gap-[72px]" />
+	<SecondaryHeader className="w-[343px] lg:w-[646px] !gap-[72px]" />
 
 	<div class="flex flex-col items-center justify-center gap-[30px]">
 		<img src={ComingSoon} alt="mascot" height="60" width="60" />
