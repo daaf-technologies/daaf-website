@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="flex flex-col items-center gap-2 bg-[#F6F6F6] px-9 py-[60px] lg:h-[1022px] lg:px-[360px] lg:py-[120px]"
+	class="flex w-full flex-col items-center gap-2 bg-[#F6F6F6] px-9 py-[60px] lg:h-[1022px] lg:px-[360px] lg:py-[120px]"
 >
 	<p class="section-title text-[12px] text-[#C1A82B]">No sales reps. No middlemen</p>
 	<p class="max-w-[20ch] text-center text-[24px] font-medium sm:max-w-[25ch]">
@@ -34,9 +34,9 @@
 			/>
 		</div>
 	</div>
-	<div class="hidden lg:absolute lg:top-[210px] lg:right-[250px] lg:z-10 lg:block">
+	<!-- <div class="hidden lg:absolute lg:top-[210px] lg:right-[250px] lg:z-10 lg:block">
 		<img src={Star} alt="star" />
-	</div>
+	</div> -->
 </div>
 
 <style>
