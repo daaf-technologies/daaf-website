@@ -5,7 +5,7 @@
 		rightTopTitle: string;
 		rightTopContent: string[];
 		rightBottomTitle: string;
-		rightBottomContent: string;
+		rightBottomContent: string[];
 	}
 
 	const {
@@ -32,7 +32,7 @@
 			</p>
 			<p class="right-top-content">
 				{#each rightTopContent as item}
-					<span class="border px-3 py-2">{item}</span>
+					<span class="border px-3 py-2 text-sm">{item}</span>
 				{/each}
 			</p>
 		</div>
@@ -42,7 +42,7 @@
 			</p>
 			<p class="right-bottom-content">
 				{#each rightBottomContent as item}
-					<span class="border px-3 py-2">{item}</span>
+					<span class="border px-3 py-2 text-sm">{item}</span>
 				{/each}
 			</p>
 		</div>
@@ -51,15 +51,10 @@
 
 <style>
 	.card {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 90px;
 		background: rgba(255, 255, 255, 0.5);
 		border: 2px solid #fff;
 		border-radius: 12px;
 		box-shadow: 0px 4px 4px 0px #ffffff40 inset;
-		padding: 90px 60px;
 		background: linear-gradient(135deg, #c4ffc9 0%, #ffffff 20%);
 	}
 
@@ -70,7 +65,6 @@
 	}
 
 	.left-title {
-		font-size: 36px;
 		font-weight: 500;
 	}
 
@@ -102,7 +96,6 @@
 		flex-wrap: wrap;
 		column-gap: 16px;
 		row-gap: 12px;
-		width: 490px;
 	}
 
 	.right-top-content span {
@@ -129,12 +122,60 @@
 		flex-wrap: wrap;
 		column-gap: 16px;
 		row-gap: 12px;
-		width: 500px;
 	}
 
 	.right-bottom-content span {
 		padding: 6px 12px;
 		border: 1px solid #e2e2e2;
 		border-radius: 8px;
+	}
+
+	@media (max-width: 768px) {
+		.card {
+			background-color: #f1f1f1;
+			padding: 16px;
+			border: 2px solid #fff;
+			display: flex;
+			flex-direction: column;
+			gap: 28px;
+		}
+
+		.left {
+			width: 70%;
+		}
+
+		.left-title {
+			font-size: 20px;
+		}
+
+		.left-content {
+			font-size: 14px;
+		}
+
+		.right-top-title {
+			font-size: 16px;
+		}
+
+		.right-bottom-title {
+			font-size: 16px;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.card {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 90px;
+			padding: 90px 60px;
+		}
+
+		.left-title {
+			font-size: 36px;
+		}
+
+		.left-content {
+			font-size: 16px;
+		}
 	}
 </style>
