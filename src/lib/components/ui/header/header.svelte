@@ -43,7 +43,7 @@
 	</div>
 
 	<!-- Will refactor it -->
-	<Button variant="secondary" onclick={() => goto('/contact-us')}>Contact us</Button>
+	<!-- <Button variant="secondary" onclick={() => goto('/contact-us')}>Contact us</Button> -->
 
 	{#if !minimal}
 		<button class="hamburger" onclick={toggle}>
@@ -85,7 +85,6 @@
 		border: 2px solid #696969;
 		border-radius: 20px;
 		display: flex;
-		gap: 200px;
 		justify-content: space-between;
 		align-items: center;
 		text-wrap: nowrap;
@@ -130,6 +129,7 @@
 	@media (min-width: 1024px) {
 		.header {
 			width: 646px;
+			gap: 200px;
 		}
 		.nav {
 			display: flex;
