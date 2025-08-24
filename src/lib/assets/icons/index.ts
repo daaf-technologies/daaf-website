@@ -6,6 +6,11 @@ import Plus from './plus.svelte';
 import Minus from './minus.svelte';
 import Mail from './mail.svelte';
 import Globe from './globe.svelte';
+import Diamond from './diamond.svelte';
+import FileCode from './file-code.svelte';
+import CodeBrowser from './code-browser.svelte';
+import GitBranch from './git-branch.svelte';
+import CheckSquareBroken from './check-square-broken.svelte';
 import Facebook from './facebook.svelte';
 import LinkedIn from './linked-in.svelte';
 import Instagram from './instagram.svelte';
@@ -21,6 +26,11 @@ export {
 	Dubai,
 	ChevronDown,
 	Globe,
+	Diamond,
+	FileCode,
+	CodeBrowser,
+	GitBranch,
+	CheckSquareBroken,
 	Facebook,
 	LinkedIn,
 	X,
