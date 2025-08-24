@@ -34,7 +34,7 @@
 			/>
 		</div>
 	</div>
-	<div class="hidden lg:absolute lg:top-[180px] lg:right-[350px] lg:z-10 lg:block">
+	<div class="hidden lg:absolute lg:top-[210px] lg:right-[250px] lg:z-10 lg:block">
 		<img src={Star} alt="star" />
 	</div>
 </div>
