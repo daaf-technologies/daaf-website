@@ -1,5 +1,5 @@
-<script>
-	import Technologies from '$lib/components/ui/technologies/technologies.svelte';
+<script lang="ts">
+	import Services from '$lib/components/ui/services';
 </script>
 
-<Technologies />
+<Services />
