@@ -6,6 +6,8 @@ import Plus from './plus.svelte';
 import Minus from './minus.svelte';
 import Mail from './mail.svelte';
 import Globe from './globe.svelte';
+import HamburgerMenu from './hamburger-menu.svelte';
+import Shield from './shield.svelte';
 import Arrow from './arrow.svelte';
 
-export { DAFF, UK, Dubai, ChevronDown, Globe, Plus, Minus, Mail, Arrow };
+export { DAFF, UK, Dubai, ChevronDown, Globe, Plus, Minus, Mail, Arrow, HamburgerMenu, Shield };
