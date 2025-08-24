@@ -6,8 +6,8 @@
 
 <div class="flex w-full flex-col items-center justify-center gap-[40px] p-4 py-[60px]">
 	<div class="flex flex-col gap-3">
-		<p class="text-center text-[#38B543]">Where DAAF Creates Impact</p>
-		<p class="w-[18ch] text-center text-2xl">
+		<p class="text-center text-[12px] text-[#38B543] lg:text-[18px]">Where DAAF Creates Impact</p>
+		<p class="lg:text[40px] w-[18ch] text-center text-2xl">
 			<span class="font-bold"> Focused services. Proven frameworks. </span>
 			<span class="font-light"> Measurable results </span>
 		</p>

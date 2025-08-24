@@ -190,6 +190,8 @@
 	}
 	@media (min-width: 1024px) {
 		.footer-container {
+			width: 100%;
+			padding: 165px;
 			background-color: #03100e;
 			color: #c4c8cc;
 			display: flex;
@@ -216,6 +218,11 @@
 		.top-right {
 			display: flex;
 			gap: 80px;
+		}
+
+		.top-right-first {
+			display: flex;
+			gap: 60px;
 		}
 
 		.top-right-list {

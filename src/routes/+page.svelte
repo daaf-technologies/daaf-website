@@ -1,5 +1,5 @@
 <script>
-	import Hero from '$lib/components/ui/hero';
+	import Home from './home.svelte';
 </script>
 
-<Hero />
+<Home />

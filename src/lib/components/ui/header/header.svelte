@@ -129,6 +129,7 @@
 	@media (min-width: 1024px) {
 		.header {
 			width: 646px;
+			gap: 200px;
 		}
 		.nav {
 			display: flex;
