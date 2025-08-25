@@ -36,7 +36,7 @@
 	</span>
 	<div class="nav">
 		{#if !minimal}
-			<a href="*" class="about">About us</a>
+			<a href="/about-us" class="about">About us</a>
 			<Dropdown variant="primary" {options} {selectLanguage} {value} />
 		{/if}
 		<Button variant="secondary" onclick={() => goto('/contact-us')}>Contact us</Button>

@@ -35,7 +35,7 @@
 		<DAFF />
 	</span>
 	<div class="nav">
-		<a href="*" class="about">About us</a>
+		<a href="/about-us" class="about">About us</a>
 		<Dropdown variant="primary" {options} {selectLanguage} {value} />
 		<Button variant="secondary" onclick={() => goto('/contact-us')}>Contact us</Button>
 	</div>
