@@ -54,7 +54,7 @@
 	</div>
 
 	<div class="mobile absolute bottom-0 left-0">
-		<img src={About} alt="mascot" class="items-start" />
+		<img src={About} alt="mascot" class="items-start" width="70" />
 	</div>
 
 	<div class="mobile absolute top-[40px] right-4">
