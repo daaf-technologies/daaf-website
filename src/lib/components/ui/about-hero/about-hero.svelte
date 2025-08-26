@@ -1,6 +1,5 @@
 <script>
 	import Header from '../header/header.svelte';
-	import AboutHero from '$lib/assets/images/about-hero.png';
 </script>
 
 <div class="about-card flex w-full flex-col items-center pt-[50px]">
@@ -18,10 +17,6 @@
 			adapts, scales, and leads in a fast-changing world.
 		</p>
 	</div>
-
-	<div class="mobile">
-		<img src={AboutHero} alt="hero" class="w-full" />
-	</div>
 </div>
 
 <style>
@@ -34,14 +29,15 @@
 	}
 
 	@media (max-width: 768px) {
-		/*  */
+		.about-card {
+			height: 720px;
+			background-image: url('/src/lib/assets/images/about-hero-mobile.png');
+			background-size: cover;
+			background-position: center;
+		}
 	}
 
 	@media (min-width: 1024px) {
-		.mobile {
-			display: none;
-		}
-
 		.about-card {
 			height: 900px;
 			background-image: url('/src/lib/assets/images/about-hero-desktop.png');
