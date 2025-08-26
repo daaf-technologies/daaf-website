@@ -1,5 +1,5 @@
 <script>
-	import Home from './home.svelte';
+	import Story from '$lib/components/ui/story/story.svelte';
 </script>
 
-<Home />
+<Story />
