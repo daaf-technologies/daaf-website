@@ -10,7 +10,7 @@
 <div class="flex flex-col gap-6">
 	<p>
 		All content on this website — including text, graphics, logos, code snippets, service
-		descriptions, and branding — is the property of DAFF unless otherwise stated.
+		descriptions, and branding — is the property of DAAF unless otherwise stated.
 	</p>
 
 	<i> You may not: </i>

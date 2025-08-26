@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { DAFF, Facebook, LinkedIn, X, Instagram, UK, Dubai, Globe } from '$lib/assets/icons';
+	import { DAAF, Facebook, LinkedIn, X, Instagram, UK, Dubai, Globe } from '$lib/assets/icons';
 	import Copyright from '$lib/assets/icons/copyright.svelte';
 	import Dropdown from '$lib/components/design/dropdown/dropdown.svelte';
 
@@ -31,7 +31,7 @@
 <div class="footer-container">
 	<div class="footer-top">
 		<div class="top-left">
-			<DAFF />
+			<DAAF />
 			<p class="top-left-title">
 				<span class="first-letter"> D </span>igital
 				<span class="first-letter"> A </span>ugmentation &
