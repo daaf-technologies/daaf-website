@@ -31,9 +31,9 @@
 </script>
 
 <div class={`${className} header`}>
-	<span class="logo">
+	<a href="/" class="logo">
 		<DAFF />
-	</span>
+	</a>
 	<div class="nav">
 		<a href="/about-us" class="about">About us</a>
 		<Dropdown variant="primary" {options} {selectLanguage} {value} />
@@ -50,7 +50,7 @@
 
 	{#if open}
 		<div class="mobile-menu">
-			<a class="about" href="*">
+			<a class="about" href="/about-us">
 				<p class="text-base">About us</p>
 				<span>
 					<Arrow width="12" height="12" fill="#C4C8CC" />
