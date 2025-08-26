@@ -19,6 +19,7 @@ import Close from './close.svelte';
 import Shield from './shield.svelte';
 import Arrow from './arrow.svelte';
 import X from './x.svelte';
+import Stars from './stars.svelte';
 
 export {
 	DAFF,
@@ -41,5 +42,6 @@ export {
 	Arrow,
 	HamburgerMenu,
 	Close,
-	Shield
+	Shield,
+	Stars
 };
