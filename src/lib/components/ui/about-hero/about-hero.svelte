@@ -1,10 +1,9 @@
 <script>
 	import Header from '../header/header.svelte';
 	import AboutHero from '$lib/assets/images/about-hero.png';
-	import AboutHeroBig from '$lib/assets/images/about-hero-Big.png';
 </script>
 
-<div class="about-card flex w-full flex-col items-center justify-center pt-[50px]">
+<div class="about-card flex w-full flex-col items-center pt-[50px]">
 	<Header />
 
 	<div class="flex flex-col items-center gap-3 pt-[70px] pb-[90px]">
@@ -23,17 +22,9 @@
 	<div class="mobile">
 		<img src={AboutHero} alt="hero" class="w-full" />
 	</div>
-
-	<div class="desktop">
-		<img src={AboutHeroBig} alt="hero" class="w-full" />
-	</div>
 </div>
 
 <style>
-	.about-card {
-		background: linear-gradient(to bottom, #ffffff 0%, #d6f5d6 100%);
-	}
-
 	.title {
 		font-family: 'Recoleta Alt';
 	}
@@ -43,14 +34,19 @@
 	}
 
 	@media (max-width: 768px) {
-		.desktop {
-			display: none;
-		}
+		/*  */
 	}
 
 	@media (min-width: 1024px) {
 		.mobile {
 			display: none;
+		}
+
+		.about-card {
+			height: 900px;
+			background-image: url('/src/lib/assets/images/about-hero-desktop.png');
+			background-size: cover;
+			background-position: center;
 		}
 	}
 </style>
