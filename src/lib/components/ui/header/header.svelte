@@ -2,28 +2,28 @@
 	import { Close, DAFF, Dubai, HamburgerMenu, UK, Arrow } from '$lib/assets/icons';
 	import { goto } from '$app/navigation';
 	import Button from '$lib/components/design/button';
-	import Dropdown from '$lib/components/design/dropdown';
+	// import Dropdown from '$lib/components/design/dropdown';
 
 	let { minimal, className }: { minimal?: boolean; className?: string } = $props();
 
-	let options = [
-		{
-			icon: UK,
-			label: 'English',
-			value: 'EN'
-		},
-		{
-			icon: Dubai,
-			label: 'Arabic',
-			value: 'AR'
-		}
-	];
+	// let options = [
+	// 	{
+	// 		icon: UK,
+	// 		label: 'English',
+	// 		value: 'EN'
+	// 	},
+	// 	{
+	// 		icon: Dubai,
+	// 		label: 'Arabic',
+	// 		value: 'AR'
+	// 	}
+	// ];
 
-	let value = $state('EN');
+	// let value = $state('EN');
 
-	function selectLanguage(lang: string) {
-		value = lang;
-	}
+	// function selectLanguage(lang: string) {
+	// 	value = lang;
+	// }
 
 	let open = $state(false);
 
@@ -31,19 +31,16 @@
 </script>
 
 <div class={`${className} header`}>
-	<span class="logo">
+	<a href="/" class="logo">
 		<DAFF />
-	</span>
+	</a>
 	<div class="nav">
 		{#if !minimal}
-			<a href="*" class="about">About us</a>
-			<Dropdown variant="primary" {options} {selectLanguage} {value} />
+			<a href="/about-us" class="about">About us</a>
+			<!-- <Dropdown variant="primary" {options} {selectLanguage} {value} /> -->
 		{/if}
 		<Button variant="secondary" onclick={() => goto('/contact-us')}>Contact us</Button>
 	</div>
-
-	<!-- Will refactor it -->
-	<!-- <Button variant="secondary" onclick={() => goto('/contact-us')}>Contact us</Button> -->
 
 	{#if !minimal}
 		<button class="hamburger" onclick={toggle}>
@@ -57,21 +54,21 @@
 
 	{#if open}
 		<div class="mobile-menu">
-			<a class="about" href="*">
+			<a class="about" href="/about-us">
 				<p class="text-base">About us</p>
 				<span>
 					<Arrow width="12" height="12" fill="#C4C8CC" />
 				</span>
 			</a>
-			<Dropdown
+			<!-- <Dropdown
 				variant="primary"
 				{options}
 				{selectLanguage}
 				{value}
 				dropdownMenuClassname="static pb-3"
 				dropdownControlClassname="w-full mt-[30px] mb-[12px]"
-			/>
-			<Button variant="secondary">Contact us</Button>
+			/> -->
+			<Button variant="secondary" onclick={() => goto('/contact-us')}>Contact us</Button>
 		</div>
 	{/if}
 </div>
@@ -104,6 +101,9 @@
 		}
 
 		.mobile-menu {
+			display: flex;
+			flex-direction: column;
+			gap: 30px;
 			width: 100%;
 			position: absolute;
 			top: 72px;
