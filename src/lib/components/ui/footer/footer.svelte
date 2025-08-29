@@ -74,7 +74,7 @@
 
 	<div class="footer-bottom">
 		<div class="bottom-left">
-			<p class="bottom-left-title">Engineering Tomorrows’ Trust</p>
+			<p class="bottom-left-title text-nowrap">Engineering Tomorrows’ Trust</p>
 			<p class="bottom-left-content">
 				Technology is only part of the story — the rest is how we work with you
 			</p>
@@ -176,6 +176,7 @@
 
 		.bottom-left-title {
 			font-size: 20px;
+			text-wrap: nowrap !important;
 		}
 
 		.bottom-left {
