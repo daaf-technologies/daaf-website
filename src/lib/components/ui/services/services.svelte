@@ -9,10 +9,13 @@
 	class="flex w-full flex-col items-center justify-center gap-[40px] bg-[#F1F1F1] p-4 py-[60px]"
 >
 	<div class="flex flex-col gap-3">
-		<p class="text-center text-[12px] text-[#38B543] lg:text-[18px]">Where DAAF Creates Impact</p>
-		<p class="lg:text[40px] w-[18ch] text-center text-2xl">
-			<span class="font-bold"> Focused services. Proven frameworks. </span>
-			<span class="font-light"> Measurable results </span>
+		<p class="section-title text-center text-[12px] text-[#38B543] lg:text-[18px]">
+			Where DAAF Creates Impact
+		</p>
+		<p class="lg:text[40px] w-[35ch] text-center text-2xl">
+			<span class="font-bold"> From legacy modernization to</span>
+			<span class="font-light italic"> AI-driven systems, </span>
+			<span class="font-bold"> we engineer results that matter</span>
 		</p>
 	</div>
 
@@ -26,6 +29,9 @@
 </div>
 
 <style>
+	.section-title {
+		font-family: 'Departure Mono';
+	}
 	@media (max-width: 768px) {
 		.desktop {
 			display: none;
