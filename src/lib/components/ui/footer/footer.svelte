@@ -43,15 +43,15 @@
 			<div class="top-right-first">
 				<div class="top-right-list">
 					<p class="top-right-title">MENU</p>
-					<p class="top-right-content">Home</p>
-					<p class="top-right-content">About us</p>
-					<p class="top-right-content">Contact us</p>
+					<a href="/" class="top-right-content">Home</a>
+					<a href="/about-us" class="top-right-content">About us</a>
+					<a href="/contact-us" class="top-right-content">Contact us</a>
 				</div>
 
 				<div class="top-right-list">
 					<p class="top-right-title">COMPLIANCES</p>
-					<p class="top-right-content">Privacy Policy</p>
-					<p class="top-right-content">Terms & Conditions</p>
+					<a href="/privacy-policy" class="top-right-content">Privacy Policy</a>
+					<a href="/terms-of-use" class="top-right-content">Terms & Conditions</a>
 				</div>
 			</div>
 
@@ -191,7 +191,7 @@
 	@media (min-width: 1024px) {
 		.footer-container {
 			width: 100%;
-			padding: 165px;
+			padding: 90px 165px;
 			background-color: #03100e;
 			color: #c4c8cc;
 			display: flex;
