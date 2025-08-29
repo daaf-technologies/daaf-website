@@ -22,10 +22,16 @@
 			</p>
 		</div>
 
-		<Button type="button" variant="primary" class="lg:h-[60px] lg:w-[200px]">Get In Touch</Button>
+		<Button
+			type="button"
+			variant="primary"
+			class="lg:h-[60px] lg:w-[200px]"
+			onclick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+			>Explore our services</Button
+		>
 	</div>
 
-	<div class="mobile relative w-full">
+	<!-- <div class="mobile relative w-full">
 		<img src={Globe} alt="globe" class="w-full" />
 
 		<img src={Mascot} alt="mascot" class="absolute top-0 right-[50px]" />
@@ -35,7 +41,7 @@
 		<img src={World} alt="globe" class="w-full" />
 
 		<img src={Hero} alt="mascot" class="absolute top-[60px] right-[300px]" />
-	</div>
+	</div> -->
 </div>
 
 <style>
@@ -48,14 +54,28 @@
 	}
 
 	@media (max-width: 768px) {
-		.desktop {
+		/* .desktop {
 			display: none;
+		} */
+
+		.hero {
+			height: 830px;
+			background-image: url('/src/lib/assets/images/home-hero-mobile.png');
+			background-size: cover;
+			background-position: center;
 		}
 	}
 
 	@media (min-width: 1024px) {
-		.mobile {
+		/* .mobile {
 			display: none;
+		} */
+
+		.hero {
+			height: 1155px;
+			background-image: url('/src/lib/assets/images/home-hero-desktop.png');
+			background-size: cover;
+			background-position: center;
 		}
 	}
 </style>
