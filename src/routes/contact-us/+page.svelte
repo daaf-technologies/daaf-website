@@ -2,6 +2,7 @@
 	import { Dubai, Shield } from '$lib/assets/icons';
 	import Button from '$lib/components/design/button';
 	import Input from '$lib/components/design/input';
+	import Footer from '$lib/components/ui/footer';
 	import Header from '$lib/components/ui/header';
 </script>
 
@@ -71,6 +72,7 @@
 		</div>
 	</div>
 </div>
+<Footer />
 
 <style>
 	.wrapper {

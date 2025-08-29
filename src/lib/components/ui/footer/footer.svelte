@@ -191,7 +191,7 @@
 	@media (min-width: 1024px) {
 		.footer-container {
 			width: 100%;
-			padding: 165px;
+			padding: 90px 165px;
 			background-color: #03100e;
 			color: #c4c8cc;
 			display: flex;
