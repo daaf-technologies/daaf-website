@@ -12,7 +12,7 @@
 
 	<div class="flex flex-col items-center justify-center py-[70px] lg:pb-0">
 		<div class="flex flex-col items-center gap-3 pb-[30px]">
-			<p class="title w-[15ch] text-center text-[30px] font-semibold lg:text-[64px]">
+			<p class="title w-[15ch] text-center text-[30px] font-semibold text-[#21231E] lg:text-[64px]">
 				Building Fearless Tech for Fearless Brands
 			</p>
 

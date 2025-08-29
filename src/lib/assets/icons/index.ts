@@ -1,4 +1,4 @@
-import DAFF from './daff.svelte';
+import DAAF from './daaf.svelte';
 import UK from './uk.svelte';
 import Dubai from './dubai.svelte';
 import ChevronDown from './chevron-down.svelte';
@@ -22,7 +22,7 @@ import X from './x.svelte';
 import Stars from './stars.svelte';
 
 export {
-	DAFF,
+	DAAF,
 	UK,
 	Dubai,
 	ChevronDown,

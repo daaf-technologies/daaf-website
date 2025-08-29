@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Close, DAFF, Dubai, HamburgerMenu, UK, Arrow } from '$lib/assets/icons';
+	import { Close, DAAF, HamburgerMenu, Arrow } from '$lib/assets/icons';
 	import { goto } from '$app/navigation';
 	import Button from '$lib/components/design/button';
 	// import Dropdown from '$lib/components/design/dropdown';
@@ -32,7 +32,7 @@
 
 <div class={`${className} header`}>
 	<a href="/" class="logo">
-		<DAFF />
+		<DAAF />
 	</a>
 	<div class="nav">
 		{#if !minimal}

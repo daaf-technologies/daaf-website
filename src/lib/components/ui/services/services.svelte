@@ -4,7 +4,7 @@
 	import { tabs } from '$lib/constants/tabs';
 </script>
 
-<div class="flex w-full flex-col items-center justify-center gap-[40px] p-4 py-[60px]">
+<div class="flex w-full flex-col items-center justify-center gap-[40px] bg-[#F1F1F1] p-4 py-[60px]">
 	<div class="flex flex-col gap-3">
 		<p class="text-center text-[12px] text-[#38B543] lg:text-[18px]">Where DAAF Creates Impact</p>
 		<p class="lg:text[40px] w-[18ch] text-center text-2xl">

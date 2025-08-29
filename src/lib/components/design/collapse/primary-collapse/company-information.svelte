@@ -4,7 +4,7 @@
 
 <div class="flex flex-col gap-4">
 	<p>
-		This website is operated by DAFF FZ-LLC, a technology consulting and software engineering firm
+		This website is operated by DAAF FZ-LLC, a technology consulting and software engineering firm
 		based in Dubai, United Arab Emirates.
 	</p>
 
@@ -13,14 +13,14 @@
 			class="flex items-center gap-2 rounded-[10px] border border-[#CADFC7] bg-[#E2FADF] px-2.5 py-3"
 		>
 			<Globe />
-			<a href="https://daff.ae">https://daaf.ae</a>
+			<a href="https://daaf.ae">https://daaf.ae</a>
 		</div>
 
 		<div
 			class="flex items-center gap-2 rounded-[10px] border border-[#CADFC7] bg-[#E2FADF] px-2.5 py-3"
 		>
 			<Mail />
-			<a href="admin@daff.ae">admin@daff.ae</a>
+			<a href="admin@daaf.ae">admin@daaf.ae</a>
 		</div>
 	</div>
 </div>

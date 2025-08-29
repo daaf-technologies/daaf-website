@@ -1,4 +1,4 @@
-# It's a SvelteKit application for Daff website.
+# It's a SvelteKit application for Daaf website.
 
 ## Developing
 

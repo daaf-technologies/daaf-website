@@ -6,7 +6,7 @@
 	</p>
 
 	<p>
-		DAFF disclaims all warranties, express or implied, related to the use of this site or its
+		DAAF disclaims all warranties, express or implied, related to the use of this site or its
 		content.
 	</p>
 </div>

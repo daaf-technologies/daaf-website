@@ -1,6 +1,6 @@
 <script>
 	import Office from '$lib/assets/images/office.png';
-	import Daff from '$lib/assets/images/daff.png';
+	import Daaf from '$lib/assets/images/daaf.png';
 	import Button from '$lib/components/design/button';
 	import StickyNote from '$lib/assets/images/sticky-note.png';
 </script>
@@ -24,7 +24,7 @@
 		>Get In Touch</Button
 	>
 
-	<img src={Daff} alt="office" class="mobile w-full" />
+	<img src={Daaf} alt="office" class="mobile w-full" />
 
 	<img src={Office} alt="office" class="desktop w-full" />
 </div>

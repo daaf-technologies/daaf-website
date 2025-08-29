@@ -1,7 +1,7 @@
 <script lang="ts">
 	// import { Close, DAFF, Dubai, HamburgerMenu, UK, Arrow } from '$lib/assets/icons';
 	import { goto } from '$app/navigation';
-	import { DAFF } from '$lib/assets/icons';
+	import { DAAF } from '$lib/assets/icons';
 	import Button from '$lib/components/design/button';
 	// import Dropdown from '$lib/components/design/dropdown';
 
@@ -33,43 +33,12 @@
 
 <div class={`${className} header`}>
 	<span class="logo">
-		<DAFF />
+		<DAAF />
 	</span>
 
 	<div class="nav">
-		<!-- <a href="*" class="about">About us</a>
-		<Dropdown variant="primary" {options} {selectLanguage} {value} /> -->
-
 		<Button variant="secondary" onclick={() => goto('/contact-us')}>Contact us</Button>
 	</div>
-
-	<!-- <button class="hamburger" onclick={toggle}>
-		{#if !open}
-			<HamburgerMenu />
-		{:else}
-			<Close />
-		{/if}
-	</button>
-
-	{#if open}
-		<div class="mobile-menu">
-			<a class="about" href="*">
-				<p class="text-base">About us</p>
-				<span>
-					<Arrow width="12" height="12" fill="#C4C8CC" />
-				</span>
-			</a>
-			<Dropdown
-				variant="primary"
-				{options}
-				{selectLanguage}
-				{value}
-				dropdownMenuClassname="static pb-3"
-				dropdownControlClassname="w-full mt-[30px] mb-[12px]"
-			/>
-			<Button variant="secondary">Contact us</Button>
-		</div>
-	{/if} -->
 </div>
 
 <style>
@@ -117,10 +86,6 @@
 			gap: 8px;
 			font-size: 16px;
 		}
-
-		/* .nav {
-			display: none;
-		} */
 	}
 
 	@media (min-width: 1024px) {

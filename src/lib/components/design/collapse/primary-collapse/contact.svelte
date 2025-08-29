@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Arrow } from '$lib/assets/icons';
 
-	const contacts = ['DAFF FZ-LLC', 'Dubai, United Arab Emirates', 'admin@daff.ae'];
+	const contacts = ['DAAF FZ-LLC', 'Dubai, United Arab Emirates', 'admin@daaf.ae'];
 </script>
 
 <div class="flex flex-col gap-6">
