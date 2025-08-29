@@ -1,5 +1,5 @@
 <script>
-	import { Dubai, Shield } from '$lib/assets/icons';
+	import { Dubai, Location, Shield } from '$lib/assets/icons';
 	import Button from '$lib/components/design/button';
 	import Input from '$lib/components/design/input';
 	import Footer from '$lib/components/ui/footer';
@@ -25,6 +25,19 @@
 			>
 				One message is all it takes to set your vision in motion. Let's create the solutions your
 				business needs to thrive today and tomorrow.
+			</div>
+
+			<div
+				class="flex flex-col items-center py-4 text-center text-[14px] leading-[140%] font-medium text-[#51636f] lg:text-left lg:text-[20px]"
+			>
+				<div class="flex items-center gap-1">
+					<Location />
+					<p class="text-nowrap">Locate us at:</p>
+				</div>
+
+				<i class="text-centerg"
+					>Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba, Dubai, U.A.E.</i
+				>
 			</div>
 		</div>
 
