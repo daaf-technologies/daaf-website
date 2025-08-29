@@ -13,7 +13,10 @@
 	const { href, src, name, designation, className, imgClassname }: FounderPropsType = $props();
 </script>
 
-<a {href} class={`flex flex-col gap-2 border-[1.6px] border-white bg-white ${className}`}>
+<a
+	{href}
+	class={`flex flex-col gap-2 rounded-[12px] border-[1.6px] border-white bg-white pb-[24px] ${className}`}
+>
 	<img {src} alt="afroze" class={imgClassname} />
 
 	<div class="flex justify-between px-3">
