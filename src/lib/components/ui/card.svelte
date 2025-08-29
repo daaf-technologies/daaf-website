@@ -166,8 +166,12 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			gap: 90px;
+			gap: 50px;
 			padding: 90px 60px;
+		}
+
+		.left {
+			width: 70%;
 		}
 
 		.left-title {
