@@ -20,6 +20,7 @@ import Shield from './shield.svelte';
 import Arrow from './arrow.svelte';
 import X from './x.svelte';
 import Stars from './stars.svelte';
+import Location from './location.svelte';
 
 export {
 	DAAF,
@@ -43,5 +44,6 @@ export {
 	HamburgerMenu,
 	Close,
 	Shield,
-	Stars
+	Stars,
+	Location
 };

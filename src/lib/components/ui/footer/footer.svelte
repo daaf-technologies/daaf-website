@@ -48,11 +48,11 @@
 					<a href="/contact-us" class="top-right-content">Contact us</a>
 				</div>
 
-				<div class="top-right-list">
+				<!-- <div class="top-right-list">
 					<p class="top-right-title">COMPLIANCES</p>
 					<a href="/privacy-policy" class="top-right-content">Privacy Policy</a>
 					<a href="/terms-of-use" class="top-right-content">Terms & Conditions</a>
-				</div>
+				</div> -->
 			</div>
 
 			<div class="top-right-second">
@@ -74,7 +74,7 @@
 
 	<div class="footer-bottom">
 		<div class="bottom-left">
-			<p class="bottom-left-title">Engineering Tomorrows’ Trust</p>
+			<p class="bottom-left-title text-nowrap">Engineering Tomorrows’ Trust</p>
 			<p class="bottom-left-content">
 				Technology is only part of the story — the rest is how we work with you
 			</p>
@@ -176,6 +176,7 @@
 
 		.bottom-left-title {
 			font-size: 20px;
+			text-wrap: nowrap !important;
 		}
 
 		.bottom-left {

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Technologies from '$lib/assets/images/technologies.png';
-	import Stack from '$lib/assets/images/stack.png';
+	// import Technologies from '$lib/assets/images/technologies.png';
+	// import Stack from '$lib/assets/images/stack.png';
 </script>
 
 <div
@@ -15,7 +15,7 @@
 	</div>
 
 	<video autoplay muted loop playsinline class="bg-video">
-		<source src="/src/lib/assets/videos/technologies.mp4" type="video/mp4" />
+		<source src="/technologies.mp4" type="video/mp4" />
 	</video>
 </div>
 
