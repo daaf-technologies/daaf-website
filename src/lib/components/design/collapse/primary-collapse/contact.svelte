@@ -4,7 +4,7 @@
 	const contacts = ['DAAF FZ-LLC', 'Dubai, United Arab Emirates', 'admin@daaf.ae'];
 </script>
 
-<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-6 text-[14px] lg:text-base">
 	<p>For any questions related to these Terms of Use, please contact us at:</p>
 
 	<div>

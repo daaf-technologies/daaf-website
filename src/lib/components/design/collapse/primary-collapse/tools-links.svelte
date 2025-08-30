@@ -1,4 +1,4 @@
-<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-4 text-[14px] lg:text-[16px]">
 	<p>
 		We may use or link to third-party services (e.g., Google Analytics, hosting platforms). These
 		are governed by their own terms and privacy policies.
