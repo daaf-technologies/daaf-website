@@ -3,7 +3,7 @@
 </script>
 
 <div class="flex flex-col gap-4">
-	<p>
+	<p class="text-[14px]">
 		This website is operated by DAAF FZ-LLC, a technology consulting and software engineering firm
 		based in Dubai, United Arab Emirates.
 	</p>

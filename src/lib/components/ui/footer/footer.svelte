@@ -48,11 +48,11 @@
 					<a href="/contact-us" class="top-right-content">Contact us</a>
 				</div>
 
-				<!-- <div class="top-right-list">
+				<div class="top-right-list">
 					<p class="top-right-title">COMPLIANCES</p>
 					<a href="/privacy-policy" class="top-right-content">Privacy Policy</a>
-					<a href="/terms-of-use" class="top-right-content">Terms & Conditions</a>
-				</div> -->
+					<!-- <a href="/terms-of-use" class="top-right-content">Terms & Conditions</a> -->
+				</div>
 			</div>
 
 			<div class="top-right-second">

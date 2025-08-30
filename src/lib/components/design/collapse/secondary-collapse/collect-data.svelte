@@ -9,7 +9,7 @@
 	];
 </script>
 
-<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-6 text-[14px] lg:text-[16px]">
 	<i>We may collect the following types of data: </i>
 
 	<div>
@@ -18,7 +18,7 @@
 				<span>
 					<Arrow />
 				</span>
-				<p>{type}</p>
+				<p class="lg:text-nowrap">{type}</p>
 			</div>
 		{/each}
 	</div>

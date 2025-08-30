@@ -9,7 +9,7 @@
 	];
 </script>
 
-<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-6 text-[14px] lg:text-[16px]">
 	<i>We use your data to: </i>
 
 	<div>

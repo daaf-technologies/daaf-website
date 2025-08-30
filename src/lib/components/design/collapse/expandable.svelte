@@ -10,7 +10,7 @@
 <div>
 	<div class="collapse-wrapper">
 		<button class="collapse-header" onclick={() => (open = !open)}>
-			<div>
+			<div class="text-base font-medium text-nowrap text-[#21231E] lg:text-[20px]">
 				{id}. {title}
 			</div>
 
