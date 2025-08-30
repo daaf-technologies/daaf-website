@@ -51,7 +51,7 @@
 				<div class="top-right-list">
 					<p class="top-right-title">COMPLIANCES</p>
 					<a href="/privacy-policy" class="top-right-content">Privacy Policy</a>
-					<!-- <a href="/terms-of-use" class="top-right-content">Terms & Conditions</a> -->
+					<a href="/terms-of-use" class="top-right-content">Terms & Conditions</a>
 				</div>
 			</div>
 
