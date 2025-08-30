@@ -8,7 +8,7 @@
 	];
 </script>
 
-<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-6 text-[14px] lg:text-[16px]">
 	<p>To the maximum extent permitted by UAE law, DAAF will not be liable for</p>
 
 	<div>

@@ -7,7 +7,7 @@
 	];
 </script>
 
-<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-6 text-[14px] lg:text-base">
 	<p>
 		All content on this website — including text, graphics, logos, code snippets, service
 		descriptions, and branding — is the property of DAAF unless otherwise stated.

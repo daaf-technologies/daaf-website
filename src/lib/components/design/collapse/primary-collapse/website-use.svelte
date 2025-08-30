@@ -8,7 +8,7 @@
 	];
 </script>
 
-<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-6 text-[14px] lg:text-[16px]">
 	<p>
 		Our website is intended to provide information about our services, expertise, and company
 		background. You agree to:

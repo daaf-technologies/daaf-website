@@ -1,4 +1,4 @@
-<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-4 text-[14px] lg:text-[16px]">
 	<p>
 		These Terms of Use are governed by the laws of the
 		<span class="font-semibold"> United Arab Emirates, </span>
