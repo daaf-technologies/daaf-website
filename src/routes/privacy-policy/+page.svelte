@@ -8,7 +8,7 @@
 	<Header />
 
 	<div class="privacy-content w-full px-4 lg:w-[700px]">
-		<div class="flex flex-col gap-3 pt-[70px]">
+		<div class="flex flex-col gap-3 pt-[70px] lg:pt-[120px]">
 			<p class="text-[30px] font-semibold text-[#21231E] lg:text-[44px]">Privacy Policy</p>
 			<p class="updated text-[16px] text-[#51636F] lg:text-[18px]">LAST UPDATED : AUGUST 2025</p>
 		</div>
@@ -16,7 +16,7 @@
 		<div class="my-[30px] h-[1px] w-full bg-[#21231E] opacity-10"></div>
 	</div>
 
-	<div class="px-4">
+	<div class="px-4 pb-[60px] lg:w-[700px] lg:pb-[120px]">
 		<SecondaryCollapse />
 	</div>
 

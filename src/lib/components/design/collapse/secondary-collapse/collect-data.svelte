@@ -18,7 +18,7 @@
 				<span>
 					<Arrow />
 				</span>
-				<p>{type}</p>
+				<p class="lg:text-nowrap">{type}</p>
 			</div>
 		{/each}
 	</div>

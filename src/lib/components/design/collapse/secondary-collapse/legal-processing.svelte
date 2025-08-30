@@ -12,8 +12,8 @@
 			</span>
 
 			<div>
-				<span> Your </span>
-				<span class="mx-1 font-semibold"> explicit consent </span>
+				<span> Your</span>
+				<span class="font-semibold"> explicit consent </span>
 				(e.g., when submitting a form)
 			</div>
 		</div>
@@ -24,7 +24,7 @@
 
 			<div>
 				<span> Our </span>
-				<span class="mx-1 font-semibold"> legitimate interest </span>
+				<span class="font-semibold">legitimate interest </span>
 				<span> in operating and improving our services </span>
 			</div>
 		</div>
