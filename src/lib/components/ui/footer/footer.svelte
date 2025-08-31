@@ -1,5 +1,15 @@
 <script lang="ts">
-	import { DAAF, Facebook, LinkedIn, X, Instagram, UK, Dubai, Globe } from '$lib/assets/icons';
+	import {
+		DAAF,
+		Facebook,
+		LinkedIn,
+		X,
+		Instagram,
+		UK,
+		Dubai,
+		Globe,
+		Tiktok
+	} from '$lib/assets/icons';
 	import Copyright from '$lib/assets/icons/copyright.svelte';
 	import Dropdown from '$lib/components/design/dropdown/dropdown.svelte';
 
@@ -88,6 +98,7 @@
 			</p>
 		</div>
 		<div class="bottom-right">
+			<Tiktok />
 			<Facebook />
 			<Instagram />
 			<X />
