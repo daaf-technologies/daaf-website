@@ -1,5 +1,15 @@
 <script lang="ts">
-	import { DAAF, Facebook, LinkedIn, X, Instagram, UK, Dubai, Globe } from '$lib/assets/icons';
+	import {
+		DAAF,
+		Facebook,
+		LinkedIn,
+		X,
+		Instagram,
+		UK,
+		Dubai,
+		Globe,
+		Tiktok
+	} from '$lib/assets/icons';
 	import Copyright from '$lib/assets/icons/copyright.svelte';
 	import Dropdown from '$lib/components/design/dropdown/dropdown.svelte';
 
@@ -57,16 +67,24 @@
 
 			<div class="top-right-second">
 				<div class="top-right-list">
-					<p class="top-right-title">LANGUAGE</p>
+					<p class="top-right-title">ADDRESS</p>
 
-					<Dropdown
+					<p class="">
+						Meydan Grandstand, 6th floor,
+						<br />
+						Meydan Road, Nad Al Sheba,
+						<br />
+						Dubai, U.A.E.
+					</p>
+
+					<!-- <Dropdown
 						{left}
 						variant="secondary"
 						{options}
 						{value}
 						{selectLanguage}
 						dropdownControlClassname="w-full !justify-between text-sm"
-					/>
+					/> -->
 				</div>
 			</div>
 		</div>
@@ -80,6 +98,7 @@
 			</p>
 		</div>
 		<div class="bottom-right">
+			<Tiktok />
 			<Facebook />
 			<Instagram />
 			<X />

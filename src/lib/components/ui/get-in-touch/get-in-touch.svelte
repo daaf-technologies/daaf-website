@@ -1,4 +1,5 @@
 <script>
+	import { goto } from '$app/navigation';
 	import Button from '$lib/components/design/button';
 </script>
 
@@ -11,8 +12,10 @@
 		<span class="font-light"> Be the brand that leads, not follows. </span>
 	</p>
 
-	<Button variant="primary" class="mb-[60px] w-[340px] lg:mb-0 lg:h-[60px] lg:w-[203px]"
-		>Get In Touch</Button
+	<Button
+		variant="primary"
+		class="mb-[60px] w-[340px] lg:mb-0 lg:h-[60px] lg:w-[203px]"
+		onclick={() => goto('/contact-us')}>Get In Touch</Button
 	>
 </div>
 
