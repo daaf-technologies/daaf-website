@@ -57,16 +57,24 @@
 
 			<div class="top-right-second">
 				<div class="top-right-list">
-					<p class="top-right-title">LANGUAGE</p>
+					<p class="top-right-title">ADDRESS</p>
 
-					<Dropdown
+					<p class="">
+						Meydan Grandstand, 6th floor,
+						<br />
+						Meydan Road, Nad Al Sheba,
+						<br />
+						Dubai, U.A.E.
+					</p>
+
+					<!-- <Dropdown
 						{left}
 						variant="secondary"
 						{options}
 						{value}
 						{selectLanguage}
 						dropdownControlClassname="w-full !justify-between text-sm"
-					/>
+					/> -->
 				</div>
 			</div>
 		</div>
