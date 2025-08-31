@@ -103,9 +103,11 @@
 				<TikTok />
 			</a>
 
-			<Facebook />
+			<a href="https://facebook.com/daaf.uae" target="_blank">
+				<Facebook />
+			</a>
 
-			<a href="https://www.instagram.com/daaf.ae/" target="_blank">
+			<a href="https://www.instagram.com/daaf_ae/" target="_blank">
 				<Instagram />
 			</a>
 
