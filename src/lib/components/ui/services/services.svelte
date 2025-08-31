@@ -10,7 +10,7 @@
 >
 	<div class="flex flex-col gap-3">
 		<p class="section-title text-center text-[12px] text-[#38B543] lg:text-[18px]">
-			Where DAAF Creates Impact
+			WHERE DAAF CREATES IMPACT
 		</p>
 		<p class="lg:text[40px] w-[23ch] text-center text-2xl lg:w-[35ch]">
 			<span class="font-bold"> From legacy modernization to</span>

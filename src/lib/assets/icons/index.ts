@@ -21,7 +21,7 @@ import Arrow from './arrow.svelte';
 import X from './x.svelte';
 import Stars from './stars.svelte';
 import Location from './location.svelte';
-import Tiktok from './tiktok.svelte';
+import TikTok from './tiktok.svelte';
 
 export {
 	DAAF,
@@ -47,5 +47,5 @@ export {
 	Shield,
 	Stars,
 	Location,
-	Tiktok
+	TikTok
 };

@@ -10,9 +10,9 @@
 	class="relative flex w-full flex-col items-center justify-center bg-[#F1F1F1] px-4 pt-[60px] pb-[115px] lg:px-[370px] lg:py-[200px]"
 >
 	<p
-		class="section-title pb-[30px] text-[12px] leading-[132%] tracking-[6.6px] text-[#EC5E2A] lg:pb-[40px] lg:text-lg"
+		class="section-title pb-[30px] text-[12px] leading-[132%] text-[#EC5E2A] lg:pb-[40px] lg:text-lg"
 	>
-		Beyond the Code
+		BEYOND THE CODE
 	</p>
 
 	<div class="relative flex flex-col gap-6 lg:gap-[50px]">

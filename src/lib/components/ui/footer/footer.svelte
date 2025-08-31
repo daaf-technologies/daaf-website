@@ -8,28 +8,29 @@
 		UK,
 		Dubai,
 		Globe,
-		Tiktok
+		TikTok
 	} from '$lib/assets/icons';
 	import Copyright from '$lib/assets/icons/copyright.svelte';
-	import Dropdown from '$lib/components/design/dropdown/dropdown.svelte';
+	// import Dropdown from '$lib/components/design/dropdown/dropdown.svelte';
 
-	let options = [
-		{
-			icon: UK,
-			label: 'English',
-			value: 'English'
-		},
-		{
-			icon: Dubai,
-			label: 'Arabic',
-			value: 'Arabic'
-		}
-	];
-	let value = $state('English');
+	// let options = [
+	// 	{
+	// 		icon: UK,
+	// 		label: 'English',
+	// 		value: 'English'
+	// 	},
+	// 	{
+	// 		icon: Dubai,
+	// 		label: 'Arabic',
+	// 		value: 'Arabic'
+	// 	}
+	// ];
 
-	function selectLanguage(lang: string) {
-		value = lang;
-	}
+	// let value = $state('English');
+
+	// function selectLanguage(lang: string) {
+	// 	value = lang;
+	// }
 </script>
 
 {#snippet left()}
@@ -98,11 +99,25 @@
 			</p>
 		</div>
 		<div class="bottom-right">
-			<Tiktok />
-			<Facebook />
-			<Instagram />
-			<X />
-			<LinkedIn />
+			<a href="https://www.tiktok.com/@daaf.ae" target="_blank">
+				<TikTok />
+			</a>
+
+			<a href="https://facebook.com/daaf.uae" target="_blank">
+				<Facebook />
+			</a>
+
+			<a href="https://www.instagram.com/daaf_ae/" target="_blank">
+				<Instagram />
+			</a>
+
+			<a href="https://www.linkedin.com/company/daaf-ae/" target="_blank">
+				<LinkedIn />
+			</a>
+
+			<a href="https://x.com/daaf_ae" target="_blank">
+				<X />
+			</a>
 		</div>
 	</div>
 
