@@ -63,7 +63,7 @@ export const services = [
 
 	{
 		// id: 'AI MCP Setup',
-		leftTitle: 'Bring AI into production—safely, quickly, & responsibly',
+		leftTitle: 'Bring AI into production - safely, quickly, & responsibly',
 		leftContent:
 			'We help you deploy and govern LLMs (like OpenAI, Falcon, or custom models) with tuned infrastructure, data pipelines, and compliance controls.',
 		rightTopTitle: 'What you get',

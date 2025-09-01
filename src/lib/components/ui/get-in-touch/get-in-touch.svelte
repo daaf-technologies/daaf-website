@@ -12,11 +12,11 @@
 		<span class="font-light"> Be the brand that leads, not follows. </span>
 	</p>
 
-	<Button
-		variant="primary"
-		class="mb-[60px] w-[340px] lg:mb-0 lg:h-[60px] lg:w-[203px]"
-		onclick={() => goto('/contact-us')}>Get In Touch</Button
-	>
+	<a href="/contact-us" target="_blank">
+		<Button variant="primary" class="mb-[60px] w-[340px] lg:mb-0 lg:h-[60px] lg:w-[203px]"
+			>Get In Touch</Button
+		>
+	</a>
 </div>
 
 <style>
