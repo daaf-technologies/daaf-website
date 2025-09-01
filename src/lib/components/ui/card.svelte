@@ -166,12 +166,13 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			gap: 50px;
+			gap: 90px;
 			padding: 90px 60px;
+			width: 1110px;
 		}
 
 		.left {
-			width: 70%;
+			width: 500px;
 		}
 
 		.left-title {
@@ -180,6 +181,10 @@
 
 		.left-content {
 			font-size: 16px;
+		}
+
+		.right {
+			width: 625px;
 		}
 	}
 </style>

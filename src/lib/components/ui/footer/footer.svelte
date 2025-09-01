@@ -226,7 +226,7 @@
 	@media (min-width: 1024px) {
 		.footer-container {
 			width: 100%;
-			padding: 90px 165px;
+			padding: 90px 165px 0;
 			background-color: #03100e;
 			color: #c4c8cc;
 			display: flex;
@@ -305,6 +305,10 @@
 		.bottom-left-content {
 			color: #c4c8cc;
 			font-size: 14px;
+		}
+
+		.copyright {
+			padding: 30px 0;
 		}
 	}
 </style>

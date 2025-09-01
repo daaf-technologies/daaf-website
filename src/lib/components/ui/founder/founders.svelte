@@ -12,26 +12,30 @@
 		Speak directly to the people who <span class="font-light"> plan and build </span> your solutions
 	</p>
 
-	<div class="flex flex-col gap-[50px] lg:relative">
-		<div class="top-[150px] w-[360px] lg:absolute lg:right-0">
+	<div class="mt-[40px] mb-[60px] flex flex-col gap-[50px] lg:relative">
+		<div
+			class="h-[350px] w-[300px] lg:absolute lg:top-[150px] lg:right-0 lg:h-[445px] lg:w-[360px]"
+		>
 			<FounderCard
 				href="https://www.linkedin.com/in/dharani-dharan-pm/"
 				className="rotate-[-4deg] "
 				src={Dharani}
 				name="DA"
-				designation="Co-Founder & CEO"
-				imgClassname="rotate-[4deg]"
+				designation="Founder"
+				imgClassname="p-2"
 			/>
 		</div>
 
-		<div class="w-[360px] lg:absolute lg:top-[40px] lg:left-[-40px]">
+		<div
+			class="h-[350px] w-[300px] lg:absolute lg:top-[40px] lg:left-[-40px] lg:h-[445px] lg:w-[360px]"
+		>
 			<FounderCard
 				href="https://www.linkedin.com/in/afrze-ali/"
 				className="rotate-[4deg] w-full"
 				src={Afroze}
 				name="AF"
-				designation="Co-Founder & CTO"
-				imgClassname="rotate-[-4deg]"
+				designation="Co-Founder"
+				imgClassname="p-2"
 			/>
 		</div>
 	</div>
