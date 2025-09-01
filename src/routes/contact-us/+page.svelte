@@ -28,7 +28,7 @@
 			</div>
 
 			<div
-				class="flex flex-col items-center py-4 text-center text-[14px] leading-[140%] font-medium text-[#51636f] lg:text-left lg:text-[20px]"
+				class="flex flex-col items-center py-4 text-center text-[14px] leading-[140%] font-medium text-[#51636f] lg:items-start lg:text-left lg:text-[20px]"
 			>
 				<div class="flex items-center gap-1">
 					<Location />

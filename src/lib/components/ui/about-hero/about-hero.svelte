@@ -6,13 +6,17 @@
 	<Header />
 
 	<div class="flex flex-col items-center gap-3 pt-[70px] pb-[90px]">
-		<p class="title w-[18ch] text-center text-[30px] font-semibold lg:w-[25ch] lg:text-[64px]">
+		<p
+			class="title w-[18ch] text-center text-[30px] leading-[120%] font-semibold lg:w-[25ch] lg:text-[64px]"
+		>
 			We Build What the Future Demands
 			<span class="hyphen font-light"> - </span>
 			Market Ready Solutions
 		</p>
 
-		<p class="w-[33ch] text-center text-base text-[#51636F] lg:w-[40ch] lg:text-[22px]">
+		<p
+			class="w-[33ch] text-center text-base leading-[140%] font-medium text-[#51636F] lg:w-[60ch] lg:text-[22px]"
+		>
 			We create solutions for today’s needs and tomorrow’s opportunities, delivering technology that
 			adapts, scales, and leads in a fast-changing world.
 		</p>

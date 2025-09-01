@@ -169,6 +169,7 @@
 			gap: 90px;
 			padding: 90px 60px;
 			width: 1110px;
+			height: 415px;
 		}
 
 		.left {
