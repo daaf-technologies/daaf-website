@@ -28,16 +28,16 @@
 			</div>
 
 			<div
-				class="flex flex-col items-center py-4 text-center text-[14px] leading-[140%] font-medium text-[#51636f] lg:items-start lg:text-left lg:text-[20px]"
+				class="flex flex-col items-center gap-3 py-4 text-center text-[14px] leading-[140%] text-[#51636f] lg:items-start lg:text-left lg:text-[20px]"
 			>
 				<div class="flex items-center gap-1">
 					<Location />
-					<p class="text-nowrap">Locate us at:</p>
+					<p class="location text-base tracking-[15%] text-nowrap text-[#EA6C18]">LOCATE US AT:</p>
 				</div>
 
-				<i class="text-centerg"
-					>Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba, Dubai, U.A.E.</i
-				>
+				<p class="w-[30ch] text-base">
+					Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba, Dubai, U.A.E.
+				</p>
 			</div>
 		</div>
 
@@ -102,5 +102,9 @@
 
 	.contact-form {
 		box-shadow: 0px 4px 4px 0px #ffffff40 inset;
+	}
+
+	.location {
+		font-family: 'Departure Mono';
 	}
 </style>
