@@ -1,7 +1,7 @@
 <script lang="ts">
 	import FounderCard from './founder-card.svelte';
-	import Afroze from '$lib/assets/images/Afroze.png';
-	import Dharani from '$lib/assets/images/Dharani.png';
+	import AF from '$lib/assets/images/AF.png';
+	import DA from '$lib/assets/images/DA.png';
 </script>
 
 <div
@@ -19,7 +19,7 @@
 			<FounderCard
 				href="https://www.linkedin.com/in/dharani-dharan-pm/"
 				className="rotate-[-4deg] "
-				src={Dharani}
+				src={DA}
 				name="DA"
 				designation="Founder"
 				imgClassname="p-2"
@@ -32,7 +32,7 @@
 			<FounderCard
 				href="https://www.linkedin.com/in/afrze-ali/"
 				className="rotate-[4deg] w-full"
-				src={Afroze}
+				src={AF}
 				name="AF"
 				designation="Co-Founder"
 				imgClassname="p-2"
