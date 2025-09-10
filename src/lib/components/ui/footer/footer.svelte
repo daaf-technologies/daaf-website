@@ -111,12 +111,12 @@
 				<Instagram />
 			</a>
 
-			<a href="https://www.linkedin.com/company/daaf-ae/" target="_blank">
-				<LinkedIn />
-			</a>
-
 			<a href="https://x.com/daaf_ae" target="_blank">
 				<X />
+			</a>
+
+			<a href="https://www.linkedin.com/company/daaf-ae/" target="_blank">
+				<LinkedIn />
 			</a>
 		</div>
 	</div>

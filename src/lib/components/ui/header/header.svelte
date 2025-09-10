@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Close, DAAF, HamburgerMenu, Arrow } from '$lib/assets/icons';
+	import { Close, DAAF, HamburgerMenu, Arrow, MobileArrow } from '$lib/assets/icons';
 	import { goto } from '$app/navigation';
 	import Button from '$lib/components/design/button';
 	// import Dropdown from '$lib/components/design/dropdown';
@@ -57,7 +57,8 @@
 			<a class="about" href="/about-us">
 				<p class="text-base">About us</p>
 				<span>
-					<Arrow width="12" height="12" fill="#C4C8CC" />
+					<!-- <Arrow width="12" height="12" fill="#C4C8CC" /> -->
+					<MobileArrow />
 				</span>
 			</a>
 			<!-- <Dropdown

@@ -1,18 +1,16 @@
 <script>
 	import Button from '$lib/components/design/button';
 	import Header from '../header';
-	import Globe from '$lib/assets/images/globe.png';
-	import World from '$lib/assets/images/world.png';
-	import Mascot from '$lib/assets/images/mascot.png';
-	import Hero from '$lib/assets/images/hero.png';
 </script>
 
 <div class="hero flex w-full flex-col items-center pt-[50px]">
 	<Header />
 
-	<div class="flex flex-col items-center justify-center py-[70px] lg:pb-0">
+	<div class="flex flex-col items-center justify-center py-[70px] lg:pt-[120px] lg:pb-0">
 		<div class="flex flex-col items-center gap-3 pb-[30px]">
-			<p class="title w-[15ch] text-center text-[30px] font-semibold text-[#21231E] lg:text-[64px]">
+			<p
+				class="title w-[15ch] text-center text-[30px] leading-[120%] font-semibold text-[#21231E] lg:text-[64px]"
+			>
 				Building Fearless Tech for Fearless Brands
 			</p>
 
@@ -25,23 +23,12 @@
 		<Button
 			type="button"
 			variant="primary"
-			class="lg:h-[60px] lg:w-[200px]"
+			class="lg:h-[60px] lg:w-fit"
 			onclick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-			>Explore our services</Button
 		>
+			<p class="text-[22px] text-nowrap">Explore our services</p>
+		</Button>
 	</div>
-
-	<!-- <div class="mobile relative w-full">
-		<img src={Globe} alt="globe" class="w-full" />
-
-		<img src={Mascot} alt="mascot" class="absolute top-0 right-[50px]" />
-	</div>
-
-	<div class="desktop relative">
-		<img src={World} alt="globe" class="w-full" />
-
-		<img src={Hero} alt="mascot" class="absolute top-[60px] right-[300px]" />
-	</div> -->
 </div>
 
 <style>
@@ -54,10 +41,6 @@
 	}
 
 	@media (max-width: 768px) {
-		/* .desktop {
-			display: none;
-		} */
-
 		.hero {
 			height: 830px;
 			background-image: url('/src/lib/assets/images/home-hero-mobile.png');
@@ -67,10 +50,6 @@
 	}
 
 	@media (min-width: 1024px) {
-		/* .mobile {
-			display: none;
-		} */
-
 		.hero {
 			height: 1155px;
 			background-image: url('/src/lib/assets/images/home-hero-desktop.png');
