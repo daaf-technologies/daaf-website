@@ -6,6 +6,7 @@
 		className?: string;
 		required?: boolean;
 		pattern?: string;
+		disabled?: boolean;
 		value?: string | number;
 		oninput?: (e: InputEvent) => void;
 	}
@@ -17,6 +18,7 @@
 		className,
 		required,
 		pattern,
+		disabled,
 		oninput,
 		value = $bindable(),
 		...rest
@@ -30,6 +32,7 @@
 	{name}
 	{required}
 	{pattern}
+	{disabled}
 	bind:value
 	{...rest}
 />
