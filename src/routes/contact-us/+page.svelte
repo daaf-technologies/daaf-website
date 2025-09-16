@@ -4,7 +4,6 @@
 	import { Dubai, Location, Shield } from '$lib/assets/icons';
 	import Button from '$lib/components/design/button';
 	import Input from '$lib/components/design/input';
-	import Modal from '$lib/components/design/modal';
 	import Footer from '$lib/components/ui/footer';
 	import Header from '$lib/components/ui/header';
 	import SuccessModal from '$lib/components/ui/success-modal/success-modal.svelte';
@@ -79,7 +78,7 @@
 
 			<form
 				onsubmit={sendEmail}
-				class="contact-form flex flex-col gap-5 rounded-xl border border-[#C4C8CC] px-4 py-6 shadow-[inset_0px_4px_4px_0px_#ffffff40] lg:w-[432px] lg:border-none lg:px-0 lg:py-0"
+				class="contact-form flex flex-col gap-5 rounded-xl border border-[#C4C8CC] px-4 py-6 lg:w-[432px] lg:border-none lg:px-0 lg:py-0"
 			>
 				<p class="text-sm font-normal text-[#21231e]">Please fill these details For Enquiry</p>
 

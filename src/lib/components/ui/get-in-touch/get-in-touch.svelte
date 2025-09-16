@@ -4,7 +4,7 @@
 </script>
 
 <div
-	class="get-in-touch relative flex w-full flex-col items-center gap-[30px] bg-[#CEECD9] pt-[60px]"
+	class="get-in-touch relative flex w-full flex-col items-center gap-[30px] bg-[#CEECD9] pt-[60px] lg:pt-[120px]"
 >
 	<p class="w-[23ch] text-center text-2xl font-medium text-[#243425] lg:w-[25ch] lg:text-[40px]">
 		Big ideas deserve more than talk, they deserve action.
