@@ -1,17 +1,18 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
+	import type { Snippet } from 'svelte';
 
-	import Button from '../button/button.svelte';
+	interface PropType {
+		isOpen: boolean;
+		children: Snippet;
+	}
 
-	let { isOpen = false } = $props();
+	let { isOpen = false, children }: PropType = $props();
 </script>
 
 {#if isOpen}
 	<div class="modal-container">
 		<div class="modal-content">
-			<p>E-mail sent successfully</p>
-
-			<Button variant="secondary" onclick={() => goto('/')}>Go to home</Button>
+			{@render children()}
 		</div>
 	</div>
 {/if}
@@ -27,15 +28,18 @@
 		width: 100%;
 		height: 100%;
 		z-index: 40;
-		background-color: rgba(0, 0, 0, 0.8);
+		backdrop-filter: blur(90px);
 	}
 
 	.modal-content {
+		width: 430px;
+		height: 250px;
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		align-items: center;
+		justify-content: center;
 		background-color: white;
-		padding: 40px;
+		padding: 24px 42px;
 		border-radius: 16px;
 	}
 </style>

@@ -79,7 +79,6 @@
 		position: relative;
 		background-color: #21231e;
 		color: #ffffff;
-		padding: 16px 30px;
 		border: 2px solid #696969;
 		border-radius: 20px;
 		display: flex;
@@ -99,6 +98,7 @@
 	@media (max-width: 768px) {
 		.header {
 			width: 343px;
+			padding: 16px 12px;
 		}
 
 		.mobile-menu {
@@ -130,6 +130,7 @@
 	@media (min-width: 1024px) {
 		.header {
 			width: 646px;
+			padding: 16px 30px;
 			gap: 200px;
 		}
 		.nav {

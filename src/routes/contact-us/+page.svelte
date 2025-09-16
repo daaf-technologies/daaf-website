@@ -7,12 +7,16 @@
 	import Modal from '$lib/components/design/modal';
 	import Footer from '$lib/components/ui/footer';
 	import Header from '$lib/components/ui/header';
+	import SuccessModal from '$lib/components/ui/success-modal/success-modal.svelte';
 
 	let isOpen = $state(false);
+	let name = $state('');
 
 	const SERVICE_ID = 'service_gltmsze';
 	const TEMPLATE_ID = 'template_86u18no';
 	const PUBLIC_KEY = 'Z-D7xiGI2pNVCLGSl';
+
+	$inspect(name, 'name');
 
 	const sendEmail = (e: SubmitEvent) => {
 		e.preventDefault();
@@ -26,6 +30,7 @@
 			.then(
 				() => {
 					console.log('SUCCESS!');
+					isOpen = !isOpen;
 				},
 				(error) => {
 					console.log('FAILED...', error.text);
@@ -80,7 +85,7 @@
 
 				<div class="flex flex-col gap-5">
 					<div class="flex flex-col gap-5 lg:flex-row lg:gap-4">
-						<Input placeholder="Name*" type="text" name="name" />
+						<Input placeholder="Name*" type="text" name="name" bind:value={name} />
 						<Input placeholder="E-mail address*" type="email" name="email" />
 					</div>
 					<div class="relative flex">
@@ -112,12 +117,7 @@
 				></textarea>
 
 				<div class="flex justify-end">
-					<Button
-						variant="primary"
-						type="submit"
-						class="lg:w-[130px]"
-						onclick={() => (isOpen = !isOpen)}>Submit</Button
-					>
+					<Button variant="primary" type="submit" class="lg:w-[130px]">Submit</Button>
 				</div>
 			</form>
 		</div>
@@ -125,7 +125,7 @@
 
 	<Footer />
 
-	<Modal {isOpen} />
+	<SuccessModal {isOpen} />
 </div>
 
 <style>
