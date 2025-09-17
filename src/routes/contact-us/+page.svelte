@@ -8,15 +8,14 @@
 	import Header from '$lib/components/ui/header';
 	import SuccessModal from '$lib/components/ui/success-modal/success-modal.svelte';
 
-	let isOpen = $state(false);
 	let name = $state('');
 	let email = $state('');
 	let phone = $state('');
 	let platform = $state('');
 	let query = $state('');
 
+	let isOpen = $state(false);
 	let sending = $state(false);
-
 	let canSubmit = $derived(
 		name.trim() !== '' &&
 			email.trim() !== '' &&
@@ -28,13 +27,6 @@
 	const SERVICE_ID = 'service_gltmsze';
 	const TEMPLATE_ID = 'template_86u18no';
 	const PUBLIC_KEY = 'Z-D7xiGI2pNVCLGSl';
-
-	$inspect(name, 'name');
-	$inspect(email, 'email');
-	$inspect(phone, 'phone');
-	$inspect(platform, 'platform');
-	$inspect(query, 'query');
-	$inspect(canSubmit, 'canSubmit');
 
 	const sendEmail = async (e: SubmitEvent) => {
 		e.preventDefault();
