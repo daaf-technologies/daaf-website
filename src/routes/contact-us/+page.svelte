@@ -4,33 +4,48 @@
 	import { Dubai, Location, Shield } from '$lib/assets/icons';
 	import Button from '$lib/components/design/button';
 	import Input from '$lib/components/design/input';
-	import Modal from '$lib/components/design/modal';
 	import Footer from '$lib/components/ui/footer';
 	import Header from '$lib/components/ui/header';
+	import SuccessModal from '$lib/components/ui/success-modal/success-modal.svelte';
+
+	let name = $state('');
+	let email = $state('');
+	let phone = $state('');
+	let platform = $state('');
+	let query = $state('');
 
 	let isOpen = $state(false);
+	let sending = $state(false);
+	let canSubmit = $derived(
+		name.trim() !== '' &&
+			email.trim() !== '' &&
+			phone.trim() !== '' &&
+			platform.trim() !== '' &&
+			query.trim() !== ''
+	);
 
 	const SERVICE_ID = 'service_gltmsze';
 	const TEMPLATE_ID = 'template_86u18no';
 	const PUBLIC_KEY = 'Z-D7xiGI2pNVCLGSl';
 
-	const sendEmail = (e: SubmitEvent) => {
+	const sendEmail = async (e: SubmitEvent) => {
 		e.preventDefault();
 
 		const form = e.currentTarget as HTMLFormElement;
 
-		emailjs
-			.sendForm(SERVICE_ID, TEMPLATE_ID, form, {
-				publicKey: PUBLIC_KEY
-			})
-			.then(
-				() => {
-					console.log('SUCCESS!');
-				},
-				(error) => {
-					console.log('FAILED...', error.text);
-				}
-			);
+		if (sending) return;
+		try {
+			sending = true;
+			await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, { publicKey: PUBLIC_KEY });
+			console.log('SUCCESS!');
+			isOpen = true;
+			form.reset();
+			name = email = phone = platform = query = '';
+		} catch (error: any) {
+			console.log('FAILED...', error?.text ?? error);
+		} finally {
+			sending = false;
+		}
 	};
 </script>
 
@@ -74,21 +89,41 @@
 
 			<form
 				onsubmit={sendEmail}
-				class="contact-form flex flex-col gap-5 rounded-xl border border-[#C4C8CC] px-4 py-6 shadow-[inset_0px_4px_4px_0px_#ffffff40] lg:w-[432px] lg:border-none lg:px-0 lg:py-0"
+				aria-busy={sending}
+				class="contact-form flex flex-col gap-5 rounded-xl border border-[#C4C8CC] px-4 py-6 lg:w-[432px] lg:border-none lg:px-0 lg:py-0"
 			>
 				<p class="text-sm font-normal text-[#21231e]">Please fill these details For Enquiry</p>
 
 				<div class="flex flex-col gap-5">
 					<div class="flex flex-col gap-5 lg:flex-row lg:gap-4">
-						<Input placeholder="Name*" type="text" name="name" />
-						<Input placeholder="E-mail address*" type="email" name="email" />
+						<Input
+							placeholder="Name*"
+							type="text"
+							name="name"
+							bind:value={name}
+							disabled={sending}
+						/>
+						<Input
+							placeholder="E-mail address*"
+							type="email"
+							name="email"
+							bind:value={email}
+							disabled={sending}
+						/>
 					</div>
 					<div class="relative flex">
 						<div class="absolute top-[13px] left-[12px] flex items-center justify-center gap-1">
 							<Dubai />
 							<p class="countrycode">+971 -</p>
 						</div>
-						<Input type="tel" placeholder="Phone number*" className="!pl-[90px]" name="phone" />
+						<Input
+							type="tel"
+							placeholder="Phone number*"
+							className="!pl-[90px]"
+							name="phone"
+							bind:value={phone}
+							disabled={sending}
+						/>
 					</div>
 				</div>
 
@@ -102,13 +137,21 @@
 					to.
 				</p>
 
-				<Input placeholder="How you came to know about us*" type="text" name="platform" />
+				<Input
+					placeholder="How you came to know about us*"
+					type="text"
+					name="platform"
+					bind:value={platform}
+					disabled={sending}
+				/>
 
 				<textarea
 					class="h-[135px] w-full resize-none rounded-lg border border-[#d6dee6] bg-white p-3 outline-none placeholder:text-sm placeholder:text-[#51636f] placeholder:opacity-100"
 					name="query"
 					rows="6"
 					placeholder="Write your query here*"
+					bind:value={query}
+					disabled={sending}
 				></textarea>
 
 				<div class="flex justify-end">
@@ -116,7 +159,7 @@
 						variant="primary"
 						type="submit"
 						class="lg:w-[130px]"
-						onclick={() => (isOpen = !isOpen)}>Submit</Button
+						disabled={!canSubmit || sending}>{sending ? 'Submitting...' : 'Submit'}</Button
 					>
 				</div>
 			</form>
@@ -125,7 +168,7 @@
 
 	<Footer />
 
-	<Modal {isOpen} />
+	<SuccessModal {isOpen} />
 </div>
 
 <style>

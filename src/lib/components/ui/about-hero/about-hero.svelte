@@ -9,7 +9,8 @@
 		<p
 			class="title w-[18ch] text-center text-[30px] leading-[120%] font-semibold lg:w-[25ch] lg:text-[64px]"
 		>
-			We Build What the Future Demands
+			We Build What the Future
+			<br /> Demands
 			<span class="hyphen font-light"> - </span>
 			Market Ready Solutions
 		</p>

@@ -4,12 +4,38 @@
 		type: 'text' | 'email' | 'tel';
 		name: string;
 		className?: string;
+		required?: boolean;
+		pattern?: string;
+		disabled?: boolean;
+		value?: string | number;
+		oninput?: (e: InputEvent) => void;
 	}
 
-	const { placeholder, type, name, className }: InputPropsType = $props();
+	let {
+		placeholder,
+		type,
+		name,
+		className,
+		required,
+		pattern,
+		disabled,
+		oninput,
+		value = $bindable(),
+		...rest
+	}: InputPropsType = $props();
 </script>
 
-<input class={`input ${className}`} {placeholder} {type} {name} />
+<input
+	class={`input ${className}`}
+	{placeholder}
+	{type}
+	{name}
+	{required}
+	{pattern}
+	{disabled}
+	bind:value
+	{...rest}
+/>
 
 <style>
 	.input {

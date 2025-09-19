@@ -27,15 +27,15 @@ export const services = [
 		rightTopTitle: 'What you get',
 		rightTopContent: [
 			'Code & DB analysis',
-			'Zero-downtime cut-over',
-			'Microservice transformation',
-			'Team retraining'
+			'Zero-downtime Cut-over',
+			'Microservice Transformation',
+			'Team Retraining'
 		],
 		rightBottomTitle: 'Why DAAF',
 		rightBottomContent: [
 			'Proven Strangler-Fig approach',
-			'Sandbox rehearsals',
-			'Risk-minimized execution'
+			'Sandbox Rehearsals',
+			'Risk-minimized Execution'
 		]
 	},
 
@@ -55,9 +55,9 @@ export const services = [
 		],
 		rightBottomTitle: 'Why DAAF',
 		rightBottomContent: [
-			'TDD-first culture',
-			'Automated DevSecOps pipelines',
-			'Reusable UI libraries'
+			'TDD-first Culture',
+			'Reusable UI Libraries',
+			'Automated DevSecOps Pipelines'
 		]
 	},
 
@@ -68,14 +68,14 @@ export const services = [
 			'We help you deploy and govern LLMs (like OpenAI, Falcon, or custom models) with tuned infrastructure, data pipelines, and compliance controls.',
 		rightTopTitle: 'What you get',
 		rightTopContent: [
-			'Model tuning',
-			'Inference infra',
-			'Prompt engineering',
-			'RAG pipelines',
-			'Compliance toolkit'
+			'Model Tuning',
+			'Inference Infra',
+			'Prompt Engineering',
+			'RAG Pipelines',
+			'Compliance Toolkit'
 		],
 		rightBottomTitle: 'Why DAAF',
-		rightBottomContent: ['In-house eval suite', 'UAE-based data residency', 'Rapid rollout']
+		rightBottomContent: ['In-House Eval Suite', 'Rapid Rollout', 'UAE-based Data Residency']
 	},
 
 	{

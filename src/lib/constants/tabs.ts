@@ -1,5 +1,5 @@
 import { CheckSquareBroken, CodeBrowser, Diamond, FileCode, GitBranch } from '$lib/assets/icons';
-import Card from '$lib/components/ui/card.svelte';
+import Card from '$lib/components/design/card';
 import { services } from './services';
 
 export const tabs = [

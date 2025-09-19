@@ -23,10 +23,10 @@
 		<Button
 			type="button"
 			variant="primary"
-			class="lg:h-[60px] lg:w-fit"
+			class="h-[44px] lg:h-[60px] lg:w-fit"
 			onclick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
 		>
-			<p class="text-[22px] text-nowrap">Explore our services</p>
+			<p class="text-base text-nowrap lg:text-[22px]">Explore our services</p>
 		</Button>
 	</div>
 </div>

@@ -6,7 +6,7 @@
 
 <div
 	id="services"
-	class="flex w-full flex-col items-center justify-center gap-[40px] bg-[#F1F1F1] p-4 py-[60px]"
+	class="flex w-full flex-col items-center justify-center gap-[40px] bg-[#F1F1F1] p-4 py-[60px] lg:py-[120px]"
 >
 	<div class="flex flex-col gap-3">
 		<p class="section-title text-center text-[12px] text-[#38B543] lg:text-[18px]">
