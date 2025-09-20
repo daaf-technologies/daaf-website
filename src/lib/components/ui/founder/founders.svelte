@@ -8,7 +8,9 @@
 	class="flex w-full flex-col items-center gap-2 bg-[#F6F6F6] px-9 py-[60px] lg:h-[1022px] lg:px-[360px] lg:py-[120px]"
 >
 	<p class="section-title text-[12px] text-[#C1A82B] lg:text-[18px]">NO SALES REPS. NO MIDDLEMEN</p>
-	<p class="max-w-[20ch] text-center text-[24px] font-medium sm:max-w-[25ch]">
+	<p
+		class="w-[20ch] text-center text-[24px] font-medium sm:max-w-[25ch] lg:w-[30ch] lg:text-[40px]"
+	>
 		Speak directly to the people who <span class="font-light"> plan and build </span> your solutions
 	</p>
 
