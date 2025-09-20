@@ -12,7 +12,7 @@
 		<p class="section-title text-center text-[12px] text-[#38B543] lg:text-[18px]">
 			WHERE DAAF CREATES IMPACT
 		</p>
-		<p class="lg:text[40px] w-[23ch] text-center text-2xl lg:w-[35ch]">
+		<p class="w-[23ch] text-center text-2xl lg:w-[35ch] lg:text-[40px]">
 			<span class="font-bold"> From legacy modernization to</span>
 			<span class="font-light italic"> AI-driven systems, </span>
 			<span class="font-bold"> we engineer results that matter</span>
