@@ -23,6 +23,7 @@ import Stars from './stars.svelte';
 import Location from './location.svelte';
 import TikTok from './tiktok.svelte';
 import MobileArrow from './mobile-arrow.svelte';
+import Success from './success.svelte';
 
 export {
 	DAAF,
@@ -49,5 +50,6 @@ export {
 	Stars,
 	Location,
 	TikTok,
-	MobileArrow
+	MobileArrow,
+	Success
 };

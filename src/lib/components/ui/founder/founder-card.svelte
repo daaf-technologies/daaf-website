@@ -15,6 +15,7 @@
 
 <a
 	{href}
+	target="_blank"
 	class={`flex flex-col gap-2 rounded-[12px] border-[1.6px] border-white bg-white pb-[24px] ${className}`}
 >
 	<img {src} alt="afroze" class={imgClassname} />

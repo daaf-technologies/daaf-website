@@ -7,42 +7,47 @@
 </script>
 
 <div
-	class="relative flex w-full flex-col items-center justify-center bg-[#F1F1F1] px-4 pt-[60px] pb-[115px] lg:px-[370px] lg:py-[200px]"
+	class="flex w-full flex-col items-center justify-center bg-[#F1F1F1] px-4 pt-[60px] pb-[115px] lg:px-[370px] lg:py-[200px]"
 >
-	<p
-		class="section-title pb-[30px] text-[12px] leading-[132%] text-[#EC5E2A] lg:pb-[40px] lg:text-lg"
-	>
-		BEYOND THE CODE
-	</p>
-
-	<div class="relative flex flex-col gap-6 lg:gap-[50px]">
-		<p class="text-xl leading-[153%] tracking-[-0.4px] lg:w-[40ch]">
-			We started DAAF with a simple belief — great technology isn’t just built, it’s built together.
-			Over the years, we’ve worked alongside brands who wanted more than a vendor; they wanted a
-			partner who understood their
-			<span class="inline-flex w-fit items-center gap-1.5 rounded-[14px] bg-[#93F27D33] px-2 py-1">
-				<Stars />
-				<span class="text-base font-semibold text-[#40BB4A]">challenges</span>
-			</span>, shared their urgency and stayed with them through every stage.
+	<div class="relative">
+		<p
+			class="section-title pb-[30px] text-[12px] leading-[132%] text-[#EC5E2A] lg:pb-[40px] lg:text-lg"
+		>
+			BEYOND THE CODE
 		</p>
+		<div class="flex flex-col gap-6 lg:gap-[50px]">
+			<p class="text-xl leading-[153%] tracking-[-0.4px] lg:w-[40ch]">
+				We started DAAF with a simple belief — great technology isn’t just built, it’s built
+				together. Over the years, we’ve worked alongside brands who wanted more than a vendor; they
+				wanted a partner who understood their
+				<span
+					class="inline-flex w-fit items-center gap-1.5 rounded-[14px] bg-[#93F27D33] px-2 py-1"
+				>
+					<Stars />
+					<span class="text-base font-semibold text-[#40BB4A]">challenges</span>
+				</span>, shared their urgency and stayed with them through every stage.
+			</p>
 
-		<p class="text-xl leading-[153%] tracking-[-0.4px] lg:w-[40ch]">
-			Every collaboration is a shared journey, where we work as an extension of your team — bringing
-			expertise, clarity, and a relentless <span
-				class="inline-flex w-fit items-center gap-1.5 rounded-[14px] bg-[#93F27D33] px-2 py-1"
-			>
-				<Stars />
-				<span class="text-base font-semibold text-[#40BB4A]">focus</span>
-			</span> on results.
-		</p>
+			<p class="text-xl leading-[153%] tracking-[-0.4px] lg:w-[40ch]">
+				Every collaboration is a shared journey, where we work as an extension of your team —
+				bringing expertise, clarity, and a relentless <span
+					class="inline-flex w-fit items-center gap-1.5 rounded-[14px] bg-[#93F27D33] px-2 py-1"
+				>
+					<Stars />
+					<span class="text-base font-semibold text-[#40BB4A]">focus</span>
+				</span> on results.
+			</p>
 
-		<p class="text-xl leading-[153%] tracking-[-0.4px] lg:w-[40ch]">
-			We’re here to understand your world, overcome your challenges, and build
-			<span class="inline-flex w-fit items-center gap-1.5 rounded-[14px] bg-[#93F27D33] px-2 py-1">
-				<Stars />
-				<span class="text-base font-semibold text-[#40BB4A]">solutions</span>
-			</span> that make a difference — for you, your team, and your customers.
-		</p>
+			<p class="text-xl leading-[153%] tracking-[-0.4px] lg:w-[40ch]">
+				We’re here to understand your world, overcome your challenges, and build
+				<span
+					class="inline-flex w-fit items-center gap-1.5 rounded-[14px] bg-[#93F27D33] px-2 py-1"
+				>
+					<Stars />
+					<span class="text-base font-semibold text-[#40BB4A]">solutions</span>
+				</span> that make a difference — for you, your team, and your customers.
+			</p>
+		</div>
 
 		<div class="desktop absolute top-[-70px] right-[-150px]">
 			<img src={BigStar} alt="star" />
