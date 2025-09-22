@@ -63,7 +63,17 @@
 
 	button::before {
 		content: '';
-		background: linear-gradient(45deg, #21221f, #8d8d8d42, #4b4b4b, #21221f);
+		background: linear-gradient(
+			45deg,
+			#434443,
+			#3c3c3b,
+			#353634,
+			#2f302d,
+			#292a27,
+			#242522,
+			#21221f,
+			#434443
+		);
 		position: absolute;
 		top: -2px;
 		left: -2px;
