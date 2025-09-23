@@ -2,28 +2,8 @@
 	import { Close, DAAF, HamburgerMenu, Arrow, MobileArrow } from '$lib/assets/icons';
 	import { goto } from '$app/navigation';
 	import Button from '$lib/components/design/button';
-	// import Dropdown from '$lib/components/design/dropdown';
 
 	let { minimal, className }: { minimal?: boolean; className?: string } = $props();
-
-	// let options = [
-	// 	{
-	// 		icon: UK,
-	// 		label: 'English',
-	// 		value: 'EN'
-	// 	},
-	// 	{
-	// 		icon: Dubai,
-	// 		label: 'Arabic',
-	// 		value: 'AR'
-	// 	}
-	// ];
-
-	// let value = $state('EN');
-
-	// function selectLanguage(lang: string) {
-	// 	value = lang;
-	// }
 
 	let open = $state(false);
 
@@ -37,7 +17,6 @@
 	<div class="nav">
 		{#if !minimal}
 			<a href="/about-us" class="about">About us</a>
-			<!-- <Dropdown variant="primary" {options} {selectLanguage} {value} /> -->
 		{/if}
 		<Button variant="secondary" onclick={() => goto('/contact-us')}>Contact us</Button>
 	</div>
@@ -57,18 +36,10 @@
 			<a class="about" href="/about-us">
 				<p class="text-base">About us</p>
 				<span>
-					<!-- <Arrow width="12" height="12" fill="#C4C8CC" /> -->
 					<MobileArrow />
 				</span>
 			</a>
-			<!-- <Dropdown
-				variant="primary"
-				{options}
-				{selectLanguage}
-				{value}
-				dropdownMenuClassname="static pb-3"
-				dropdownControlClassname="w-full mt-[30px] mb-[12px]"
-			/> -->
+
 			<Button variant="secondary" onclick={() => goto('/contact-us')}>Contact us</Button>
 		</div>
 	{/if}

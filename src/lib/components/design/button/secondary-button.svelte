@@ -32,6 +32,8 @@
 
 <style>
 	button {
+		position: relative;
+		z-index: 0;
 		width: 100%;
 		height: 32px;
 		display: flex;
@@ -45,11 +47,64 @@
 		border-radius: 8px;
 		background: #76f349;
 		border: 2.5px solid #21231e;
+		transition: scale 400ms ease-in-out;
+		/* box-shadow: 0px -2.76px 2.76px 0px #393b37; */
 	}
 
 	button[disabled],
 	button[aria-disabled='true'] {
 		opacity: 0.5;
 		cursor: not-allowed;
+	}
+
+	button::after {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: #76f349;
+		inset: 0;
+		border-radius: inherit;
+		transition: background 300ms ease-in-out;
+	}
+
+	button::before {
+		content: '';
+		background: linear-gradient(45deg, #008000, #38b000, #70e000, #9ef01a, #ccff33, #008000);
+		position: absolute;
+		top: -1px;
+		left: -1px;
+		background-size: 200%;
+		z-index: -1;
+		width: calc(100% + 2px);
+		height: calc(100% + 2px);
+		filter: blur(8px);
+		animation: glowing 20s linear infinite;
+		transition: opacity 0.3s ease-in-out;
+		border-radius: inherit;
+		opacity: 1;
+	}
+
+	@keyframes glowing {
+		0% {
+			background-position: 0 0;
+		}
+
+		50% {
+			background-position: 400% 0;
+		}
+
+		100% {
+			background-position: 0 0;
+		}
+	}
+
+	button:hover::after {
+		background: transparent;
+	}
+
+	button:hover {
+		scale: 1.02;
 	}
 </style>

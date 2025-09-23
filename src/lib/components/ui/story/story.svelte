@@ -9,7 +9,7 @@
 <div
 	class="relative flex w-full flex-col items-center justify-center bg-[#F1F1F1] px-4 pt-[60px] pb-[115px] lg:px-[370px] lg:py-[200px]"
 >
-	<div class="">
+	<div>
 		<p
 			class="section-title pb-[30px] text-[12px] leading-[132%] text-[#EC5E2A] lg:pb-[40px] lg:text-lg"
 		>
@@ -48,14 +48,14 @@
 				</span> that make a difference — for you, your team, and your customers.
 			</p>
 		</div>
+	</div>
 
-		<div class="desktop absolute top-[-70px] right-[-150px]">
-			<img src={BigStar} alt="star" />
-		</div>
+	<div class="desktop absolute top-[180px] right-[300px]">
+		<img src={BigStar} alt="star" />
+	</div>
 
-		<div class="desktop absolute bottom-0 left-[-180px]">
-			<img src={Story} alt="story" />
-		</div>
+	<div class="desktop absolute bottom-[200px] left-[200px]">
+		<img src={Story} alt="story" />
 	</div>
 
 	<div class="mobile absolute bottom-0 left-0">
