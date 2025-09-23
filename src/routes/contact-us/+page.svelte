@@ -24,7 +24,7 @@
 			query.trim() !== ''
 	);
 
-	const SERVICE_ID = 'service_gltmsze';
+	const SERVICE_ID = 'service_92drs3v';
 	const TEMPLATE_ID = 'template_86u18no';
 	const PUBLIC_KEY = 'Z-D7xiGI2pNVCLGSl';
 
