@@ -48,6 +48,7 @@
 		background: #76f349;
 		border: 2.5px solid #21231e;
 		transition: scale 400ms ease-in-out;
+		/* box-shadow: 0px -2.76px 2.76px 0px #393b37; */
 	}
 
 	button[disabled],

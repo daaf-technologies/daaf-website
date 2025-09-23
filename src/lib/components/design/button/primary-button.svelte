@@ -38,6 +38,10 @@
 		color: #fff;
 		padding: 8px 16px;
 		border-radius: 16px;
+		box-shadow:
+			0px 0px 0px 2.76px #8d8d8d42,
+			0px 0px 0px 2.76px #4b4b4b inset,
+			0px -2.76px 2.76px 0px #21221f inset;
 		background: #21231e;
 		border: 1.5px solid #21231e;
 		transition: scale 400ms ease-in-out;
@@ -58,6 +62,9 @@
 		background-color: #21231e;
 		inset: 0;
 		border-radius: inherit;
+		box-shadow:
+			0px 0px 0px 2.76px #4b4b4b inset,
+			0px -2.76px 2.76px 0px #21221f inset;
 		transition: background 400ms ease-in-out;
 	}
 
