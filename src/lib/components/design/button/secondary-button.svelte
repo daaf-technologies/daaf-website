@@ -72,12 +72,12 @@
 		content: '';
 		background: linear-gradient(45deg, #008000, #38b000, #70e000, #9ef01a, #ccff33, #008000);
 		position: absolute;
-		top: -2px;
-		left: -2px;
-		background-size: 400%;
+		top: -1px;
+		left: -1px;
+		background-size: 200%;
 		z-index: -1;
-		width: calc(100% + 4px);
-		height: calc(100% + 4px);
+		width: calc(100% + 2px);
+		height: calc(100% + 2px);
 		filter: blur(8px);
 		animation: glowing 20s linear infinite;
 		transition: opacity 0.3s ease-in-out;
@@ -104,6 +104,6 @@
 	}
 
 	button:hover {
-		scale: 1.08;
+		scale: 1.02;
 	}
 </style>
