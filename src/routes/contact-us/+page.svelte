@@ -49,6 +49,18 @@
 	};
 </script>
 
+<svelte:head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-L06688S0CR"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'G-L06688S0CR');
+	</script>
+</svelte:head>
+
 <div class="h-full w-full">
 	<div
 		class="wrapper flex h-full max-w-full flex-col items-center overflow-y-auto px-4 py-[50px] backdrop-blur-[620px] lg:gap-[140px] lg:px-[200px]"

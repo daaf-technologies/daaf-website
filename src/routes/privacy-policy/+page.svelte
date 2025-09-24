@@ -4,6 +4,18 @@
 	import Header from '$lib/components/ui/header/header.svelte';
 </script>
 
+<svelte:head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-L06688S0CR"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'G-L06688S0CR');
+	</script>
+</svelte:head>
+
 <div class="privacy-policy flex w-full flex-col items-center pt-[50px]">
 	<Header />
 

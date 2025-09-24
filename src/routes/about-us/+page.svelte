@@ -6,6 +6,18 @@
 	import Story from '$lib/components/ui/story/story.svelte';
 </script>
 
+<svelte:head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-L06688S0CR"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'G-L06688S0CR');
+	</script>
+</svelte:head>
+
 <div class="flex w-full flex-col items-center justify-center">
 	<AboutHero />
 	<Story />
