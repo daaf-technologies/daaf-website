@@ -152,6 +152,7 @@
 	}
 	@media (max-width: 768px) {
 		.footer-container {
+			width: 100%;
 			padding: 0 16px;
 			background-color: #03100e;
 			color: #c4c8cc;

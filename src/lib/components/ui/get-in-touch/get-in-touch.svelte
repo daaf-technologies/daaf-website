@@ -1,6 +1,8 @@
 <script>
-	import { goto } from '$app/navigation';
 	import Button from '$lib/components/design/button';
+	import GetInTouchMascot from '$lib/assets/images/get-in-touch-mascot.png';
+	import GetInTouchMascotMobile from '$lib/assets/images/get-in-touch-mascot-mobile.png';
+	import StickyNote from '$lib/assets/images/sticky-note.png';
 </script>
 
 <div
@@ -17,23 +19,117 @@
 			>Get In Touch</Button
 		>
 	</a>
+
+	<img class="sticky-note absolute left-[200px]" src={StickyNote} alt="sticky-note" />
+
+	<img class="mascot absolute bottom-0" src={GetInTouchMascot} alt="mascot" />
+
+	<!-- <img class="absolute bottom-0 w-full" src={GetInTouchMascotMobile} alt="mascot" /> -->
 </div>
 
 <style>
+	.get-in-touch {
+		background-image: url('/src/lib/assets/images/get-in-touch-bg.png');
+		background-size: cover;
+	}
 	@media (max-width: 768px) {
+		.sticky-note {
+			width: 140px;
+			height: 130px;
+			top: 300px;
+			left: 50px;
+		}
 		.get-in-touch {
 			height: 617px;
-			background-image: url('/src/lib/assets/images/get-in-touch-mobile.png');
-			background-size: cover;
-			background-position: center;
 		}
+
+		.mascot {
+			height: 250px;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	@media (min-width: 770px) and (max-width: 1020px) {
 	}
 	@media (min-width: 1024px) {
 		.get-in-touch {
-			height: 923px;
-			background-image: url('/src/lib/assets/images/get-in-touch-desktop.png');
-			background-size: cover;
-			background-position: center;
+			min-height: 1000px;
+		}
+
+		.sticky-note {
+			top: 100px;
+			left: 30px;
+		}
+	}
+
+	@media (min-width: 1240px) {
+		.sticky-note {
+			top: 100px;
+			left: 130px;
+		}
+	}
+
+	@media (min-width: 1500px) {
+		.sticky-note {
+			top: 100px;
+			left: 250px;
+		}
+	}
+
+	@media (min-width: 1600px) {
+		.sticky-note {
+			top: 100px;
+			left: 350px;
+		}
+	}
+
+	@media (min-width: 1800px) {
+		.sticky-note {
+			top: 100px;
+			left: 400px;
+		}
+	}
+
+	@media (min-width: 1900px) {
+		.sticky-note {
+			top: 100px;
+			left: 450px;
+		}
+	}
+
+	@media (min-width: 2000px) {
+		.sticky-note {
+			top: 100px;
+			left: 500px;
+		}
+	}
+
+	@media (min-width: 2200px) {
+		.sticky-note {
+			top: 100px;
+			left: 620px;
+		}
+	}
+
+	@media (min-width: 2500px) {
+		.sticky-note {
+			top: 100px;
+			left: 780px;
+		}
+	}
+
+	@media (min-width: 3000px) {
+		.sticky-note {
+			top: 100px;
+			left: 1000px;
+		}
+	}
+
+	@media (min-width: 3500px) {
+		.sticky-note {
+			top: 100px;
+			left: 1400px;
 		}
 	}
 </style>
