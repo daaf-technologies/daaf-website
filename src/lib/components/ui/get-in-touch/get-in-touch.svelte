@@ -1,7 +1,6 @@
 <script>
 	import Button from '$lib/components/design/button';
 	import GetInTouchMascot from '$lib/assets/images/get-in-touch-mascot.png';
-	import GetInTouchMascotMobile from '$lib/assets/images/get-in-touch-mascot-mobile.png';
 	import StickyNote from '$lib/assets/images/sticky-note.png';
 </script>
 
@@ -23,8 +22,6 @@
 	<img class="sticky-note absolute left-[200px]" src={StickyNote} alt="sticky-note" />
 
 	<img class="mascot absolute bottom-0" src={GetInTouchMascot} alt="mascot" />
-
-	<!-- <img class="absolute bottom-0 w-full" src={GetInTouchMascotMobile} alt="mascot" /> -->
 </div>
 
 <style>
