@@ -1,9 +1,9 @@
 <script>
-	import Founders from '$lib/components/ui/founder/founders.svelte';
-	import GetInTouch from '$lib/components/ui/get-in-touch/get-in-touch.svelte';
-	import Footer from '$lib/components/ui/footer/footer.svelte';
-	import AboutHero from '$lib/components/ui/about-hero/about-hero.svelte';
-	import Story from '$lib/components/ui/story/story.svelte';
+	import Founders from '$lib/components/ui/founder';
+	import GetInTouch from '$lib/components/ui/get-in-touch';
+	import Footer from '$lib/components/ui/footer';
+	import AboutHero from '$lib/components/ui/about-hero';
+	import Story from '$lib/components/ui/story';
 </script>
 
 <svelte:head>

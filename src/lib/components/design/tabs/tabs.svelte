@@ -82,12 +82,8 @@
 		gap: 12px;
 		overflow-x: auto;
 		white-space: nowrap;
-		/* padding: 0 48px; */
 	}
 
-	.tabs-content {
-		padding: 0 150px;
-	}
 	.tab-item {
 		padding: 10px 12px;
 		border: 1px solid #c4c8cc;
@@ -112,5 +108,28 @@
 
 	.tab-item.tab-item.active:hover {
 		background-color: #000;
+	}
+
+	/* Added this to avoid the scroll, but it looks ugly though */
+	@media (min-width: 1024px) {
+		.tabs-header {
+			gap: 8px;
+		}
+
+		.tab-item {
+			padding: 10px 4px;
+			gap: 4px;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.tabs-header {
+			gap: 12px;
+		}
+
+		.tab-item {
+			padding: 10px 12px;
+			gap: 8px;
+		}
 	}
 </style>
