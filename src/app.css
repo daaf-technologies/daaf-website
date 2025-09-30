@@ -234,6 +234,42 @@
 	font-display: swap;
 }
 
+/* Stacion Regular */
+@font-face {
+	font-family: 'Stacion';
+	src: url('/src/lib/assets/fonts/stacion/stacion-regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Stacion Regular Italic */
+@font-face {
+	font-family: 'Stacion';
+	src: url('/src/lib/assets/fonts/stacion/stacion-italic.otf') format('opentype');
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+/* Stacion Light */
+@font-face {
+	font-family: 'Stacion';
+	src: url('/src/lib/assets/fonts/stacion/stacion-light.otf') format('opentype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Stacion Light Italic */
+@font-face {
+	font-family: 'Stacion';
+	src: url('/src/lib/assets/fonts/stacion/stacion-light-italic.otf') format('opentype');
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
 body {
 	font-family:
 		'Inter Variable', 'Recoleta', 'Recoleta Alt', 'Departure Mono', 'Neurial Grotesk', system-ui,
