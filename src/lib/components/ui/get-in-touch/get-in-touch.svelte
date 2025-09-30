@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="get-in-touch relative flex w-full flex-col items-center gap-[30px] bg-[#CEECD9] pt-[60px] lg:pt-[120px]"
+	class="get-in-touch relative flex w-full flex-col items-center gap-[30px] bg-[#CEECD9] pt-[60px] md:pt-[120px]"
 >
 	<p
 		class="title w-[23ch] text-center text-2xl font-medium text-[#243425] md:w-[25ch] lg:text-[40px]"
