@@ -168,7 +168,7 @@
 			justify-content: center;
 			gap: 90px;
 			padding: 0 60px;
-			width: 1110px;
+			width: 1000px;
 			height: 415px;
 		}
 
