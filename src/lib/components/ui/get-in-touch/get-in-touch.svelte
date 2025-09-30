@@ -8,11 +8,11 @@
 	class="get-in-touch relative flex w-full flex-col items-center gap-[30px] bg-[#CEECD9] pt-[60px] lg:pt-[120px]"
 >
 	<p
-		class="title w-[23ch] text-center text-2xl font-medium text-[#243425] lg:w-[25ch] lg:text-[40px]"
+		class="title w-[23ch] text-center text-2xl font-medium text-[#243425] md:w-[25ch] lg:text-[40px]"
 	>
 		Big ideas deserve more than talk, they deserve action.
 
-		<span class="font-light"> Be the brand that leads, not follows. </span>
+		<span class="font-[stacion] font-light italic"> Be the brand that leads, not follows. </span>
 	</p>
 
 	<a href="/contact-us" target="_blank" class="contact-link">
@@ -57,7 +57,7 @@
 		}
 	}
 
-	@media (min-width: 770px) {
+	@media (min-width: 820px) {
 		.get-in-touch {
 			min-height: 1000px;
 		}
@@ -76,6 +76,7 @@
 		.mascot {
 			bottom: 0;
 			object-fit: none;
+			object-position: 28%;
 			width: 100%;
 			height: 580px;
 		}
@@ -92,28 +93,42 @@
 			top: 65px;
 			left: 18px;
 		}
+
+		.mascot {
+			object-position: 17%;
+		}
 	}
 
-	@media (min-width: 1020px) {
-	}
 	@media (min-width: 1024px) {
 		.sticky-note {
 			top: 100px;
 			left: 30px;
 		}
+
+		.mascot {
+			object-position: 6%;
+		}
 	}
 
-	@media (min-width: 1240px) {
+	@media (min-width: 1280px) {
 		.sticky-note {
 			top: 100px;
 			left: 130px;
 		}
+
+		.mascot {
+			object-position: right;
+		}
 	}
 
-	@media (min-width: 1500px) {
+	@media (min-width: 1512px) {
 		.sticky-note {
 			top: 100px;
 			left: 250px;
+		}
+
+		.mascot {
+			object-position: right;
 		}
 	}
 
@@ -121,6 +136,9 @@
 		.sticky-note {
 			top: 100px;
 			left: 350px;
+		}
+		.mascot {
+			object-position: center;
 		}
 	}
 
