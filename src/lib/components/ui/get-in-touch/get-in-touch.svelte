@@ -85,6 +85,15 @@
 		}
 	}
 
+	@media (min-width: 960px) {
+		.sticky-note {
+			width: 249px;
+			height: 234px;
+			top: 65px;
+			left: 18px;
+		}
+	}
+
 	@media (min-width: 1020px) {
 	}
 	@media (min-width: 1024px) {
