@@ -1,8 +1,3 @@
-<script lang="ts">
-	// import Technologies from '$lib/assets/images/technologies.png';
-	// import Stack from '$lib/assets/images/stack.png';
-</script>
-
 <div
 	class="technologies flex w-full flex-col items-center justify-center gap-[40px] bg-[#F9FAFC] py-[60px] lg:py-[150px]"
 >

@@ -1,22 +1,20 @@
 <script>
 	import { Stars } from '$lib/assets/icons';
-	import Star from '$lib/assets/images/star2.png';
-	import BigStar from '$lib/assets/images/big-star.png';
-	import About from '$lib/assets/images/about.png';
-	import Story from '$lib/assets/images/story.png';
+	import Star from '$lib/assets/images/star-big.svg';
+	import Story from '$lib/assets/images/mascot-story.svg';
 </script>
 
 <div
-	class="relative flex w-full flex-col items-center justify-center bg-[#F1F1F1] px-4 pt-[60px] pb-[115px] lg:px-[370px] lg:py-[200px]"
+	class="relative flex w-full flex-col items-center justify-center overflow-hidden bg-[#F1F1F1] px-4 pt-[60px] pb-[115px] lg:px-[370px] lg:py-[200px]"
 >
 	<div>
 		<p
-			class="section-title pb-[30px] text-[12px] leading-[132%] text-[#EC5E2A] lg:pb-[40px] lg:text-lg"
+			class="section-title pb-[30px] text-[12px] leading-[132%] tracking-[6.6px] text-[#EC5E2A] lg:pb-[40px] lg:text-lg"
 		>
 			BEYOND THE CODE
 		</p>
 		<div class="flex flex-col gap-6 lg:gap-[50px]">
-			<p class="text-xl leading-[153%] tracking-[-0.4px] lg:w-[40ch]">
+			<p class="text-xl leading-[153%] tracking-[-0.4px] text-[#21231E] lg:w-[40ch]">
 				We started DAAF with a simple belief — great technology isn’t just built, it’s built
 				together. Over the years, we’ve worked alongside brands who wanted more than a vendor; they
 				wanted a partner who understood their
@@ -28,7 +26,7 @@
 				</span>, shared their urgency and stayed with them through every stage.
 			</p>
 
-			<p class="text-xl leading-[153%] tracking-[-0.4px] lg:w-[40ch]">
+			<p class="text-xl leading-[153%] tracking-[-0.4px] text-[#21231E] lg:w-[40ch]">
 				Every collaboration is a shared journey, where we work as an extension of your team —
 				bringing expertise, clarity, and a relentless <span
 					class="inline-flex w-fit items-center gap-1.5 rounded-[14px] bg-[#93F27D33] px-2 py-1"
@@ -38,7 +36,7 @@
 				</span> on results.
 			</p>
 
-			<p class="text-xl leading-[153%] tracking-[-0.4px] lg:w-[40ch]">
+			<p class="text-xl leading-[153%] tracking-[-0.4px] text-[#21231E] lg:w-[40ch]">
 				We’re here to understand your world, overcome your challenges, and build
 				<span
 					class="inline-flex w-fit items-center gap-1.5 rounded-[14px] bg-[#93F27D33] px-2 py-1"
@@ -50,21 +48,17 @@
 		</div>
 	</div>
 
-	<div class="desktop absolute top-[180px] right-[300px]">
-		<img src={BigStar} alt="star" />
-	</div>
-
-	<div class="desktop absolute bottom-[200px] left-[200px]">
-		<img src={Story} alt="story" />
-	</div>
-
-	<div class="mobile absolute bottom-0 left-0">
-		<img src={About} alt="mascot" class="items-start" width="70" />
-	</div>
-
-	<div class="mobile absolute top-[40px] right-4">
+	<div class="star absolute">
 		<img src={Star} alt="star" />
 	</div>
+	<!-- 94 x 111 -->
+	<!-- 38 x 46 -->
+
+	<div class="mascot absolute">
+		<img src={Story} alt="story" />
+	</div>
+	<!-- 145 x 219 -->
+	<!-- 120 x 190 -->
 </div>
 
 <style>
@@ -73,14 +67,119 @@
 	}
 
 	@media (max-width: 768px) {
-		.desktop {
-			display: none;
+		.star {
+			width: 38px;
+			height: 46px;
+			top: 40px;
+			right: 6px;
+		}
+
+		.mascot {
+			width: 110px;
+			height: 190px;
+			bottom: -80px;
+			left: -45px;
 		}
 	}
 
 	@media (min-width: 1024px) {
-		.mobile {
-			display: none;
+		.star {
+			top: 180px;
+			right: 200px;
+		}
+
+		.mascot {
+			bottom: 240px;
+			left: 80px;
+		}
+	}
+
+	@media (min-width: 1240px) {
+		.star {
+			right: 315px;
+		}
+
+		.mascot {
+			left: 200px;
+		}
+	}
+
+	@media (min-width: 1440px) {
+		.star {
+			right: 435px;
+		}
+
+		.mascot {
+			left: 300px;
+		}
+	}
+
+	@media (min-width: 1700px) {
+		.star {
+			right: 550px;
+		}
+
+		.mascot {
+			left: 420px;
+		}
+	}
+
+	@media (min-width: 1900px) {
+		.star {
+			right: 620px;
+		}
+
+		.mascot {
+			left: 500px;
+		}
+	}
+
+	@media (min-width: 2048px) {
+		.star {
+			right: 700px;
+		}
+
+		.mascot {
+			left: 580px;
+		}
+	}
+
+	@media (min-width: 2240px) {
+		.star {
+			right: 800px;
+		}
+
+		.mascot {
+			left: 680px;
+		}
+	}
+	@media (min-width: 2500px) {
+		.star {
+			right: 950px;
+		}
+
+		.mascot {
+			left: 850px;
+		}
+	}
+
+	@media (min-width: 3000px) {
+		.star {
+			right: 1200px;
+		}
+
+		.mascot {
+			left: 1100px;
+		}
+	}
+
+	@media (min-width: 3800px) {
+		.star {
+			right: 1550px;
+		}
+
+		.mascot {
+			left: 1450px;
 		}
 	}
 </style>
