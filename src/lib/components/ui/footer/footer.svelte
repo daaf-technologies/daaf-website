@@ -54,27 +54,27 @@
 			</p>
 		</div>
 		<div class="bottom-right">
-			<a href="https://www.tiktok.com/@daaf.ae" target="_blank" class="tiktok">
+			<a href="https://www.tiktok.com/@daaf.ae" target="_blank" class="icon tiktok">
 				<TikTok />
 			</a>
 
-			<a href="https://facebook.com/daaf.uae" target="_blank" class="facebook">
+			<a href="https://facebook.com/daaf.uae" target="_blank" class="icon facebook">
 				<Facebook />
 			</a>
 
-			<a href="https://www.instagram.com/daaf_ae/" target="_blank" class="instagram">
+			<a href="https://www.instagram.com/daaf_ae/" target="_blank" class="icon instagram">
 				<Instagram />
 			</a>
 
-			<a href="https://x.com/daaf_ae" target="_blank" class="x">
+			<a href="https://x.com/daaf_ae" target="_blank" class="icon x">
 				<X />
 			</a>
 
-			<a href="https://www.linkedin.com/company/daaf-ae/" target="_blank" class="linkedin">
+			<a href="https://www.linkedin.com/company/daaf-ae/" target="_blank" class="icon linkedin">
 				<LinkedIn />
 			</a>
 
-			<a href="https://www.threads.com/@daaf_ae" target="_blank" class="threads">
+			<a href="https://www.threads.com/@daaf_ae" target="_blank" class="icon threads">
 				<Threads />
 			</a>
 		</div>
@@ -143,7 +143,7 @@
 			display: flex;
 			flex-direction: column;
 			gap: 40px;
-			padding-bottom: 60px;
+			padding-bottom: 40px;
 		}
 
 		.top-right-first {
@@ -152,23 +152,24 @@
 			margin-right: 20px;
 		}
 
-		.top-right-content {
-			font-size: 20px;
-		}
-
 		.top-right-list {
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
 		}
 
-		.top-right-second {
-			width: 100%;
+		.top-right-title {
+			line-height: 100%;
+			letter-spacing: 15.3%;
 		}
 
-		.bottom-right {
-			display: flex;
-			gap: 40px;
+		.top-right-content {
+			font-size: 20px;
+			line-height: 100%;
+		}
+
+		.top-right-second {
+			width: 100%;
 		}
 
 		.footer-bottom {
@@ -192,10 +193,26 @@
 		.bottom-left-content {
 			font-size: 14px;
 			color: #c4c8cc;
+			width: 32ch;
 		}
 
+		.bottom-right {
+			display: flex;
+			gap: 30px;
+		}
+
+		.icon {
+			width: 32px;
+			height: 32px;
+		}
+
+		.address {
+			font-size: 20px;
+			line-height: 150%;
+		}
 		.copyright {
 			padding: 30px 0;
+			line-height: 100%;
 		}
 	}
 
@@ -291,6 +308,11 @@
 			gap: 36px;
 		}
 
+		.icon {
+			width: 36px;
+			height: 36px;
+		}
+
 		.copyright {
 			padding: 30px 0 50px;
 			line-height: 100%;
@@ -384,6 +406,12 @@
 		}
 		.copyright {
 			padding: 30px 0;
+		}
+	}
+
+	@media (min-width: 1440px) {
+		.footer-container {
+			padding: 90px 165px 0;
 		}
 	}
 </style>
