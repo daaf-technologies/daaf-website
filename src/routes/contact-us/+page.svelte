@@ -68,7 +68,7 @@
 		<Header className="header w-[343px] lg:w-[646px] !gap-[72px]" />
 		<div class="md:flex md:gap-[50px] md:pt-[60px] md:pb-[100px] lg:gap-[40px] xl:gap-[118px]">
 			<div
-				class="description flex flex-col gap-3 pt-[70px] pb-[40px] md:w-[240px] md:pt-0 md:pb-0 lg:w-fit lg:gap-5 xl:w-[530px]"
+				class="description flex flex-col gap-3 pt-[70px] pb-[40px] md:w-[250px] md:pt-0 md:pb-0 lg:w-fit lg:gap-5 xl:w-[530px]"
 			>
 				<div
 					class="title text-center text-[30px] leading-[120%] font-semibold text-[#21231e] md:w-[10ch] md:text-left md:leading-[120%] md:tracking-[-2px] lg:text-left lg:text-[40px] xl:text-[50px]"
