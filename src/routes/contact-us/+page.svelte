@@ -66,7 +66,9 @@
 		class="wrapper flex h-full max-w-full flex-col items-center overflow-y-auto px-4 py-[50px] backdrop-blur-[620px] md:px-[60px] lg:gap-[140px] lg:px-[90px]"
 	>
 		<Header className="header w-[343px] lg:w-[646px] !gap-[72px]" />
-		<div class="md:flex md:gap-[50px] md:pt-[60px] md:pb-[100px] lg:gap-[40px] xl:gap-[118px]">
+		<div
+			class="content md:flex md:gap-[50px] md:pt-[60px] lg:gap-[40px] lg:pb-[100px] xl:gap-[118px]"
+		>
 			<div
 				class="description flex flex-col gap-3 pt-[70px] pb-[40px] md:w-[250px] md:pt-0 md:pb-0 lg:w-fit lg:gap-5 xl:w-[530px]"
 			>
@@ -220,6 +222,9 @@
 	}
 
 	@media (width: 768px) {
+		/* .content {
+			padding-bottom: 0;
+		} */
 		.name {
 			width: 150px;
 		}
