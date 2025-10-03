@@ -68,7 +68,7 @@
 		<Header className="header w-[343px] lg:w-[646px] !gap-[72px]" />
 		<div class="md:flex md:gap-[50px] md:pt-[60px] md:pb-[100px] lg:gap-[40px] xl:gap-[118px]">
 			<div
-				class="description flex flex-col gap-3 pt-[70px] pb-[40px] md:pt-0 md:pb-0 lg:w-fit lg:gap-5 xl:w-[530px]"
+				class="description flex flex-col gap-3 pt-[70px] pb-[40px] md:w-[240px] md:pt-0 md:pb-0 lg:w-fit lg:gap-5 xl:w-[530px]"
 			>
 				<div
 					class="title text-center text-[30px] leading-[120%] font-semibold text-[#21231e] md:w-[10ch] md:text-left md:leading-[120%] md:tracking-[-2px] lg:text-left lg:text-[40px] xl:text-[50px]"
@@ -93,7 +93,9 @@
 						</p>
 					</div>
 
-					<p class="lg-text-base w-[26ch] text-left text-base text-[#696969] md:text-sm">
+					<p
+						class="lg-text-base w-[26ch] text-center text-base text-[#696969] md:text-left md:text-sm"
+					>
 						Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba, Dubai, U.A.E.
 					</p>
 				</div>
@@ -102,30 +104,33 @@
 			<form
 				onsubmit={sendEmail}
 				aria-busy={sending}
-				class="contact-form flex flex-col gap-5 rounded-xl border border-[#C4C8CC] px-4 py-6 md:w-[350px]! md:border-none md:px-0 md:py-0 lg:w-[432px] lg:border-none lg:px-0 lg:py-0"
+				class="contact-form flex flex-col gap-5 rounded-xl border border-[#C4C8CC] px-4 py-6 md:border-none md:px-0 md:py-0 lg:w-[432px] lg:border-none lg:px-0 lg:py-0"
 			>
 				<p class="text-sm font-normal text-[#21231e]">Please fill these details For Enquiry</p>
 
 				<div class="flex flex-col gap-5">
 					<div class="flex flex-col gap-5 md:flex-row lg:flex-row lg:gap-4">
-						<Input
-							placeholder="Name*"
-							type="text"
-							name="name"
-							bind:value={name}
-							disabled={sending}
-							className="md:w-[190px]!"
-						/>
-						<Input
-							placeholder="E-mail address*"
-							type="email"
-							name="email"
-							bind:value={email}
-							disabled={sending}
-							className="md:w-[190px]!"
-						/>
+						<div class="name">
+							<Input
+								placeholder="Name*"
+								type="text"
+								name="name"
+								bind:value={name}
+								disabled={sending}
+							/>
+						</div>
+
+						<div class="email">
+							<Input
+								placeholder="E-mail address*"
+								type="email"
+								name="email"
+								bind:value={email}
+								disabled={sending}
+							/>
+						</div>
 					</div>
-					<div class="relative flex md:w-[400px]">
+					<div class="phone relative flex">
 						<div class="absolute top-[13px] left-[12px] flex items-center justify-center gap-1">
 							<Dubai />
 							<p class="countrycode">+971 -</p>
@@ -142,7 +147,7 @@
 				</div>
 
 				<p
-					class="flex items-baseline justify-center gap-3 rounded-lg border border-white bg-[#d9ffdc66] p-3 text-sm text-[#69747d] md:w-[400px]"
+					class="promise flex items-baseline justify-center gap-3 rounded-lg border border-white bg-[#d9ffdc66] p-3 text-sm text-[#69747d] md:w-[400px]"
 				>
 					<span>
 						<Shield />
@@ -151,17 +156,18 @@
 					to.
 				</p>
 
-				<Input
-					placeholder="How you came to know about us*"
-					type="text"
-					name="platform"
-					bind:value={platform}
-					disabled={sending}
-					className="md:w-[400px]!"
-				/>
+				<div class="platform">
+					<Input
+						placeholder="How you came to know about us*"
+						type="text"
+						name="platform"
+						bind:value={platform}
+						disabled={sending}
+					/>
+				</div>
 
 				<textarea
-					class="h-[135px] w-full resize-none rounded-lg border border-[#d6dee6] bg-white p-3 outline-none placeholder:text-sm placeholder:text-[#51636f] placeholder:opacity-100 md:w-[400px]"
+					class="query h-[135px] w-full resize-none rounded-lg border border-[#d6dee6] bg-white p-3 outline-none placeholder:text-sm placeholder:text-[#51636f] placeholder:opacity-100"
 					name="query"
 					rows="6"
 					placeholder="Write your query here*"
@@ -207,9 +213,44 @@
 		font-family: 'Departure Mono';
 	}
 
-	@media (max-width: 360px) {
+	@media (max-width: 360px) and (max-width: 768px) {
 		.wrapper {
 			padding: 8px;
+		}
+	}
+
+	@media (width: 768px) {
+		.name {
+			width: 150px;
+		}
+
+		.email {
+			width: 150px;
+		}
+		.phone {
+			max-width: 324px !important;
+		}
+
+		.promise {
+			max-width: 324px !important;
+		}
+
+		.platform {
+			max-width: 324px !important;
+		}
+
+		.query {
+			max-width: 324px;
+		}
+	}
+
+	@media (min-width: 820px) {
+		.phone {
+			min-width: 400px !important;
+		}
+
+		.query {
+			min-width: 400px;
 		}
 	}
 </style>
