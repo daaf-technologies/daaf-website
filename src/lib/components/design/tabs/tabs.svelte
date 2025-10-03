@@ -86,7 +86,7 @@
 	}
 
 	.tabs-content {
-		padding: 0 150px;
+		padding: 0 90px;
 	}
 	.tab-item {
 		padding: 10px 12px;
