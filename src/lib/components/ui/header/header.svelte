@@ -18,9 +18,9 @@
 		{#if !minimal}
 			<a href="/about-us" class="about">About us</a>
 
-			<a href="/blogs" class="blogs">Blogs</a>
+			<a href="/coming-soon" class="blogs">Blogs</a>
 
-			<a href="/case-study" class="cases">Case Study</a>
+			<a href="/coming-soon" class="cases">Case Study</a>
 		{/if}
 	</div>
 
@@ -188,8 +188,5 @@
 			line-height: 16px;
 			font-weight: 300;
 		}
-	}
-
-	@media (min-width: 1024px) {
 	}
 </style>
