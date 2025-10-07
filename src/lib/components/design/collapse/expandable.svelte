@@ -10,8 +10,17 @@
 <div>
 	<div class="collapse-wrapper">
 		<button class="collapse-header" onclick={() => (open = !open)}>
-			<div class="text-base font-medium text-nowrap text-[#21231E] lg:text-[20px]">
-				{id}. {title}
+			<div
+				class="flex items-center gap-[6px] text-base font-medium text-nowrap text-[#21231E] lg:text-[20px]"
+			>
+				{#if id}
+					{@const Id = id}
+					<Id stroke="black" />
+				{/if}
+
+				<p class="leading-[100%] font-normal tracking-[2%] text-[#51636F]">
+					{title}
+				</p>
 			</div>
 
 			<div class="icon" class:open>

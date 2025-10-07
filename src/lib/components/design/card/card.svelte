@@ -32,7 +32,7 @@
 			</p>
 			<p class="right-top-content">
 				{#each rightTopContent as item}
-					<span class="border px-3 py-2 text-sm">{item}</span>
+					<span class="item tracking-[-0.25px]">{item}</span>
 				{/each}
 			</p>
 		</div>
@@ -42,7 +42,7 @@
 			</p>
 			<p class="right-bottom-content">
 				{#each rightBottomContent as item}
-					<span class="border px-3 py-2 text-sm">{item}</span>
+					<span class="item tracking-[-0.25px]">{item}</span>
 				{/each}
 			</p>
 		</div>
@@ -66,10 +66,15 @@
 
 	.left-title {
 		font-weight: 500;
+		line-height: 130%;
+		color: #21231e;
 	}
 
 	.left-content {
 		color: #51636f;
+		letter-spacing: -0.25px;
+		line-height: 172%;
+		font-weight: 400;
 	}
 
 	.right {
@@ -87,10 +92,11 @@
 	.right-top-title {
 		font-size: 24px;
 		font-weight: 500;
+		color: #21231e;
 	}
 
 	.right-top-content {
-		font-size: 16px;
+		font-size: 14px;
 		color: #51636f;
 		display: flex;
 		flex-wrap: wrap;
@@ -98,10 +104,12 @@
 		row-gap: 12px;
 	}
 
-	.right-top-content span {
-		padding: 6px 12px;
+	.item {
+		padding: 8px 12px;
 		border: 1px solid #e2e2e2;
 		border-radius: 8px;
+		letter-spacing: -0.25px;
+		text-wrap: nowrap;
 	}
 
 	.right-bottom {
@@ -113,10 +121,11 @@
 	.right-bottom-title {
 		font-size: 24px;
 		font-weight: 500;
+		color: #21231e;
 	}
 
 	.right-bottom-content {
-		font-size: 16px;
+		font-size: 14px;
 		color: #51636f;
 		display: flex;
 		flex-wrap: wrap;
@@ -124,10 +133,12 @@
 		row-gap: 12px;
 	}
 
-	.right-bottom-content span {
-		padding: 6px 12px;
+	.item {
+		padding: 8px 12px;
 		border: 1px solid #e2e2e2;
 		border-radius: 8px;
+		letter-spacing: -0.25px;
+		text-wrap: nowrap;
 	}
 
 	@media (max-width: 768px) {
@@ -138,10 +149,6 @@
 			display: flex;
 			flex-direction: column;
 			gap: 28px;
-		}
-
-		.left {
-			width: 70%;
 		}
 
 		.left-title {
@@ -161,6 +168,53 @@
 		}
 	}
 
+	@media (min-width: 820px) {
+		.card {
+			display: flex;
+			gap: 48px;
+			padding: 30px;
+			width: 720px;
+			height: 415px;
+		}
+
+		.left {
+			min-width: 300px;
+			max-width: 300px;
+		}
+
+		.left-title {
+			font-size: 30px;
+		}
+
+		.right {
+			gap: 20px;
+			min-width: 320px;
+		}
+
+		.right-top-title {
+			font-size: 20px;
+		}
+
+		.right-top-content {
+			column-gap: 12px;
+			row-gap: 12px;
+		}
+
+		.right-bottom-title {
+			font-size: 20px;
+		}
+		.right-bottom-content {
+			column-gap: 8px;
+			row-gap: 8px;
+		}
+
+		.item {
+			font-size: 14px;
+			padding: 4px;
+			text-wrap: nowrap;
+		}
+	}
+
 	@media (min-width: 1024px) {
 		.card {
 			display: flex;
@@ -168,8 +222,8 @@
 			justify-content: center;
 			gap: 90px;
 			padding: 0 60px;
-			width: 1110px;
-			height: 415px;
+			width: 850px;
+			height: 432px;
 		}
 
 		.left {
@@ -186,6 +240,28 @@
 
 		.right {
 			width: 625px;
+		}
+	}
+
+	@media (min-width: 1280px) {
+		.card {
+			width: 1110px;
+			height: 452px;
+		}
+		.left {
+			min-width: 400px;
+		}
+		.right-top-title {
+			font-size: 24px;
+		}
+
+		.item {
+			font-size: 16px;
+			padding: 8px 12px;
+		}
+
+		.right-bottom-title {
+			font-size: 24px;
 		}
 	}
 </style>

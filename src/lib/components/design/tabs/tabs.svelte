@@ -82,12 +82,8 @@
 		gap: 12px;
 		overflow-x: auto;
 		white-space: nowrap;
-		/* padding: 0 48px; */
 	}
 
-	.tabs-content {
-		padding: 0 150px;
-	}
 	.tab-item {
 		padding: 10px 12px;
 		border: 1px solid #c4c8cc;
@@ -112,5 +108,29 @@
 
 	.tab-item.tab-item.active:hover {
 		background-color: #000;
+	}
+
+	@media (min-width: 820px) {
+		.tabs-header {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.tabs-content {
+			padding: 0 40px;
+		}
+	}
+
+	@media (min-width: 960px) {
+		.tabs-header {
+			max-width: 800px;
+		}
+	}
+
+	@media (min-width: 1280px) {
+		.tabs-header {
+			max-width: 100%;
+		}
 	}
 </style>
