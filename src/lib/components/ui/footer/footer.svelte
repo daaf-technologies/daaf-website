@@ -1,43 +1,7 @@
 <script lang="ts">
-	import {
-		DAAF,
-		Facebook,
-		LinkedIn,
-		X,
-		Instagram,
-		UK,
-		Dubai,
-		Globe,
-		TikTok
-	} from '$lib/assets/icons';
+	import { DAAF, Facebook, LinkedIn, X, Instagram, TikTok, Threads } from '$lib/assets/icons';
 	import Copyright from '$lib/assets/icons/copyright.svelte';
-	// import Dropdown from '$lib/components/design/dropdown/dropdown.svelte';
-
-	// let options = [
-	// 	{
-	// 		icon: UK,
-	// 		label: 'English',
-	// 		value: 'English'
-	// 	},
-	// 	{
-	// 		icon: Dubai,
-	// 		label: 'Arabic',
-	// 		value: 'Arabic'
-	// 	}
-	// ];
-
-	// let value = $state('English');
-
-	// function selectLanguage(lang: string) {
-	// 	value = lang;
-	// }
 </script>
-
-{#snippet left()}
-	<span>
-		<Globe fill="#E6E6E6" />
-	</span>
-{/snippet}
 
 <div class="footer-container">
 	<div class="footer-top">
@@ -70,22 +34,13 @@
 				<div class="top-right-list">
 					<p class="top-right-title">ADDRESS</p>
 
-					<p class="">
+					<p class="address">
 						Meydan Grandstand, 6th floor,
 						<br />
 						Meydan Road, Nad Al Sheba,
 						<br />
 						Dubai, U.A.E.
 					</p>
-
-					<!-- <Dropdown
-						{left}
-						variant="secondary"
-						{options}
-						{value}
-						{selectLanguage}
-						dropdownControlClassname="w-full !justify-between text-sm"
-					/> -->
 				</div>
 			</div>
 		</div>
@@ -99,24 +54,28 @@
 			</p>
 		</div>
 		<div class="bottom-right">
-			<a href="https://www.tiktok.com/@daaf.ae" target="_blank">
+			<a href="https://www.tiktok.com/@daaf.ae" target="_blank" class="icon tiktok">
 				<TikTok />
 			</a>
 
-			<a href="https://facebook.com/daaf.uae" target="_blank">
+			<a href="https://facebook.com/daaf.uae" target="_blank" class="icon facebook">
 				<Facebook />
 			</a>
 
-			<a href="https://www.instagram.com/daaf_ae/" target="_blank">
+			<a href="https://www.instagram.com/daaf_ae/" target="_blank" class="icon instagram">
 				<Instagram />
 			</a>
 
-			<a href="https://x.com/daaf_ae" target="_blank">
+			<a href="https://x.com/daaf_ae" target="_blank" class="icon x">
 				<X />
 			</a>
 
-			<a href="https://www.linkedin.com/company/daaf-ae/" target="_blank">
+			<a href="https://www.linkedin.com/company/daaf-ae/" target="_blank" class="icon linkedin">
 				<LinkedIn />
+			</a>
+
+			<a href="https://www.threads.com/@daaf_ae" target="_blank" class="icon threads">
+				<Threads />
 			</a>
 		</div>
 	</div>
@@ -128,6 +87,12 @@
 </div>
 
 <style>
+	.footer-container {
+		width: 100%;
+		background-color: #03100e;
+		color: #c4c8cc;
+	}
+
 	.first-letter {
 		font-family: 'Departure Mono';
 		color: #40bb4a;
@@ -144,6 +109,14 @@
 		border-bottom: 1px solid #2d373e;
 	}
 
+	.bottom-left-title {
+		color: #ffffff;
+	}
+
+	.bottom-left-content {
+		color: #c5c6c9;
+	}
+
 	.copyright {
 		display: flex;
 		gap: 4px;
@@ -152,17 +125,14 @@
 	}
 	@media (max-width: 768px) {
 		.footer-container {
-			width: 100%;
 			padding: 0 16px;
-			background-color: #03100e;
-			color: #c4c8cc;
 		}
 
 		.top-left {
 			display: flex;
 			flex-direction: column;
 			gap: 16px;
-			padding: 60px 0;
+			padding: 60px 0 40px;
 		}
 
 		.first-letter {
@@ -173,7 +143,7 @@
 			display: flex;
 			flex-direction: column;
 			gap: 40px;
-			padding-bottom: 60px;
+			padding-bottom: 40px;
 		}
 
 		.top-right-first {
@@ -182,24 +152,24 @@
 			margin-right: 20px;
 		}
 
-		.top-right-content {
-			color: #c5c6c9;
-			font-size: 20px;
-		}
-
 		.top-right-list {
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
 		}
 
-		.top-right-second {
-			width: 100%;
+		.top-right-title {
+			line-height: 100%;
+			letter-spacing: 15.3%;
 		}
 
-		.bottom-right {
-			display: flex;
-			gap: 40px;
+		.top-right-content {
+			font-size: 20px;
+			line-height: 100%;
+		}
+
+		.top-right-second {
+			width: 100%;
 		}
 
 		.footer-bottom {
@@ -220,18 +190,43 @@
 			gap: 12px;
 		}
 
+		.bottom-left-content {
+			font-size: 14px;
+			color: #c4c8cc;
+			width: 32ch;
+		}
+
+		.bottom-right {
+			display: flex;
+			gap: 30px;
+		}
+
+		.icon {
+			width: 32px;
+			height: 32px;
+		}
+
+		.address {
+			font-size: 20px;
+			line-height: 150%;
+		}
 		.copyright {
 			padding: 30px 0;
+			line-height: 100%;
 		}
 	}
-	@media (min-width: 1024px) {
+
+	@media (min-width: 820px) {
 		.footer-container {
-			width: 100%;
-			padding: 90px 165px 0;
-			background-color: #03100e;
-			color: #c4c8cc;
+			padding: 105px 60px 0;
 			display: flex;
 			flex-direction: column;
+		}
+
+		.footer-top {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
 		}
 
 		.footer-top {
@@ -249,11 +244,13 @@
 		.top-left-title {
 			font-size: 26px;
 			width: 270px;
+			line-height: 140%;
 		}
 
 		.top-right {
 			display: flex;
 			gap: 80px;
+			justify-content: space-between;
 		}
 
 		.top-right-first {
@@ -270,11 +267,13 @@
 		.top-right-title {
 			color: #76797e;
 			font-size: 14px;
+			line-height: 100%;
 		}
 
 		.top-right-content {
 			color: #c5c6c9;
 			font-size: 16px;
+			line-height: 100%;
 		}
 
 		.footer-bottom {
@@ -283,7 +282,101 @@
 			justify-content: space-between;
 			align-items: center;
 			padding: 22px 0;
-			margin: 40px 0 22px;
+			margin-top: 60px;
+		}
+
+		.bottom-left {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+		}
+
+		.bottom-left-title {
+			color: #ffffff;
+			font-size: 20px;
+			line-height: 100%;
+		}
+
+		.bottom-left-content {
+			color: #c4c8cc;
+			font-size: 14px;
+			line-height: 130%;
+		}
+
+		.bottom-right {
+			display: flex;
+			gap: 36px;
+		}
+
+		.icon {
+			width: 36px;
+			height: 36px;
+		}
+
+		.copyright {
+			padding: 30px 0 50px;
+			line-height: 100%;
+		}
+	}
+	@media (min-width: 1024px) {
+		.footer-container {
+			padding: 90px 90px 0;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.footer-top {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		.top-left {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+
+		.top-left-title {
+			font-size: 26px;
+			width: 270px;
+		}
+
+		.top-right {
+			display: flex;
+			gap: 40px;
+		}
+
+		.top-right-first {
+			display: flex;
+			gap: 40px;
+		}
+
+		.top-right-list {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+
+		.top-right-title {
+			color: #76797e;
+			font-size: 14px;
+		}
+
+		.top-right-content {
+			color: #c5c6c9;
+			font-size: 16px;
+			text-wrap: nowrap;
+		}
+
+		.footer-bottom {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 22px 0;
+			margin-top: 60px;
 		}
 
 		.bottom-left {
@@ -308,8 +401,17 @@
 			font-size: 14px;
 		}
 
+		.address {
+			text-wrap: nowrap;
+		}
 		.copyright {
 			padding: 30px 0;
+		}
+	}
+
+	@media (min-width: 1440px) {
+		.footer-container {
+			padding: 90px 165px 0;
 		}
 	}
 </style>
