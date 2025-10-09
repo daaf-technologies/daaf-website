@@ -24,6 +24,7 @@ import Location from './location.svelte';
 import TikTok from './tiktok.svelte';
 import MobileArrow from './mobile-arrow.svelte';
 import Success from './success.svelte';
+import Threads from './threads.svelte';
 
 export {
 	DAAF,
@@ -51,5 +52,6 @@ export {
 	Location,
 	TikTok,
 	MobileArrow,
-	Success
+	Success,
+	Threads
 };

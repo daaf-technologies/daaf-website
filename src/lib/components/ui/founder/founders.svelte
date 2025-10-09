@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="flex w-full flex-col items-center gap-2 bg-[#F6F6F6] px-9 py-[60px] lg:h-[1022px] lg:px-[360px] lg:py-[120px]"
+	class="flex w-full flex-col items-center gap-2 bg-[#F6F6F6] px-9 py-[60px] lg:h-[1022px] lg:py-[120px]"
 >
 	<p
 		class="section-title text-[12px] leading-[110%] tracking-[2px] text-nowrap text-[#C1A82B] lg:text-[18px]"

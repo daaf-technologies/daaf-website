@@ -53,7 +53,9 @@
 						<Icon stroke={index === activeIndex ? 'white' : 'black'} />
 					</span>
 				{/if}
-				{label}
+				<p>
+					{label}
+				</p>
 			</button>
 		{/each}
 	</div>
@@ -85,6 +87,7 @@
 	}
 
 	.tab-item {
+		font-size: 14px;
 		padding: 10px 12px;
 		border: 1px solid #c4c8cc;
 		border-radius: 50px;
