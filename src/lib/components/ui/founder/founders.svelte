@@ -7,7 +7,9 @@
 <div
 	class="founders flex w-full flex-col items-center gap-2 bg-[#F6F6F6] px-9 py-[60px] lg:h-[1022px]"
 >
-	<p class="section-title text-[12px] text-nowrap text-[#C1A82B] tablet:text-[18px]">
+	<p
+		class="section-title text-[12px] leading-[110%] tracking-[2px] text-nowrap text-[#C1A82B] tablet:text-[18px]"
+	>
 		NO SALES REPS. NO MIDDLEMEN
 	</p>
 	<p

@@ -1,34 +1,9 @@
 <script lang="ts">
-	// import { Close, DAFF, Dubai, HamburgerMenu, UK, Arrow } from '$lib/assets/icons';
 	import { goto } from '$app/navigation';
 	import { DAAF } from '$lib/assets/icons';
 	import Button from '$lib/components/design/button';
-	// import Dropdown from '$lib/components/design/dropdown';
 
 	let { className }: { className?: string } = $props();
-
-	// let options = [
-	// 	{
-	// 		icon: UK,
-	// 		label: 'English',
-	// 		value: 'EN'
-	// 	},
-	// 	{
-	// 		icon: Dubai,
-	// 		label: 'Arabic',
-	// 		value: 'AR'
-	// 	}
-	// ];
-
-	// let value = $state('EN');
-
-	// function selectLanguage(lang: string) {
-	// 	value = lang;
-	// }
-
-	// let open = $state(false);
-
-	// const toggle = () => (open = !open);
 </script>
 
 <div class={`${className} header`}>

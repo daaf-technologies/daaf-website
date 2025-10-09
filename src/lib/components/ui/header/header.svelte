@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Close, DAAF, HamburgerMenu, Arrow, MobileArrow } from '$lib/assets/icons';
+	import { Close, DAAF, HamburgerMenu, MobileArrow } from '$lib/assets/icons';
 	import { goto } from '$app/navigation';
 	import Button from '$lib/components/design/button';
 
@@ -17,8 +17,19 @@
 	<div class="nav">
 		{#if !minimal}
 			<a href="/about-us" class="about">About us</a>
+
+			<a href="/coming-soon" class="blogs">Blogs</a>
+
+			<a href="/coming-soon" class="cases">Case Study</a>
 		{/if}
-		<Button variant="secondary" onclick={() => goto('/contact-us')}>Contact us</Button>
+	</div>
+
+	<div class="contact">
+		<Button
+			class="button h-[48px]! rounded-[78px]! p-4!"
+			variant="secondary"
+			onclick={() => goto('/contact-us')}>Contact us</Button
+		>
 	</div>
 
 	{#if !minimal}
@@ -40,7 +51,23 @@
 				</span>
 			</a>
 
-			<Button variant="secondary" onclick={() => goto('/contact-us')}>Contact us</Button>
+			<a class="blogs" href="/coming-soon">
+				<p class="text-base">Blogs</p>
+				<span>
+					<MobileArrow />
+				</span>
+			</a>
+
+			<a class="cases" href="/coming-soon">
+				<p class="text-base">Case Study</p>
+				<span>
+					<MobileArrow />
+				</span>
+			</a>
+
+			<Button variant="secondary" onclick={() => goto('/contact-us')} class="h-[40px]!"
+				>Contact us</Button
+			>
 		</div>
 	{/if}
 </div>
@@ -63,9 +90,9 @@
 	}
 
 	.about {
-		font-size: 14px;
 		cursor: pointer;
 	}
+
 	@media (max-width: 768px) {
 		.header {
 			width: 343px;
@@ -93,21 +120,47 @@
 			font-size: 16px;
 		}
 
+		.blogs {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			font-size: 16px;
+		}
+
+		.cases {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			font-size: 16px;
+		}
+
 		.nav {
+			display: none;
+		}
+
+		.contact {
 			display: none;
 		}
 	}
 
-	@media (min-width: 1024px) {
+	@media (min-width: 820px) {
 		.header {
-			width: 646px;
-			padding: 16px 30px;
-			gap: 200px;
+			padding: 8px 8px 8px 24px;
+			gap: 130px;
+			border-radius: 60px;
 		}
 		.nav {
 			display: flex;
 			align-items: center;
-			gap: 12px;
+			gap: 24px;
+		}
+
+		.button {
+			border-radius: 78px !important;
+			padding: 16px !important;
+			height: 48px !important;
 		}
 
 		.hamburger {
@@ -116,6 +169,24 @@
 
 		.mobile-menu {
 			display: none;
+		}
+
+		.about {
+			font-size: 14px;
+			line-height: 16px;
+			font-weight: 300;
+		}
+
+		.blogs {
+			font-size: 14px;
+			line-height: 16px;
+			font-weight: 300;
+		}
+
+		.cases {
+			font-size: 14px;
+			line-height: 16px;
+			font-weight: 300;
 		}
 	}
 </style>
