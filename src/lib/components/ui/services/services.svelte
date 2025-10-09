@@ -38,6 +38,12 @@
 		}
 	}
 
+	@media (min-width: 820px) {
+		.mobile {
+			display: none;
+		}
+	}
+
 	@media (min-width: 1024px) {
 		.mobile {
 			display: none;
