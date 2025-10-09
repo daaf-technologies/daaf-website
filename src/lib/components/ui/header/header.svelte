@@ -51,14 +51,14 @@
 				</span>
 			</a>
 
-			<a class="blogs" href="/blogs">
+			<a class="blogs" href="/coming-soon">
 				<p class="text-base">Blogs</p>
 				<span>
 					<MobileArrow />
 				</span>
 			</a>
 
-			<a class="cases" href="/case-study">
+			<a class="cases" href="/coming-soon">
 				<p class="text-base">Case Study</p>
 				<span>
 					<MobileArrow />
