@@ -5,23 +5,28 @@
 </script>
 
 <div
-	class="get-in-touch relative flex w-full flex-col items-center gap-[30px] bg-[#CEECD9] pt-[60px] lg:pt-[120px]"
+	class="get-in-touch relative flex w-full flex-col items-center gap-[30px] bg-[#CEECD9] pt-[60px] md:pt-[120px]"
 >
-	<p class="w-[23ch] text-center text-2xl font-medium text-[#243425] lg:w-[25ch] lg:text-[40px]">
+	<p
+		class="title w-[23ch] text-center text-2xl font-medium text-[#243425] md:w-[25ch] lg:text-[40px]"
+	>
 		Big ideas deserve more than talk, they deserve action.
 
-		<span class="font-light"> Be the brand that leads, not follows. </span>
+		<span class="font-[stacion] font-light italic"> Be the brand that leads, not follows. </span>
 	</p>
 
-	<a href="/contact-us" target="_blank">
-		<Button variant="primary" class="mb-[60px] w-[340px] lg:mb-0 lg:h-[60px] lg:w-[203px]"
-			>Get In Touch</Button
+	<a href="/contact-us" target="_blank" class="contact-link">
+		<Button
+			variant="primary"
+			class="contact-button mb-[60px] w-[340px] md:mb-0 md:h-[60px] md:w-[203px]"
 		>
+			<p class="contact-text font-semibold">Get In Touch</p>
+		</Button>
 	</a>
 
 	<img class="sticky-note absolute left-[200px]" src={StickyNote} alt="sticky-note" />
 
-	<img class="mascot absolute bottom-0" src={GetInTouchMascot} alt="mascot" />
+	<img class="mascot absolute" src={GetInTouchMascot} alt="mascot" />
 </div>
 
 <style>
@@ -30,47 +35,100 @@
 		background-size: cover;
 	}
 	@media (max-width: 768px) {
+		.get-in-touch {
+			height: 617px;
+		}
 		.sticky-note {
 			width: 140px;
 			height: 130px;
 			top: 300px;
 			left: 50px;
 		}
-		.get-in-touch {
-			height: 617px;
-		}
 
 		.mascot {
+			bottom: 0;
 			height: 250px;
 			object-fit: cover;
 			object-position: center;
 		}
+
+		.contact-text {
+			font-size: 16px;
+		}
 	}
 
-	@media (min-width: 770px) and (max-width: 1020px) {
-	}
-	@media (min-width: 1024px) {
+	@media (min-width: 820px) {
 		.get-in-touch {
 			min-height: 1000px;
 		}
 
+		.title {
+			font-size: 40px;
+		}
+
+		.sticky-note {
+			width: 155px;
+			height: 146px;
+			top: 47px;
+			left: 27px;
+		}
+
+		.mascot {
+			bottom: 0;
+			object-fit: none;
+			object-position: 28%;
+			width: 100%;
+			height: 580px;
+		}
+
+		.contact-text {
+			font-size: 22px;
+		}
+	}
+
+	@media (min-width: 960px) {
+		.sticky-note {
+			width: 249px;
+			height: 234px;
+			top: 65px;
+			left: 18px;
+		}
+
+		.mascot {
+			object-position: 17%;
+		}
+	}
+
+	@media (min-width: 1024px) {
 		.sticky-note {
 			top: 100px;
 			left: 30px;
 		}
+
+		.mascot {
+			object-position: 6%;
+		}
 	}
 
-	@media (min-width: 1240px) {
+	@media (min-width: 1280px) {
 		.sticky-note {
 			top: 100px;
 			left: 130px;
 		}
+
+		.mascot {
+			object-position: right;
+		}
 	}
 
-	@media (min-width: 1500px) {
+	@media (min-width: 1512px) {
 		.sticky-note {
 			top: 100px;
 			left: 250px;
+		}
+
+		.mascot {
+			object-position: right;
 		}
 	}
 
@@ -78,6 +136,9 @@
 		.sticky-note {
 			top: 100px;
 			left: 350px;
+		}
+		.mascot {
+			object-position: center;
 		}
 	}
 
