@@ -65,7 +65,7 @@
 	<div
 		class="wrapper flex h-full max-w-full flex-col items-center overflow-y-auto px-4 py-[50px] backdrop-blur-[620px] md:px-[60px] lg:gap-[140px] lg:px-[90px]"
 	>
-		<Header className="header w-[343px] lg:w-[646px] !gap-[72px]" />
+		<Header />
 		<div
 			class="content md:flex md:gap-[50px] md:pt-[60px] lg:gap-[40px] lg:pb-[100px] xl:gap-[118px]"
 		>

@@ -5,16 +5,18 @@
 </script>
 
 <div
-	class="relative flex w-full flex-col items-center justify-center overflow-hidden bg-[#F1F1F1] px-4 pt-[60px] pb-[115px] lg:px-[370px] lg:py-[200px]"
+	class="relative flex w-full flex-col items-center justify-center overflow-hidden bg-[#F1F1F1] px-4 pt-[60px] pb-[115px] tablet:px-[60px] tablet:py-[200px] lg:px-[370px]"
 >
 	<div>
 		<p
-			class="section-title pb-[30px] text-[12px] leading-[132%] tracking-[6.6px] text-[#EC5E2A] lg:pb-[40px] lg:text-lg"
+			class="section-title pb-[30px] text-[12px] leading-[132%] tracking-[6.6px] text-[#EC5E2A] tablet:text-xl lg:pb-[40px]"
 		>
 			BEYOND THE CODE
 		</p>
 		<div class="flex flex-col gap-6 lg:gap-[50px]">
-			<p class="text-xl leading-[153%] tracking-[-0.4px] text-[#21231E] lg:w-[40ch]">
+			<p
+				class="text-xl leading-[153%] tracking-[-0.4px] text-[#21231E] tablet:w-[36ch] tablet:text-[30px]"
+			>
 				We started DAAF with a simple belief — great technology isn’t just built, it’s built
 				together. Over the years, we’ve worked alongside brands who wanted more than a vendor; they
 				wanted a partner who understood their
@@ -26,7 +28,9 @@
 				</span>, shared their urgency and stayed with them through every stage.
 			</p>
 
-			<p class="text-xl leading-[153%] tracking-[-0.4px] text-[#21231E] lg:w-[40ch]">
+			<p
+				class="text-xl leading-[153%] tracking-[-0.4px] text-[#21231E] tablet:w-[38ch] tablet:text-[30px]"
+			>
 				Every collaboration is a shared journey, where we work as an extension of your team —
 				bringing expertise, clarity, and a relentless <span
 					class="inline-flex w-fit items-center gap-1.5 rounded-[14px] bg-[#93F27D33] px-2 py-1"
@@ -36,7 +40,9 @@
 				</span> on results.
 			</p>
 
-			<p class="text-xl leading-[153%] tracking-[-0.4px] text-[#21231E] lg:w-[40ch]">
+			<p
+				class="text-xl leading-[153%] tracking-[-0.4px] text-[#21231E] tablet:w-[37ch] tablet:text-[30px]"
+			>
 				We’re here to understand your world, overcome your challenges, and build
 				<span
 					class="inline-flex w-fit items-center gap-1.5 rounded-[14px] bg-[#93F27D33] px-2 py-1"
@@ -79,6 +85,30 @@
 			height: 190px;
 			bottom: -80px;
 			left: -45px;
+		}
+	}
+
+	@media (min-width: 820px) {
+		.star {
+			top: 150px;
+			right: 0px;
+		}
+
+		.mascot {
+			bottom: 0px;
+			left: -50px;
+		}
+	}
+
+	@media (min-width: 960px) {
+		.star {
+			top: 180px;
+			right: 60px;
+		}
+
+		.mascot {
+			bottom: 250px;
+			left: -20px;
 		}
 	}
 
