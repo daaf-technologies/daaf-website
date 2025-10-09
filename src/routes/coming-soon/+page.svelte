@@ -46,6 +46,7 @@
 <style>
 	.wrapper {
 		background: linear-gradient(170deg, #e1fbdc 0%, #e1fbdc 60%, #b3da41b2 100%);
+		height: 100vh;
 	}
 
 	.first-letter {
