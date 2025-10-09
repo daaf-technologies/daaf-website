@@ -113,16 +113,27 @@
 		background-color: #000;
 	}
 
-	/* Added this to avoid the scroll, but it looks ugly though */
-	@media (min-width: 1024px) {
+	@media (min-width: 820px) {
 		.tabs-header {
-			gap: 6px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.tabs-content {
+			padding: 0 40px;
 		}
 	}
 
-	@media (min-width: 1240px) {
+	@media (min-width: 960px) {
 		.tabs-header {
-			gap: 12px;
+			max-width: 800px;
+		}
+	}
+
+	@media (min-width: 1280px) {
+		.tabs-header {
+			max-width: 100%;
 		}
 	}
 </style>
