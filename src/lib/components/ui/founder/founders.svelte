@@ -59,9 +59,5 @@
 			min-height: 970px;
 			padding: 120px 0;
 		}
-
-		/* .foundercard {
-			
-		} */
 	}
 </style>
