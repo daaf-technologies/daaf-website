@@ -120,7 +120,7 @@
 
 		.mascot {
 			bottom: 240px;
-			left: 80px;
+			left: 0;
 		}
 	}
 
@@ -130,7 +130,7 @@
 		}
 
 		.mascot {
-			left: 200px;
+			left: 100px;
 		}
 	}
 
@@ -140,7 +140,7 @@
 		}
 
 		.mascot {
-			left: 300px;
+			left: 200px;
 		}
 	}
 
@@ -150,7 +150,7 @@
 		}
 
 		.mascot {
-			left: 420px;
+			left: 320px;
 		}
 	}
 
@@ -160,7 +160,7 @@
 		}
 
 		.mascot {
-			left: 500px;
+			left: 400px;
 		}
 	}
 
@@ -170,7 +170,7 @@
 		}
 
 		.mascot {
-			left: 580px;
+			left: 480px;
 		}
 	}
 
@@ -180,7 +180,7 @@
 		}
 
 		.mascot {
-			left: 680px;
+			left: 580px;
 		}
 	}
 	@media (min-width: 2500px) {
@@ -189,7 +189,7 @@
 		}
 
 		.mascot {
-			left: 850px;
+			left: 750px;
 		}
 	}
 
@@ -199,7 +199,7 @@
 		}
 
 		.mascot {
-			left: 1100px;
+			left: 1000px;
 		}
 	}
 
@@ -209,7 +209,7 @@
 		}
 
 		.mascot {
-			left: 1450px;
+			left: 1350px;
 		}
 	}
 </style>
