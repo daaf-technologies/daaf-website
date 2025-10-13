@@ -16,7 +16,7 @@
 	</a>
 	<div class="nav">
 		{#if !minimal}
-			<a href="/about-us" class="about">About us</a>
+			<a href="/about-us" class="about active:">About us</a>
 
 			<a href="/coming-soon" class="blogs">Blogs</a>
 
@@ -102,7 +102,7 @@
 		.mobile-menu {
 			display: flex;
 			flex-direction: column;
-			gap: 30px;
+			gap: 20px;
 			width: 100%;
 			position: absolute;
 			top: 72px;
@@ -177,7 +177,7 @@
 			font-weight: 300;
 		}
 
-		.blogs {
+		.about:active .blogs {
 			font-size: 14px;
 			line-height: 16px;
 			font-weight: 300;
