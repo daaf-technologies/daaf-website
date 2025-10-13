@@ -46,7 +46,12 @@
 
 	@media (width: 768px) {
 		.about-card {
-			background-size: contain, cover;
+			background-size:
+				800px auto,
+				auto;
+			background-position:
+				50% 125%,
+				bottom;
 		}
 	}
 
