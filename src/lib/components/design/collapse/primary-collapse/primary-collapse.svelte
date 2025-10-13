@@ -62,7 +62,6 @@
 <div class="flex flex-col gap-5">
 	{#each items as item}
 		<Expandable id={item.id} title={item.title}>
-			<!-- {@html item.body} -->
 			<svelte:component this={item.body} />
 		</Expandable>
 	{/each}
