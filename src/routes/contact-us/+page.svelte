@@ -24,9 +24,9 @@
 			query.trim() !== ''
 	);
 
-	const SERVICE_ID = 'service_92drs3v';
-	const TEMPLATE_ID = 'template_86u18no';
-	const PUBLIC_KEY = 'Z-D7xiGI2pNVCLGSl';
+	const SERVICE_ID = 'service_ykodhvi';
+	const TEMPLATE_ID = 'template_zj2toew';
+	const PUBLIC_KEY = '1PHWpWGFxUgsQ1ojw';
 
 	const sendEmail = async (e: SubmitEvent) => {
 		e.preventDefault();
