@@ -75,9 +75,10 @@
 
 	@media (min-width: 1500px) {
 		.about-card {
+			height: 1000px;
 			background-size: cover, cover;
 			background-position:
-				50% 450px,
+				50% 500px,
 				bottom;
 		}
 	}
