@@ -5,7 +5,7 @@
 <div class="about-card @container flex w-full flex-col items-center pt-[50px]">
 	<Header />
 
-	<div class="flex flex-col items-center gap-3 pt-[70px] pb-[90px]">
+	<div class="flex flex-col items-center gap-3 pt-[70px] pb-[90px] tablet:pt-[140px]">
 		<p
 			class="title w-[16ch] text-center font-[stacion] text-[30px] leading-[120%] font-semibold tablet:text-[60px] lg:text-[64px] xl:w-[25ch] @min-[960px]:text-[64px]"
 		>
