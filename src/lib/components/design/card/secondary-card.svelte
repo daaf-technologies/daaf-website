@@ -16,9 +16,9 @@
 
 	<p class="title">{title}</p>
 
-	<div class="flex gap-2 pl-[22px]">
+	<div class="author-container">
 		{#if photo}
-			<img class="photo" src={photo} alt="dummy-author" />
+			<img class="photo" src={photo} alt="author" />
 		{/if}
 
 		<p class="author">{author}</p>
@@ -35,6 +35,7 @@
 		border: 1px solid #ced1d433;
 		box-shadow: 0px 6.63px 23.56px 0px #00000008;
 		border-radius: 16px;
+		padding: 8px;
 		display: flex;
 		flex-direction: column;
 		gap: 30px;
@@ -44,7 +45,7 @@
 		width: 325px;
 		height: 150px;
 		border-radius: 8px;
-		object-fit: contain;
+		object-fit: cover;
 	}
 
 	.title {
@@ -72,17 +73,14 @@
 		left: 22px;
 	}
 
-	@media (max-width: 768px) {
-		.wrapper {
-			padding: 6px 8px 28px;
-		}
+	.author-container {
+		display: flex;
+		padding-left: 22px;
+		padding-bottom: 20px;
+		gap: 8px;
 	}
 
 	@media (min-width: 1440px) {
-		.wrapper {
-			padding: 6px 6px 26px;
-		}
-
 		.image {
 			width: 270px;
 		}
