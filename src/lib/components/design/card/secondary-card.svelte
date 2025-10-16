@@ -46,12 +46,14 @@
 		height: 150px;
 		border-radius: 8px;
 		object-fit: cover;
+		align-self: center;
 	}
 
 	.title {
 		color: #0c223b;
 		font-weight: 500;
 		font-size: 20px;
+		line-height: 140%;
 		letter-spacing: -0.22px;
 		width: 17ch;
 		padding-left: 22px;
@@ -78,6 +80,24 @@
 		padding-left: 22px;
 		padding-bottom: 20px;
 		gap: 8px;
+	}
+
+	@media (min-width: 820px) {
+		.image {
+			width: 200px;
+		}
+	}
+
+	@media (min-width: 960px) {
+		.image {
+			width: 238px;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.image {
+			width: 245px;
+		}
 	}
 
 	@media (min-width: 1440px) {
