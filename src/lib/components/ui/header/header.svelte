@@ -114,7 +114,7 @@
 		.mobile-menu {
 			display: flex;
 			flex-direction: column;
-			gap: 30px;
+			gap: 20px;
 			width: 100%;
 			position: absolute;
 			top: 72px;
