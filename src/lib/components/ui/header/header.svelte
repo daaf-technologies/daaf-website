@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Close, DAAF, HamburgerMenu, MobileArrow } from '$lib/assets/icons';
 	import { goto } from '$app/navigation';
+	import { page } from '$app/state';
 	import Button from '$lib/components/design/button';
 
 	let { minimal, className }: { minimal?: boolean; className?: string } = $props();
@@ -8,6 +9,8 @@
 	let open = $state(false);
 
 	const toggle = () => (open = !open);
+
+	const route = page?.route?.id;
 </script>
 
 <div class={`${className} header`}>
@@ -16,11 +19,20 @@
 	</a>
 	<div class="nav">
 		{#if !minimal}
-			<a href="/about-us" class="about active:">About us</a>
+			<a href="/about-us" class={`link ${route === '/about-us' ? 'active' : ''}`}>
+				<span class="current h-1 w-1 rounded-full bg-[#76F349]"></span>
+				<p>About us</p>
+			</a>
 
-			<a href="/coming-soon" class="blogs">Blogs</a>
+			<a href="/coming-soon" class={`link ${route === '/blogs' ? 'active' : ''}`}>
+				<span class="current h-1 w-1 rounded-full bg-[#76F349]"></span>
+				<p>Blogs</p>
+			</a>
 
-			<a href="/coming-soon" class="cases">Case Study</a>
+			<a href="/coming-soon" class={`link ${route === '/case-study' ? 'active' : ''}`}>
+				<span class="current h-1 w-1 rounded-full bg-[#76F349]"></span>
+				<p>Case Studies</p>
+			</a>
 		{/if}
 	</div>
 
@@ -59,7 +71,7 @@
 			</a>
 
 			<a class="cases" href="/coming-soon">
-				<p class="text-base">Case Study</p>
+				<p class="text-base">Case Studies</p>
 				<span>
 					<MobileArrow />
 				</span>
@@ -171,22 +183,23 @@
 			display: none;
 		}
 
-		.about {
+		.link {
 			font-size: 14px;
 			line-height: 16px;
 			font-weight: 300;
+			display: flex;
+			align-items: center;
+			gap: 6px;
 		}
 
-		.about:active .blogs {
-			font-size: 14px;
-			line-height: 16px;
-			font-weight: 300;
+		.current {
+			display: none;
 		}
-
-		.cases {
-			font-size: 14px;
-			line-height: 16px;
-			font-weight: 300;
+		.active {
+			font-weight: 600 !important;
+		}
+		.active .current {
+			display: inline-block !important;
 		}
 	}
 </style>
