@@ -15,7 +15,13 @@
 			>
 				{#if id}
 					{@const Id = id}
-					<Id stroke="black" />
+					{#if typeof id === 'string'}
+						<span class="leading-[100%] font-normal tracking-[2%] text-[#51636F]">
+							{id}.
+						</span>
+					{:else}
+						<Id stroke="black" />
+					{/if}
 				{/if}
 
 				<p class="leading-[100%] font-normal tracking-[2%] text-[#51636F]">
