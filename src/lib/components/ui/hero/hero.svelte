@@ -2,7 +2,7 @@
 	import Header from '../header';
 	import Button from '$lib/components/design/button';
 	import Globe from '$lib/assets/images/globe.svg';
-	import Mascot from '$lib/assets/images/mascot.svg';
+	import Mascot from '$lib/assets/images/mascot-hero.svg';
 </script>
 
 <div class="hero relative flex w-full flex-col items-center pt-[50px]">

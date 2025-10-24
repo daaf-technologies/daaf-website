@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="relative flex w-full flex-col items-center justify-center overflow-hidden bg-[#F1F1F1] px-4 pt-[60px] pb-[115px] tablet:px-[60px] tablet:py-[200px] lg:px-[370px]"
+	class="relative flex w-full flex-col items-center justify-center overflow-hidden bg-[#F1F1F1] pt-[60px] pb-[115px] tablet:py-[200px]"
 >
 	<div>
 		<p
@@ -115,7 +115,7 @@
 	@media (min-width: 1024px) {
 		.star {
 			top: 180px;
-			right: 200px;
+			right: 100px;
 		}
 
 		.mascot {
@@ -126,7 +126,7 @@
 
 	@media (min-width: 1240px) {
 		.star {
-			right: 315px;
+			right: 215px;
 		}
 
 		.mascot {
@@ -136,7 +136,7 @@
 
 	@media (min-width: 1440px) {
 		.star {
-			right: 435px;
+			right: 335px;
 		}
 
 		.mascot {
@@ -146,7 +146,7 @@
 
 	@media (min-width: 1700px) {
 		.star {
-			right: 550px;
+			right: 450px;
 		}
 
 		.mascot {
@@ -156,7 +156,7 @@
 
 	@media (min-width: 1900px) {
 		.star {
-			right: 620px;
+			right: 520px;
 		}
 
 		.mascot {
@@ -166,7 +166,7 @@
 
 	@media (min-width: 2048px) {
 		.star {
-			right: 700px;
+			right: 600px;
 		}
 
 		.mascot {
@@ -176,7 +176,7 @@
 
 	@media (min-width: 2240px) {
 		.star {
-			right: 800px;
+			right: 700px;
 		}
 
 		.mascot {
@@ -185,7 +185,7 @@
 	}
 	@media (min-width: 2500px) {
 		.star {
-			right: 950px;
+			right: 850px;
 		}
 
 		.mascot {
@@ -195,7 +195,7 @@
 
 	@media (min-width: 3000px) {
 		.star {
-			right: 1200px;
+			right: 1100px;
 		}
 
 		.mascot {
@@ -205,7 +205,7 @@
 
 	@media (min-width: 3800px) {
 		.star {
-			right: 1550px;
+			right: 1450px;
 		}
 
 		.mascot {
