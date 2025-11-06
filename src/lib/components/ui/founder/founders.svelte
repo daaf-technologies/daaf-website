@@ -10,14 +10,14 @@
 	<p
 		class="section-title text-[12px] leading-[110%] tracking-[2px] text-nowrap text-[#C1A82B] tablet:text-[18px]"
 	>
-		NO SALES REPS. NO MIDDLEMEN
+		BUILT BY ENGINEERS. LED BY EXPERIENCE.
 	</p>
 	<p
 		class="description w-[20ch] text-center text-[24px] font-medium sm:max-w-[25ch] tablet:w-[30ch] tablet:text-[36px] lg:text-[40px]"
 	>
-		Speak directly to the people who <span class="font-[stacion] font-light italic">
-			plan and build
-		</span> your solutions
+		Connect directly with the people who
+		<span class="font-[stacion] font-light italic"> understand the code </span>
+		behind your vision
 	</p>
 
 	<div class="mt-[40px] mb-[30px] flex flex-col gap-[50px] tablet:relative">
