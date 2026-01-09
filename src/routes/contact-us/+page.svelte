@@ -96,9 +96,26 @@
 					</div>
 
 					<p
-						class="lg-text-base w-[26ch] text-center text-base text-[#696969] md:text-left md:text-sm"
+						class="lg-text-base w-[35ch] text-center text-base text-[#696969] md:text-left md:text-sm"
 					>
 						Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba, Dubai, U.A.E.
+					</p>
+				</div>
+
+				<div
+					class="flex flex-col items-center gap-3 py-4 text-center text-[14px] leading-[140%] text-[#51636f] md:items-start lg:items-start lg:text-left lg:text-[20px]"
+				>
+					<div class="flex items-center gap-1">
+						<Location />
+						<p class="location text-base tracking-[15%] text-nowrap text-[#EA6C18]">
+							CONTACT US AT:
+						</p>
+					</div>
+
+					<p
+						class="lg-text-base w-[35ch] text-center text-base text-[#696969] md:text-left md:text-sm"
+					>
+						admin@daaf.ae
 					</p>
 				</div>
 			</div>
