@@ -34,7 +34,7 @@
 		background-image: url('/src/lib/assets/images/get-in-touch-bg.png');
 		background-size: cover;
 	}
-	@media (max-width: 768px) {
+	@media (min-width: 300px) {
 		.get-in-touch {
 			height: 617px;
 		}
