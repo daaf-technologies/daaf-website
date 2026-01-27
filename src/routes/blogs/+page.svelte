@@ -57,10 +57,9 @@
 </svelte:head>
 
 <div class="blogs-page flex w-full flex-col items-center">
-	<Header />
-
-	<!-- Hero Section -->
+	<!-- First section: green gradient; includes Header + title + subtitle + featured cards -->
 	<div class="hero-section flex w-full flex-col items-center gap-[30px] px-4">
+		<Header />
 		<div class="flex flex-col gap-3 text-center max-w-[900px]">
 			<h1 class="hero-title text-[44px] font-semibold text-[#21231E]">Blogs</h1>
 			<p class="hero-subtitle text-[20px] text-[#51636F]">
@@ -165,9 +164,10 @@
 		min-height: 100vh;
 	}
 
+	/* Only the first (hero) section: linear gradient #E1FBDC → #FFFFFF */
 	.hero-section {
-		background: #ffffff;
-		padding-top: 80px;
+		background: linear-gradient(160deg, #E1FBDC 0%, #FFFFFF 100%);
+		padding-top: 24px;
 		padding-bottom: 40px;
 	}
 
@@ -396,7 +396,7 @@
 
 	@media (min-width: 820px) {
 		.hero-section {
-			padding-top: 100px;
+			padding-top: 32px;
 			padding-bottom: 60px;
 		}
 
@@ -453,7 +453,7 @@
 
 	@media (min-width: 1024px) {
 		.hero-section {
-			padding-top: 120px;
+			padding-top: 40px;
 			padding-bottom: 80px;
 		}
 

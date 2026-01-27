@@ -33,7 +33,7 @@
 		font-family: 'Inter';
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 819px) {
 		.about-card {
 			height: 720px;
 			background-image: url('/src/lib/assets/images/about-hero-mobile.png');

@@ -61,10 +61,9 @@
 
 {#if blog}
 	<div class="blog-detail flex w-full flex-col items-center">
-		<Header />
-
-		<!-- Hero Section -->
+		<!-- First section: green gradient; includes Header + title + description + featured image -->
 		<div class="hero-section flex w-full flex-col items-center gap-[30px] px-4">
+			<Header />
 			<div class="flex flex-col gap-4 text-center max-w-[900px]">
 				<h1 class="blog-title text-[44px] font-semibold text-[#21231E]">{blog.title}</h1>
 				<p class="blog-description text-[20px] text-[#51636F]">{blog.description}</p>
@@ -232,9 +231,11 @@
 			min-height: 100vh;
 		}
 
+		/* Only the first (hero) section: linear gradient #E1FBDC → #FFFFFF */
 		.hero-section {
-			background: linear-gradient(160deg, #fafdf9 0%, #ffffff 40%);
-			padding-top: 80px;
+			background: linear-gradient(160deg, #E1FBDC 0%, #FFFFFF 100%);
+			padding-top: 24px;
+			padding-bottom: 48px;
 		}
 
 		.blog-title {
@@ -597,7 +598,7 @@
 
 		@media (min-width: 820px) {
 			.hero-section {
-				padding-top: 100px;
+				padding-top: 32px;
 				padding-left: 20px;
 				padding-right: 20px;
 			}
@@ -701,7 +702,7 @@
 
 		@media (min-width: 1024px) {
 			.hero-section {
-				padding-top: 120px;
+				padding-top: 40px;
 				padding-left: 24px;
 				padding-right: 24px;
 			}
