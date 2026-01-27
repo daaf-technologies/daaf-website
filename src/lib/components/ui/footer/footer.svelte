@@ -123,7 +123,7 @@
 		justify-content: center;
 		align-items: center;
 	}
-	@media (max-width: 768px) {
+	@media (min-width: 300px) {
 		.footer-container {
 			padding: 0 16px;
 		}
