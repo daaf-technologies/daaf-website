@@ -31,49 +31,32 @@ export const blogPosts: BlogPost[] = [
 			{ id: 'takeaways', title: 'Key takeaways' },
 			{ id: 'disabling', title: 'Disabling Liftoff' }
 		],
-		content: `While troubleshooting a performance anomaly, we discovered that V8's Liftoff compiler was causing significant slowdowns in our Node.js application. This post details our investigation and the solution we implemented.
+		content: `<h2 id="overview">Overview</h2>
+<p>While troubleshooting a performance anomaly in our Node.js application, we discovered unexpected slowdowns when running multiple worker threads. The issue led us deep into WebAssembly execution and V8's compiler optimizations.</p>
+<p>We had developed a custom JavaScript runtime for the secure execution of untrusted third-party code. The runtime uses QuickJS for JavaScript and WebAssembly (WASM) for isolation and performance-critical paths. As we scaled the number of worker threads, execution times became wildly inconsistent.</p>
 
-## The experiment
+<h2 id="experiment">The experiment</h2>
+<p>We set up an experiment to measure the performance impact of parallelization. Each worker would spawn its own runtime context and run a simple loop to assess whether we could benefit from multi-threaded execution.</p>
+<figure class="content-embedded-image">
+	<img src="/images/blog-embed-verification-apis.png" alt="Top Email Verification APIs" />
+</figure>
+<h3>But when we ran the script, the results were surprising:</h3>
+<p class="content-bullet">→ Running a single worker took a quite reasonable 330ms.</p>
+<p class="content-bullet">→ Running four workers made each worker's individual execution time balloon to 4053ms.</p>
+<p class="content-bullet">→ Cutting the worker count to two reduced execution time to 1200ms per worker.</p>
+<p>The parallelization we expected to help was making things worse. Adding more workers increased per-worker execution time instead of dividing the load. We needed to understand why.</p>
 
-We set up a controlled experiment to measure the performance impact of different compilation strategies.
+<h2 id="liftoff">V8's Liftoff compiler</h2>
+<p>We dug into V8's documentation. The unpredictable performance and the link between worker count and execution time pointed to how V8 compiles WebAssembly.</p>
+<blockquote>The goal of Liftoff is to reduce startup time for WebAssembly-based apps by generating code as fast as possible. Code quality is secondary.</blockquote>
+<p>Liftoff is V8's baseline compiler for WebAssembly. It prioritizes compilation speed over the quality of the generated code. In our scenario, with multiple runtimes and repeated WASM execution, that trade-off worked against us.</p>
 
-### But when we ran the script, the results were surprising:
+<h2 id="takeaways">Key takeaways</h2>
+<p>Liftoff can be a bottleneck when running many WebAssembly instances in parallel. If you see execution time grow with the number of workers, V8's compilation strategy is a likely cause. Disabling Liftoff for hot WASM paths can restore predictable, faster performance.</p>
 
-→ Running a single worker took a quite reasonable 330ms.
-→ With multiple workers, performance degraded significantly.
-→ The Liftoff compiler was the bottleneck.
-
-## V8's Liftoff compiler
-
-Liftoff is V8's baseline compiler designed for fast startup times. However, in certain scenarios, it can become a performance bottleneck, especially in long-running applications with high throughput requirements.
-
-> Liftoff's goal is to generate code quickly, prioritizing compilation speed over execution speed. This makes it ideal for startup performance but can be problematic for hot code paths.
-
-## Disabling Liftoff
-
-After identifying the issue, we disabled Liftoff for our critical code paths, resulting in a 40% performance improvement.`
-	},
-	{
-		id: '2',
-		title: 'Inside the growth of the top AI companies on Stripe',
-		slug: 'inside-growth-top-ai-companies-stripe',
-		category: 'Engineering',
-		author: 'Lauren Thomas',
-		date: 'Sep 07, 2025',
-		description:
-			'Building scalable tax compliance solutions requires understanding complex regulations across multiple jurisdictions. Learn how we architected a platform that handles global tax requirements efficiently.',
-		featuredImage: '/images/blog-featured-2.png'
-	},
-	{
-		id: '3',
-		title: 'How we built it: Jurisdiction resolution for Stripe Tax',
-		slug: 'how-we-built-jurisdiction-resolution-stripe-tax',
-		category: 'Software Development',
-		author: 'Stephanie Neill',
-		date: 'Oct 21, 2024',
-		description:
-			'Streamlining tax compliance across borders is challenging. Our platform consolidates multiple tax jurisdictions into a single, easy-to-use interface that simplifies complex workflows.',
-		featuredImage: '/images/blog-featured-3.png'
+<h2 id="disabling">Disabling Liftoff</h2>
+<p>We ran an experiment: we disabled Liftoff using a V8 flag in Node.js. The inconsistent execution times disappeared. Workers scaled as we had originally expected.</p>
+<p>If you hit similar behaviour with Node.js, WebAssembly, and worker threads, try turning off Liftoff for your critical code paths. In our case, it resolved the anomaly and gave us the performance profile we needed.</p>`
 	}
 ];
 
