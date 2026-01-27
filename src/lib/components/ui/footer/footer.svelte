@@ -123,7 +123,7 @@
 		justify-content: center;
 		align-items: center;
 	}
-	@media (min-width: 300px) {
+	@media (max-width: 819px) {
 		.footer-container {
 			padding: 0 16px;
 		}
@@ -239,6 +239,10 @@
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
+		}
+
+		.first-letter {
+			font-size: 26px;
 		}
 
 		.top-left-title {

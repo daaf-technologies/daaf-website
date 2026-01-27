@@ -126,7 +126,7 @@
 		cursor: pointer;
 	}
 
-	@media (min-width: 300px) {
+	@media (max-width: 819px) {
 		.header {
 			width: 343px;
 			padding: 16px 12px;
