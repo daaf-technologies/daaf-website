@@ -13,6 +13,67 @@
 	const route = page?.route?.id;
 </script>
 
+<svelte:head>
+	<script type="application/ld+json">
+		{JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'Organization',
+			'@id': 'https://daaf.ae/#organization',
+			name: 'DAAF',
+			url: 'https://daaf.ae/',
+			logo: 'https://daaf.ae/assets/images/daaf-logo.png',
+			image: 'https://daaf.ae/assets/images/daaf-logo.png',
+			description:
+				'DAAF is a technology-driven company delivering software, artificial intelligence, and digital solutions tailored for modern businesses.',
+			foundingDate: '2025',
+			founder: [
+				{
+					'@type': 'Person',
+					name: 'Darani Dharan'
+				},
+				{
+					'@type': 'Person',
+					name: 'Ali Afroze'
+				}
+			],
+			knowsAbout: [
+				'Artificial Intelligence',
+				'Software Development',
+				'Web and Mobile Application Development',
+				'Digital Transformation',
+				'Data Analytics',
+				'Cloud Solutions',
+				'Plugin and Micro App Development',
+				'Legacy Migration',
+				'Full Stack Engineering',
+				'Ai MCP Setup',
+				'UX and UI Development'
+			],
+			sameAs: [
+				'https://www.linkedin.com/company/daaf-llc/',
+				'https://www.facebook.com/daaf.llc',
+				'https://www.instagram.com/daaf_llc/',
+				'https://x.com/daaf_llc',
+				'https://www.threads.com/@daaf_llc'
+			],
+			address: {
+				'@type': 'PostalAddress',
+				streetAddress: 'Meydan Grandstand, 6th floor, Meydan Road',
+				addressLocality: 'Nad Al Sheba',
+				addressRegion: 'Dubai',
+				addressCountry: 'AE'
+			},
+			contactPoint: {
+				'@type': 'ContactPoint',
+				contactType: 'customer support',
+				email: 'admin@daaf.ae',
+				telephone: '+971524240586',
+				availableLanguage: ['English']
+			}
+		})}
+	</script>
+</svelte:head>
+
 <div class={`${className} header`}>
 	<a href="/" class="logo">
 		<DAAF />
