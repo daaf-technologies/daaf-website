@@ -4,7 +4,6 @@
 	import GetInTouch from '$lib/components/ui/get-in-touch';
 	import Header from '$lib/components/ui/header';
 	import Button from '$lib/components/design/button';
-	import { caseStudiesData } from '$lib/constants/case-studies';
 	import CaseStudyCard1 from '$lib/assets/images/case-study-card-1.png';
 	import CaseStudyCard2 from '$lib/assets/images/case-study-card-2.png';
 	import CaseStudyCard3 from '$lib/assets/images/case-study-card-3.png';
@@ -79,17 +78,15 @@
 
 	<div class="hero-section flex w-full flex-col items-center gap-[30px] px-4 pt-[40px]">
 		<div class="flex flex-col gap-3 text-center">
-			<p class="title text-[30px] font-semibold text-[#21231E]">Case Study</p>
-			<p
-				class="subtitle w-full max-w-[90%] text-center text-[16px] text-[#51636F]"
-			>
+			<p class="title !font-[stacion] text-[30px] font-semibold text-[#21231E]">Case Study</p>
+			<p class="subtitle text-center text-[16px] text-[#51636F]">
 				From seamless integration to future-ready platforms, DAAF builds what tomorrow demands —
 				today.
 			</p>
 		</div>
 
-		<div class="filters-container flex w-full max-w-[1200px] flex-wrap justify-center gap-2 px-4">
-			{#each filters as filter}
+		<div class="filters-container flex max-w-[1200px] flex-wrap justify-center gap-2">
+			{#each filters as filter (filter)}
 				<button
 					class="filter-btn"
 					class:active={selectedFilter === filter}
@@ -101,10 +98,10 @@
 		</div>
 	</div>
 
-	<div
-		class="case-studies-grid flex w-full max-w-[1200px] flex-col items-center gap-4 px-4 py-[40px]"
-	>
-		{#each filteredCaseStudies as study}
+	<div class="divider border-b-[1px] border-[#EDEDED]"></div>
+
+	<div class="case-studies-grid flex flex-col items-center gap-4 px-4 py-[40px]">
+		{#each filteredCaseStudies as study (study.slug)}
 			<a href="/case-study/{study.slug}" class="case-study-card">
 				<div class="card-image">
 					<img src={study.image} alt={study.title} />
@@ -117,10 +114,13 @@
 		{/each}
 	</div>
 
-	<div class="view-all-section flex w-full justify-center pb-[40px]">
-		<Button variant="primary" onclick={() => goto('/blogs')} class="view-all-btn">
-			View all Blogs
-		</Button>
+	<div class="divider border-b-[1px] border-[#EDEDED]"></div>
+
+	<div class="view-all-section flex w-full justify-center">
+		<div class="view-all-btn">
+			<Button class="w-full" variant="primary" onclick={() => goto('/blogs')}>View all Blogs</Button
+			>
+		</div>
 	</div>
 
 	<GetInTouch />
@@ -166,7 +166,9 @@
 		border-radius: 12px;
 		overflow: hidden;
 		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-		transition: transform 0.2s ease, box-shadow 0.2s ease;
+		transition:
+			transform 0.2s ease,
+			box-shadow 0.2s ease;
 		cursor: pointer;
 		text-decoration: none;
 		display: block;
@@ -216,14 +218,14 @@
 	}
 
 	/* Mobile: 375px to 820px */
-	@media (max-width: 820px) {
+	@media (max-width: 819px) {
 		.case-study {
 			padding-top: 0;
 		}
 
 		.hero-section {
-			padding-top: 24px;
-			gap: 24px;
+			padding-top: 70px;
+			gap: 60px;
 		}
 
 		.title {
@@ -232,13 +234,18 @@
 
 		.subtitle {
 			font-size: 16px;
+			width: 35ch;
 			line-height: 150%;
+		}
+
+		.divider {
+			width: 343px;
 		}
 
 		.filters-container {
 			padding: 0 16px;
+			margin-bottom: 30px;
 			gap: 8px;
-			justify-content: flex-start;
 			overflow-x: auto;
 			-webkit-overflow-scrolling: touch;
 			scrollbar-width: none;
@@ -250,7 +257,7 @@
 
 		.filter-btn {
 			font-size: 12px;
-			padding: 8px 16px;
+			padding: 10px 12px;
 			white-space: nowrap;
 			flex-shrink: 0;
 		}
@@ -264,7 +271,7 @@
 		}
 
 		.case-study-card {
-			width: 100%;
+			width: 342px;
 		}
 
 		.card-content {
@@ -280,33 +287,38 @@
 		}
 
 		.view-all-section {
+			padding-top: 30px;
 			padding-bottom: 40px;
 		}
 
 		.view-all-btn {
-			width: auto;
+			width: 342px;
 			padding: 12px 24px;
 		}
 	}
 
 	/* Tablet: 821px to 1023px */
-	@media (min-width: 821px) and (max-width: 1023px) {
+	@media (min-width: 820px) and (max-width: 1023px) {
 		.case-study {
 			padding-top: 50px;
 		}
 
+		.case-study-card {
+			width: 212px;
+		}
+
 		.hero-section {
-			padding-top: 70px;
-			gap: 30px;
+			padding-top: 120px;
+			gap: 100px;
 		}
 
 		.title {
-			font-size: 44px;
+			font-size: 60px;
 		}
 
 		.subtitle {
 			font-size: 20px;
-			max-width: 60ch;
+			max-width: 40ch;
 		}
 
 		.filters-container {
@@ -315,23 +327,32 @@
 
 		.filter-btn {
 			font-size: 14px;
-			padding: 10px 20px;
+			padding: 10px 12px;
 		}
 
 		.case-studies-grid {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			gap: 24px;
-			padding-top: 60px;
-			padding-bottom: 60px;
+			padding-top: 40px;
+			padding-bottom: 40px;
 		}
 
 		.card-title {
 			font-size: 20px;
 		}
 
+		.filters-container {
+			padding-bottom: 30px;
+		}
+
+		.divider {
+			width: 840px;
+		}
+
 		.view-all-section {
-			padding-bottom: 60px;
+			padding-top: 30px;
+			padding-bottom: 120px;
 		}
 	}
 
@@ -343,20 +364,21 @@
 
 		.hero-section {
 			padding-top: 120px;
-			gap: 30px;
+			gap: 94px;
 		}
 
 		.title {
-			font-size: 44px;
+			font-size: 64px;
 		}
 
 		.subtitle {
 			font-size: 20px;
-			max-width: 60ch;
+			max-width: 40ch;
 		}
 
 		.filters-container {
 			gap: 12px;
+			padding-bottom: 30px;
 		}
 
 		.filter-btn {
@@ -368,14 +390,19 @@
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			gap: 32px;
-			padding-top: 120px;
-			padding-bottom: 120px;
+			padding-top: 40px;
+			padding-bottom: 40px;
 		}
-
+		.case-study-card {
+			width: 257px;
+		}
 		.card-title {
 			font-size: 22px;
 		}
-
+		.divider {
+			width: 910px;
+			margin-bottom: 30px;
+		}
 		.view-all-section {
 			padding-bottom: 120px;
 		}
@@ -389,7 +416,7 @@
 
 		.hero-section {
 			padding-top: 120px;
-			gap: 30px;
+			gap: 94px;
 			max-width: 1200px;
 		}
 
@@ -399,33 +426,40 @@
 
 		.subtitle {
 			font-size: 20px;
-			max-width: 60ch;
+			max-width: 40ch;
 		}
 
 		.filters-container {
 			gap: 12px;
+			padding-bottom: 30px;
 		}
 
 		.filter-btn {
 			font-size: 14px;
-			padding: 10px 20px;
+			padding: 10px 12px;
 		}
 
 		.case-studies-grid {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			gap: 32px;
-			padding-top: 120px;
-			padding-bottom: 120px;
-			max-width: 1200px;
+			padding-top: 70px;
+			padding-bottom: 60px;
+		}
+
+		.case-study-card {
+			width: 238px;
 		}
 
 		.card-title {
 			font-size: 22px;
 		}
-
+		.divider {
+			width: 910px;
+			margin-bottom: 30px;
+		}
 		.view-all-section {
-			padding-bottom: 120px;
+			padding-bottom: 40px;
 		}
 	}
 </style>
