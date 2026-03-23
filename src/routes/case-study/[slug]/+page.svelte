@@ -58,11 +58,11 @@
 </svelte:head>
 
 {#if caseStudy}
-	<div class="case-study-detail flex w-full flex-col items-center pt-[50px]">
-		<Header />
+	<div class="case-study-detail flex w-full flex-col items-center">
+		<div class="hero-section flex w-full flex-col items-center gap-[30px] px-4 pt-[50px]">
+			<Header />
 
-		<div class="hero-section flex w-full flex-col items-center gap-[30px] px-4 pt-[70px] lg:pt-[120px]">
-			<div class="flex flex-col gap-3 text-center max-w-[900px]">
+			<div class="flex max-w-[900px] flex-col items-center gap-3 text-center">
 				<h1 class="title text-[30px] font-semibold text-[#21231E] lg:text-[44px]">
 					{caseStudy.title}
 				</h1>
@@ -71,18 +71,22 @@
 				</p>
 			</div>
 
-			<div class="hero-image-container w-full max-w-[1200px] mt-8">
+			<div class="hero-image-container w-full max-w-[1200px]">
 				{#if heroImage}
 					<img src={heroImage} alt={caseStudy.title} class="hero-image" />
 				{:else}
-					<div class="hero-image-placeholder bg-[#21231E] rounded-lg p-8 h-[400px] flex items-center justify-center">
-						<p class="text-white text-lg">Hero Image Placeholder</p>
+					<div
+						class="hero-image-placeholder flex h-[400px] items-center justify-center rounded-lg bg-[#21231E] p-8"
+					>
+						<p class="text-lg text-white">Hero Image Placeholder</p>
 					</div>
 				{/if}
 			</div>
 		</div>
 
-		<div class="content-section flex w-full max-w-[900px] flex-col gap-12 px-4 py-[60px] lg:py-[120px]">
+		<div
+			class="content-section flex w-full max-w-[644px] flex-col gap-12 px-4 py-[60px] lg:py-[120px]"
+		>
 			<section class="content-block">
 				<h2 class="section-title">Client Objective</h2>
 				<p class="section-text">{caseStudy.clientObjective}</p>
@@ -95,7 +99,7 @@
 			<section class="content-block">
 				<h2 class="section-title">Challenges</h2>
 				<ul class="bullet-list">
-					{#each caseStudy.challenges as challenge}
+					{#each caseStudy.challenges as challenge, i (i)}
 						<li>
 							<span class="bullet">→</span>
 							<span class="bullet-text">{challenge}</span>
@@ -108,7 +112,7 @@
 				<h2 class="section-title">DAAF's Approach</h2>
 				<p class="section-text">{caseStudy.approach.intro}</p>
 				<ul class="bullet-list">
-					{#each caseStudy.approach.points as point}
+					{#each caseStudy.approach.points as point, i (i)}
 						<li>
 							<span class="bullet">→</span>
 							<span class="bullet-text">{point}</span>
@@ -121,7 +125,7 @@
 				<h2 class="section-title">Solution Snapshot</h2>
 				<p class="section-text">{caseStudy.solutionSnapshot.intro}</p>
 				<ul class="bullet-list">
-					{#each caseStudy.solutionSnapshot.points as point}
+					{#each caseStudy.solutionSnapshot.points as point, i (i)}
 						<li>
 							<span class="bullet">→</span>
 							<span class="bullet-text">{point}</span>
@@ -134,7 +138,7 @@
 				<h2 class="section-title">Outcomes</h2>
 				<p class="section-text">{caseStudy.outcomes.intro}</p>
 				<ul class="bullet-list">
-					{#each caseStudy.outcomes.points as point}
+					{#each caseStudy.outcomes.points as point, i (i)}
 						<li>
 							<span class="bullet">→</span>
 							<span class="bullet-text">{point}</span>
@@ -153,7 +157,7 @@
 				<h2 class="section-title">User Experience (Flexible Section)</h2>
 				<p class="section-text">{caseStudy.userExperience.intro}</p>
 				<ul class="bullet-list">
-					{#each caseStudy.userExperience.points as point}
+					{#each caseStudy.userExperience.points as point, i (i)}
 						<li>
 							<span class="bullet">→</span>
 							<span class="bullet-text">{point}</span>
@@ -172,7 +176,7 @@
 				<h2 class="section-title">Security & Reliability (Flexible Section)</h2>
 				<p class="section-text">{caseStudy.securityReliability.intro}</p>
 				<ul class="bullet-list">
-					{#each caseStudy.securityReliability.points as point}
+					{#each caseStudy.securityReliability.points as point, i (i)}
 						<li>
 							<span class="bullet">→</span>
 							<span class="bullet-text">{point}</span>
@@ -185,7 +189,7 @@
 				<h2 class="section-title">Delivery Timeline (Flexible Section)</h2>
 				<p class="section-text">{caseStudy.deliveryTimeline.intro}</p>
 				<ul class="bullet-list">
-					{#each caseStudy.deliveryTimeline.points as point}
+					{#each caseStudy.deliveryTimeline.points as point, i (i)}
 						<li>
 							<span class="bullet">→</span>
 							<span class="bullet-text">{point}</span>
@@ -202,30 +206,28 @@
 			</section>
 		</div>
 
-		<div class="recent-case-studies flex w-full flex-col items-center gap-8 px-4 pb-[60px] lg:pb-[120px]">
+		<div
+			class="recent-case-studies flex w-full flex-col items-center gap-8 bg-[#F9FAFA] px-4 pb-[60px] lg:pb-[120px]"
+		>
 			<h2 class="recent-title text-[30px] font-semibold text-[#21231E] lg:text-[44px]">
 				Recent Case Studies
 			</h2>
 			<div
 				class="case-studies-grid flex w-full max-w-[1200px] flex-col items-center gap-6 md:grid md:grid-cols-3 md:gap-8"
 			>
-			{#each recentCaseStudies as study}
-				<a href="/case-study/{study.slug}" class="case-study-card">
-					<div class="card-image">
-						<img
-							src={caseStudyImages[study.slug]}
-							alt={study.title}
-							class="card-image-img"
-						/>
-					</div>
-					<div class="card-content">
-						<h3 class="card-title">{study.title}</h3>
-						<p class="card-author">{study.author}</p>
-					</div>
-				</a>
-			{/each}
+				{#each recentCaseStudies as study (study.slug)}
+					<a href="/case-study/{study.slug}" class="case-study-card">
+						<div class="card-image">
+							<img src={caseStudyImages[study.slug]} alt={study.title} class="card-image-img" />
+						</div>
+						<div class="card-content">
+							<h3 class="card-title">{study.title}</h3>
+							<p class="card-author">{study.author}</p>
+						</div>
+					</a>
+				{/each}
 			</div>
-			<div class="view-all-section flex w-full justify-center mt-8">
+			<div class="view-all-section mt-8 flex w-full justify-center">
 				<Button variant="primary" onclick={() => goto('/case-study')} class="view-all-btn">
 					View all
 				</Button>
@@ -237,72 +239,73 @@
 
 	<style>
 		.case-study-detail {
-			background: linear-gradient(177.08deg, #e1fbdc -36.44%, #ffffff 97.58%);
+			background-color: #ffffff;
 			min-height: 100vh;
 		}
 
+		.hero-section {
+			background: linear-gradient(177.08deg, #e1fbdc -36.44%, #ffffff 97.58%);
+		}
 		.title {
-			font-family: 'recoleta alt';
+			font-family: 'Stacion';
 			line-height: 130%;
 		}
 
-	.hero-image-container {
-		margin-top: 40px;
-		display: flex;
-		justify-content: center;
-		width: 100%;
-	}
+		.hero-image-container {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
 
-	.hero-image {
-		width: 100%;
-		max-width: 1025px;
-		height: 480px;
-		border-radius: 16px;
-		background-color: #000000;
-		object-fit: cover;
-		box-shadow:
-			3px 4px 10px 0px rgba(50, 47, 47, 0.21),
-			12px 15px 19px 0px rgba(50, 47, 47, 0.18);
-	}
+		.hero-image {
+			width: 100%;
+			max-width: 1025px;
+			height: 480px;
+			border-radius: 16px;
+			background-color: #000000;
+			object-fit: cover;
+			box-shadow:
+				3px 4px 10px 0px rgba(50, 47, 47, 0.21),
+				12px 15px 19px 0px rgba(50, 47, 47, 0.18);
+		}
 
-	.hero-image-placeholder {
-		width: 100%;
-		max-width: 1025px;
-		border-radius: 16px;
-		box-shadow:
-			3px 4px 10px 0px rgba(50, 47, 47, 0.21),
-			12px 15px 19px 0px rgba(50, 47, 47, 0.18);
-	}
+		.hero-image-placeholder {
+			width: 100%;
+			max-width: 1025px;
+			border-radius: 16px;
+			box-shadow:
+				3px 4px 10px 0px rgba(50, 47, 47, 0.21),
+				12px 15px 19px 0px rgba(50, 47, 47, 0.18);
+		}
 
-	.content-section {
-		width: 100%;
-	}
+		.content-section {
+			width: 100%;
+		}
 
-	.content-image-container {
-		display: flex;
-		justify-content: center;
-		width: 100%;
-		margin: 24px 0;
-	}
+		.content-image-container {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			margin: 24px 0;
+		}
 
-	.content-image {
-		width: 100%;
-		max-width: 651px;
-		height: 292px;
-		border-radius: 8px;
-		object-fit: cover;
-		filter: blur(1.47px);
-		box-shadow: 3px 4px 10px 0px rgba(50, 47, 47, 0.21);
-	}
+		.content-image {
+			width: 100%;
+			max-width: 651px;
+			height: 292px;
+			border-radius: 8px;
+			object-fit: cover;
+			filter: blur(1.47px);
+			box-shadow: 3px 4px 10px 0px rgba(50, 47, 47, 0.21);
+		}
 
-	.content-block {
-		display: flex;
-		flex-direction: column;
-		gap: 16px;
-	}
+		.content-block {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+		}
 
 		.section-title {
-			font-family: 'recoleta alt';
 			font-size: 28px;
 			font-weight: 600;
 			color: #21231e;
@@ -388,7 +391,7 @@
 		}
 
 		.recent-title {
-			font-family: 'recoleta alt';
+			font-family: 'Inter Variable';
 			text-align: center;
 		}
 
@@ -398,7 +401,9 @@
 			border-radius: 12px;
 			overflow: hidden;
 			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-			transition: transform 0.2s ease, box-shadow 0.2s ease;
+			transition:
+				transform 0.2s ease,
+				box-shadow 0.2s ease;
 			cursor: pointer;
 			text-decoration: none;
 			display: block;
@@ -436,7 +441,7 @@
 		}
 
 		.card-title {
-			font-family: 'recoleta alt';
+			font-family: 'Inter Variable';
 			font-size: 20px;
 			font-weight: 600;
 			color: #21231e;
@@ -453,8 +458,19 @@
 		}
 
 		@media (max-width: 768px) {
+			.title {
+				padding-top: 40px;
+				font-size: 30px;
+			}
+
+			.hero-image {
+				width: 340px;
+				object-fit: contain;
+				margin-top: 60px;
+				margin-bottom: 60px;
+			}
 			.section-title {
-				font-size: 24px;
+				font-size: 20px;
 			}
 
 			.section-text,
@@ -477,16 +493,90 @@
 			.cta-section {
 				padding: 24px;
 			}
+
+			.recent-case-studies {
+				background-color: #f9fafa !important;
+			}
 		}
 
-		@media (min-width: 1024px) {
+		@media (min-width: 820px) and (max-width: 1023px) {
+			.title {
+				padding-top: 90px;
+				font-size: 64px;
+				width: 12ch;
+			}
+
+			.subtitle {
+				width: 49ch;
+			}
+			.hero-image {
+				width: 700px;
+				object-fit: contain;
+				margin-top: 60px;
+				margin-bottom: 60px;
+			}
+			.recent-case-studies {
+				padding-top: 60px;
+			}
+		}
+
+		@media (min-width: 1024px) and (max-width: 1139px) {
+			.title {
+				padding-top: 90px;
+				font-size: 64px;
+				width: 12ch;
+			}
 			.section-title {
 				font-size: 32px;
+			}
+
+			.subtitle {
+				width: 48ch;
 			}
 
 			.section-text,
 			.bullet-text {
 				font-size: 18px;
+			}
+
+			.hero-image {
+				width: 843px;
+			}
+
+			.recent-case-studies {
+				padding-top: 120px;
+			}
+		}
+
+		@media (min-width: 1140px) {
+			.hero-section {
+				gap: 60px;
+				padding-bottom: 60px;
+			}
+			.title {
+				width: 12ch;
+				font-size: 64px;
+			}
+
+			.subtitle {
+				width: 48ch;
+			}
+
+			.content-section {
+				background-color: #ffffff;
+			}
+
+			.section-title {
+				font-family: 'Inter Variable';
+				font-size: 20px;
+			}
+
+			.section-text {
+				font-family: 'Inter Variable';
+			}
+
+			.recent-case-studies {
+				padding-top: 120px;
 			}
 		}
 	</style>

@@ -105,7 +105,7 @@ export const caseStudiesData: Record<string, CaseStudyData> = {
 		securityReliability: {
 			intro: 'Safeguards implemented:',
 			points: [
-				'Data isolation: Each organization\'s data is completely segregated',
+				"Data isolation: Each organization's data is completely segregated",
 				'Traceability: Full audit logs for all processing steps',
 				'Queue-based processing: Handles large uploads without timeouts',
 				'Parallel tiling/caching: Optimized for performance at scale'
