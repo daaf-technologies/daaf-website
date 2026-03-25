@@ -23,7 +23,7 @@ export const blogPosts: BlogPost[] = [
 		lastUpdated: 'August 11, 2025',
 		description:
 			'While businesses are rapidly building AI products, monetization remains a challenge. In this post, we share a framework for building a successful pricing strategy with key decision points on charge metrics, billing models, and guardrails.',
-		featuredImage: '/images/blog-daaf-tax.png',
+		featuredImage: 'src/lib/assets/images/blog-card-email-deliverability.png',
 		tableOfContents: [
 			{ id: 'overview', title: 'Overview' },
 			{ id: 'experiment', title: 'The Experiment' },

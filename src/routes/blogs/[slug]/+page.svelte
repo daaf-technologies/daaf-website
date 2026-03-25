@@ -4,24 +4,28 @@
 	import Footer from '$lib/components/ui/footer';
 	import Header from '$lib/components/ui/header';
 	import Button from '$lib/components/design/button';
-	import { blogPosts } from '$lib/constants/blogs';
+	import { blogPosts, type BlogPost } from '$lib/constants/blogs';
 	import BlogCardPricingScale from '$lib/assets/images/blog-card-pricing-scale.png';
 	import BlogCardBuildEmails from '$lib/assets/images/blog-card-build-emails.png';
 	import BlogCardEmailDeliverability from '$lib/assets/images/blog-card-email-deliverability.png';
 
 	const blogCardImages = [BlogCardPricingScale, BlogCardBuildEmails, BlogCardEmailDeliverability];
 
+	type RecentCard =
+		| { type: 'blog'; blog: BlogPost }
+		| { type: 'placeholder'; image: string; title: string; author: string };
+
 	/** Recent: 1 real blog (DAAF Tax, links) + 2 placeholders (images only, no link). Always shown before footer. */
-	const recentCards = [
-		{ type: 'blog' as const, blog: blogPosts[0] },
+	const recentCards: RecentCard[] = [
+		{ type: 'blog', blog: blogPosts[0] },
 		{
-			type: 'placeholder' as const,
+			type: 'placeholder',
 			image: BlogCardBuildEmails,
 			title: 'A comprehensive worldwide tax compliance platform.',
 			author: 'Liam Carter'
 		},
 		{
-			type: 'placeholder' as const,
+			type: 'placeholder',
 			image: BlogCardPricingScale,
 			title: 'A one-stop shop for handling your global tax compliance needs!',
 			author: 'Ava Thompson'
@@ -101,7 +105,7 @@
 					<h2 class="toc-title">CONTENTS</h2>
 					<nav class="toc-nav">
 						{#if blog.tableOfContents}
-							{#each blog.tableOfContents as item, i}
+							{#each blog.tableOfContents as item, i (item.id)}
 								<a href="#{item.id}" class="toc-link">{i + 1}. {item.title}</a>
 							{/each}
 						{:else}
@@ -130,6 +134,7 @@
 				<div class="content-body">
 					{#if blog.content}
 						<div class="content-html">
+							<!-- eslint-disable-next-line svelte/no-at-html-tags -- trusted CMS/static content only -->
 							{@html blog.content}
 						</div>
 					{:else}
@@ -186,7 +191,7 @@
 				</Button>
 			</div>
 			<div class="recent-grid flex w-full max-w-[1200px] gap-6">
-				{#each recentCards as card}
+				{#each recentCards as card, i (i)}
 					{#if card.type === 'blog'}
 						<a href="/blogs/{card.blog.slug}" class="recent-card">
 							<div class="recent-image">

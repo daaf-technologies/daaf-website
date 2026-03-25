@@ -1,21 +1,25 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import Footer from '$lib/components/ui/footer';
 	import GetInTouch from '$lib/components/ui/get-in-touch';
 	import Header from '$lib/components/ui/header';
 	import Button from '$lib/components/design/button';
-	import { blogPosts } from '$lib/constants/blogs';
+	import { blogPosts, type BlogPost } from '$lib/constants/blogs';
 	import BlogCardPricingScale from '$lib/assets/images/blog-card-pricing-scale.png';
+	import BlogCardCube from '$lib/assets/images/blog-card-cube.png';
 	import BlogCardBuildEmails from '$lib/assets/images/blog-card-build-emails.png';
 	import BlogCardEmailDeliverability from '$lib/assets/images/blog-card-email-deliverability.png';
 
 	const blogCardImages = [BlogCardPricingScale, BlogCardBuildEmails, BlogCardEmailDeliverability];
 
+	type FeaturedCard =
+		| { type: 'blog'; blog: BlogPost }
+		| { type: 'placeholder'; image: string; title: string };
+
 	/** Featured: 1 real blog (DAAF Tax, links) + 2 image-only cards (no navigation) */
-	const featuredCards = [
-		{ type: 'blog' as const, blog: blogPosts[0] },
-		{ type: 'placeholder' as const, image: BlogCardPricingScale, title: 'Pricing Plan Scale' },
-		{ type: 'placeholder' as const, image: BlogCardBuildEmails, title: 'The new way to build emails' }
+	const featuredCards: FeaturedCard[] = [
+		{ type: 'blog', blog: blogPosts[0] },
+		{ type: 'placeholder', image: BlogCardCube, title: 'Pricing Plan Scale' },
+		{ type: 'placeholder', image: BlogCardPricingScale, title: 'The new way to build emails' }
 	];
 
 	const filters = [
@@ -60,7 +64,7 @@
 	<!-- First section: green gradient; includes Header + title + subtitle + featured cards -->
 	<div class="hero-section flex w-full flex-col items-center gap-[30px] px-4">
 		<Header />
-		<div class="flex flex-col gap-3 text-center max-w-[900px]">
+		<div class="flex max-w-[910px] flex-col gap-3 text-center">
 			<h1 class="hero-title text-[44px] font-semibold text-[#21231E]">Blogs</h1>
 			<p class="hero-subtitle text-[20px] text-[#51636F]">
 				From seamless integration to future-ready platforms, DAAF builds what tomorrow demands —
@@ -69,8 +73,8 @@
 		</div>
 
 		<!-- Featured: DAAF Tax (link) + 2 image-only cards (no link) -->
-		<div class="featured-blogs flex w-full max-w-[1200px] gap-6 px-4 mt-8">
-			{#each featuredCards as card}
+		<div class="featured-blogs mt-8 flex w-full max-w-[1200px] gap-6 px-4">
+			{#each featuredCards as card, i (i)}
 				{#if card.type === 'blog'}
 					<a href="/blogs/{card.blog.slug}" class="featured-card">
 						<div class="featured-image">
@@ -94,8 +98,8 @@
 
 	<!-- Beyond the Call Section -->
 	<div class="beyond-section flex w-full flex-col items-center gap-8 px-4">
-		<div class="flex flex-col gap-4 text-center max-w-[900px]">
-			<p class="beyond-label text-[14px] uppercase tracking-wider text-[#51636F]">
+		<div class="flex max-w-[900px] flex-col gap-4 text-center">
+			<p class="beyond-label text-[14px] tracking-wider text-[#51636F] uppercase">
 				BEYOND THE CALL
 			</p>
 			<h2 class="beyond-title text-[44px] font-semibold text-[#21231E]">
@@ -105,8 +109,8 @@
 		</div>
 
 		<!-- Filters -->
-		<div class="filters-container flex w-full max-w-[1200px] flex-wrap justify-center gap-3">
-			{#each filters as filter}
+		<div class="filters-container flex w-full max-w-[910px] flex-wrap justify-center gap-3">
+			{#each filters as filter (filter)}
 				<button
 					class="filter-btn"
 					class:active={selectedFilter === filter}
@@ -119,8 +123,8 @@
 	</div>
 
 	<!-- Blog Listings: mobile = stacked (text, author+date, image); desktop = two columns -->
-	<div class="blog-listings flex w-full max-w-[1200px] px-4">
-		{#each filteredBlogs as blog, i}
+	<div class="blog-listings flex w-full max-w-[910px] px-4">
+		{#each filteredBlogs as blog, i (blog.slug)}
 			<article class="blog-summary">
 				<div class="category-tag" data-category={blog.category.toLowerCase()}>
 					{blog.category.toUpperCase()}
@@ -166,13 +170,13 @@
 
 	/* Only the first (hero) section: linear gradient #E1FBDC → #FFFFFF */
 	.hero-section {
-		background: linear-gradient(160deg, #E1FBDC 0%, #FFFFFF 100%);
+		background: linear-gradient(160deg, #e1fbdc 0%, #ffffff 100%);
 		padding-top: 24px;
 		padding-bottom: 40px;
 	}
 
 	.hero-title {
-		font-family: 'recoleta alt';
+		font-family: 'Stacion';
 		line-height: 130%;
 	}
 
@@ -192,7 +196,9 @@
 		border-radius: 12px;
 		overflow: hidden;
 		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-		transition: transform 0.2s ease, box-shadow 0.2s ease;
+		transition:
+			transform 0.2s ease,
+			box-shadow 0.2s ease;
 		cursor: pointer;
 		text-decoration: none;
 		display: block;
@@ -215,7 +221,6 @@
 
 	.featured-image {
 		width: 100%;
-		aspect-ratio: 269 / 150;
 		overflow: hidden;
 	}
 
@@ -233,6 +238,7 @@
 	}
 
 	.beyond-label {
+		font-family: 'Departure Mono';
 		font-weight: 500;
 		letter-spacing: 0.1em;
 	}
@@ -243,7 +249,7 @@
 	}
 
 	.filter-btn {
-		padding: 10px 20px;
+		padding: 10px 12px;
 		border-radius: 20px;
 		border: 1px solid #e2e2e2;
 		background: #ffffff;
@@ -282,6 +288,7 @@
 	}
 
 	.category-tag {
+		font-family: 'Departure Mono';
 		font-size: 12px;
 		font-weight: 600;
 		text-transform: uppercase;
@@ -297,7 +304,9 @@
 		color: #38b543;
 	}
 
-	.category-tag:not([data-category='corporate']):not([data-category='engineering']):not([data-category='software development']) {
+	.category-tag:not([data-category='corporate']):not([data-category='engineering']):not(
+			[data-category='software development']
+		) {
 		color: #38b543;
 	}
 
@@ -352,7 +361,9 @@
 		border-radius: 12px;
 		overflow: hidden;
 		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-		transition: transform 0.2s ease, box-shadow 0.2s ease;
+		transition:
+			transform 0.2s ease,
+			box-shadow 0.2s ease;
 		cursor: pointer;
 		text-decoration: none;
 		display: block;
@@ -451,7 +462,7 @@
 		}
 	}
 
-	@media (min-width: 1024px) {
+	@media (min-width: 1024px) and (max-width: 1139px) {
 		.hero-section {
 			padding-top: 40px;
 			padding-bottom: 80px;
@@ -470,6 +481,22 @@
 		.view-all-section {
 			padding-top: 40px;
 			padding-bottom: 80px;
+		}
+	}
+	@media (min-width: 1140px) {
+		.hero-title {
+			font-size: 64px;
+			padding-top: 90px;
+		}
+
+		.hero-subtitle {
+			color: #51636f;
+			font-size: 22px;
+			width: 40ch;
+		}
+
+		.featured-card {
+			width: 330px;
 		}
 	}
 </style>
