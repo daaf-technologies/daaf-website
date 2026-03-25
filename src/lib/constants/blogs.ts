@@ -1,3 +1,7 @@
+import BlogCardEmailDeliverability from '$lib/assets/images/blog-card-email-deliverability.png';
+import BlogCardBuildEmails from '$lib/assets/images/blog-card-build-emails.png';
+import BlogCardPricingScale from '$lib/assets/images/blog-card-pricing-scale.png';
+
 export interface BlogPost {
 	id: string;
 	title: string;
@@ -23,7 +27,7 @@ export const blogPosts: BlogPost[] = [
 		lastUpdated: 'August 11, 2025',
 		description:
 			'While businesses are rapidly building AI products, monetization remains a challenge. In this post, we share a framework for building a successful pricing strategy with key decision points on charge metrics, billing models, and guardrails.',
-		featuredImage: 'src/lib/assets/images/blog-card-email-deliverability.png',
+		featuredImage: BlogCardEmailDeliverability,
 		tableOfContents: [
 			{ id: 'overview', title: 'Overview' },
 			{ id: 'experiment', title: 'The Experiment' },
@@ -57,6 +61,62 @@ export const blogPosts: BlogPost[] = [
 <h2 id="disabling">Disabling Liftoff</h2>
 <p>We ran an experiment: we disabled Liftoff using a V8 flag in Node.js. The inconsistent execution times disappeared. Workers scaled as we had originally expected.</p>
 <p>If you hit similar behaviour with Node.js, WebAssembly, and worker threads, try turning off Liftoff for your critical code paths. In our case, it resolved the anomaly and gave us the performance profile we needed.</p>`
+	},
+	{
+		id: '2',
+		title: 'Inside the growth of the top AI companies on Stripe',
+		slug: 'inside-the-growth-of-top-ai-companies-on-stripe',
+		category: 'Engineering',
+		author: 'Lauren Thomas',
+		date: 'Sep 07, 2025',
+		description:
+			'While businesses are rapidly building AI products, monetization remains a challenge. In this post, we share a framework for building a successful pricing strategy with key decision points on charge metrics, billing models, and guardrails.',
+		featuredImage: BlogCardBuildEmails,
+		tableOfContents: [
+			{ id: 'context', title: 'Market context' },
+			{ id: 'patterns', title: 'Growth patterns' },
+			{ id: 'billing', title: 'Billing and scale' },
+			{ id: 'takeaways', title: 'Takeaways' }
+		],
+		content: `<h2 id="context">Market context</h2>
+<p>AI-native companies are scaling faster than traditional SaaS benchmarks. We looked at how leading teams use payments infrastructure to support usage-based models, enterprise contracts, and global expansion.</p>
+
+<h2 id="patterns">Growth patterns</h2>
+<p>High-growth AI businesses tend to combine product-led adoption with disciplined revenue operations. Clear packaging, transparent metering, and reliable invoicing reduce friction as deal sizes grow.</p>
+
+<h2 id="billing">Billing and scale</h2>
+<p>As volume and geography diversify, billing systems must handle partial periods, credits, and tax without slowing product velocity. The teams we studied invested early in data quality and reconciliation.</p>
+
+<h2 id="takeaways">Takeaways</h2>
+<p>Strong monetization is as much an engineering problem as a go-to-market one. Instrument usage early, align finance and product on metrics, and choose infrastructure that can evolve with your pricing.</p>`
+	},
+	{
+		id: '3',
+		title: 'How we built it: Jurisdiction resolution for Stripe Tax',
+		slug: 'jurisdiction-resolution-stripe-tax',
+		category: 'Software Development',
+		author: 'Stephanie Neill',
+		date: 'Oct 21, 2024',
+		description:
+			'While businesses are rapidly building AI products, monetization remains a challenge. In this post, we share a framework for building a successful pricing strategy with key decision points on charge metrics, billing models, and guardrails.',
+		featuredImage: BlogCardPricingScale,
+		tableOfContents: [
+			{ id: 'problem', title: 'The problem' },
+			{ id: 'design', title: 'Design' },
+			{ id: 'implementation', title: 'Implementation' },
+			{ id: 'results', title: 'Results' }
+		],
+		content: `<h2 id="problem">The problem</h2>
+<p>Tax jurisdiction rules vary by country, product type, and customer location. We needed a resolution layer that was fast, explainable, and safe to extend as regulations changed.</p>
+
+<h2 id="design">Design</h2>
+<p>We separated rule data from evaluation logic, versioned rule sets, and added tracing so support and compliance could see why a given transaction received a specific treatment.</p>
+
+<h2 id="implementation">Implementation</h2>
+<p>The service runs deterministic checks first, then falls back to configurable heuristics where the data model allows ambiguity. Automated tests cover edge cases drawn from real production incidents.</p>
+
+<h2 id="results">Results</h2>
+<p>Latency stayed within our SLOs while accuracy improved quarter over quarter. Teams can ship new regions without redeploying the core engine—only the rule bundles need updates.</p>`
 	}
 ];
 

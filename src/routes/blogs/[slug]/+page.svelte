@@ -15,21 +15,11 @@
 		| { type: 'blog'; blog: BlogPost }
 		| { type: 'placeholder'; image: string; title: string; author: string };
 
-	/** Recent: 1 real blog (DAAF Tax, links) + 2 placeholders (images only, no link). Always shown before footer. */
+	/** Recent: same three posts as listing (before footer) */
 	const recentCards: RecentCard[] = [
 		{ type: 'blog', blog: blogPosts[0] },
-		{
-			type: 'placeholder',
-			image: BlogCardBuildEmails,
-			title: 'A comprehensive worldwide tax compliance platform.',
-			author: 'Liam Carter'
-		},
-		{
-			type: 'placeholder',
-			image: BlogCardPricingScale,
-			title: 'A one-stop shop for handling your global tax compliance needs!',
-			author: 'Ava Thompson'
-		}
+		{ type: 'blog', blog: blogPosts[1] },
+		{ type: 'blog', blog: blogPosts[2] }
 	];
 
 	let slug = $derived($page.params.slug);

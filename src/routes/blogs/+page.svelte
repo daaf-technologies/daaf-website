@@ -5,7 +5,6 @@
 	import Button from '$lib/components/design/button';
 	import { blogPosts, type BlogPost } from '$lib/constants/blogs';
 	import BlogCardPricingScale from '$lib/assets/images/blog-card-pricing-scale.png';
-	import BlogCardCube from '$lib/assets/images/blog-card-cube.png';
 	import BlogCardBuildEmails from '$lib/assets/images/blog-card-build-emails.png';
 	import BlogCardEmailDeliverability from '$lib/assets/images/blog-card-email-deliverability.png';
 
@@ -15,11 +14,11 @@
 		| { type: 'blog'; blog: BlogPost }
 		| { type: 'placeholder'; image: string; title: string };
 
-	/** Featured: 1 real blog (DAAF Tax, links) + 2 image-only cards (no navigation) */
+	/** Featured row: three posts (matches listing hero) */
 	const featuredCards: FeaturedCard[] = [
 		{ type: 'blog', blog: blogPosts[0] },
-		{ type: 'placeholder', image: BlogCardCube, title: 'Pricing Plan Scale' },
-		{ type: 'placeholder', image: BlogCardPricingScale, title: 'The new way to build emails' }
+		{ type: 'blog', blog: blogPosts[1] },
+		{ type: 'blog', blog: blogPosts[2] }
 	];
 
 	const filters = [
@@ -72,7 +71,7 @@
 			</p>
 		</div>
 
-		<!-- Featured: DAAF Tax (link) + 2 image-only cards (no link) -->
+		<!-- Featured: three blog posts -->
 		<div class="featured-blogs mt-8 flex w-full max-w-[1200px] gap-6 px-4">
 			{#each featuredCards as card, i (i)}
 				{#if card.type === 'blog'}
