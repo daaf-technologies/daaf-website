@@ -58,23 +58,23 @@
 				<TikTok />
 			</a>
 
-			<a href="https://facebook.com/daaf.uae" target="_blank" class="icon facebook">
+			<a href="https://www.facebook.com/daaf.llc" target="_blank" class="icon facebook">
 				<Facebook />
 			</a>
 
-			<a href="https://www.instagram.com/daaf_ae/" target="_blank" class="icon instagram">
+			<a href="https://www.instagram.com/daaf_llc/" target="_blank" class="icon instagram">
 				<Instagram />
 			</a>
 
-			<a href="https://x.com/daaf_ae" target="_blank" class="icon x">
+			<a href="https://x.com/daaf_llc" target="_blank" class="icon x">
 				<X />
 			</a>
 
-			<a href="https://www.linkedin.com/company/daaf-ae/" target="_blank" class="icon linkedin">
+			<a href="https://www.linkedin.com/company/daaf-llc/" target="_blank" class="icon linkedin">
 				<LinkedIn />
 			</a>
 
-			<a href="https://www.threads.com/@daaf_ae" target="_blank" class="icon threads">
+			<a href="https://www.threads.com/@daaf_llc" target="_blank" class="icon threads">
 				<Threads />
 			</a>
 		</div>
@@ -123,7 +123,7 @@
 		justify-content: center;
 		align-items: center;
 	}
-	@media (max-width: 768px) {
+	@media (max-width: 819px) {
 		.footer-container {
 			padding: 0 16px;
 		}
@@ -239,6 +239,10 @@
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
+		}
+
+		.first-letter {
+			font-size: 26px;
 		}
 
 		.top-left-title {

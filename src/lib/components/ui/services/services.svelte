@@ -15,7 +15,7 @@
 			WHERE DAAF CREATES IMPACT
 		</p>
 		<p
-			class="w-[23ch] text-center text-2xl leading-[120%] text-[#402A2A] tablet:w-[30ch] tablet:text-[36px] lg:text-[40px]"
+			class="w-[22ch] text-center text-2xl leading-[120%] text-[#402A2A] tablet:w-[31ch] tablet:text-[36px] lg:text-[40px]"
 		>
 			<span class="font-bold"> From legacy modernization to</span>
 			<span class="font-[Stacion] font-light italic"> AI-driven systems, </span>

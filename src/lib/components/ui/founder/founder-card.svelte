@@ -22,9 +22,9 @@
 
 	<div class="flex items-center justify-between px-3">
 		<div>
-			<p class="name text-lg font-semibold lg:text-2xl">{name}</p>
+			<p class="name text-lg font-semibold text-[#243425] tablet:text-2xl">{name}</p>
 			<p
-				class="designation text-sm font-semibold text-nowrap text-[#65755F] lg:h-9 lg:w-[66px] lg:text-xl"
+				class="designation text-sm font-semibold tracking-[-0.8px] text-nowrap text-[#65755F] tablet:text-xl"
 			>
 				{designation}
 			</p>
@@ -32,7 +32,7 @@
 
 		<Button
 			variant="primary"
-			class="flex items-center lg:h-[36px]! lg:w-[66px]! lg:px-[18px]! lg:py-[10px]!"
+			class="flex items-center tablet:h-[36px]! tablet:w-[66px]! tablet:px-[18px]! tablet:py-[10px]!"
 		>
 			<p class="text-[14px]">Visit</p>
 		</Button>
