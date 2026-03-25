@@ -63,7 +63,7 @@
 	<!-- First section: green gradient; includes Header + title + subtitle + featured cards -->
 	<div class="hero-section flex w-full flex-col items-center gap-[30px] px-4">
 		<Header />
-		<div class="flex max-w-[910px] flex-col gap-3 text-center">
+		<div class="flex flex-col gap-3 text-center">
 			<h1 class="hero-title text-[44px] font-semibold text-[#21231E]">Blogs</h1>
 			<p class="hero-subtitle text-[20px] text-[#51636F]">
 				From seamless integration to future-ready platforms, DAAF builds what tomorrow demands —
@@ -177,10 +177,13 @@
 	.hero-title {
 		font-family: 'Stacion';
 		line-height: 130%;
+		font-size: 30px;
+		padding-top: 40px;
 	}
 
 	.hero-subtitle {
 		line-height: 150%;
+		width: 35ch;
 	}
 
 	.featured-blogs {
@@ -404,10 +407,38 @@
 		padding-bottom: 48px;
 	}
 
+	@media (max-width: 819px) {
+		.hero-title {
+		}
+
+		.hero-subtitle {
+			font-size: 16px;
+		}
+		.featured-blogs {
+			justify-items: center;
+			padding-bottom: 90px;
+		}
+		.featured-card {
+			width: 345px;
+			height: 250px;
+		}
+	}
+
 	@media (min-width: 820px) {
 		.hero-section {
-			padding-top: 32px;
+			padding-top: 50px;
+			padding-bottom: 90px;
+		}
+
+		.hero-title {
+			font-size: 64px;
+			padding-top: 90px;
+		}
+
+		.hero-subtitle {
+			font-size: 22px;
 			padding-bottom: 60px;
+			width: 40ch;
 		}
 
 		.featured-blogs {
@@ -456,15 +487,26 @@
 		}
 
 		.view-all-section {
-			padding-top: 32px;
+			padding-top: 50px;
 			padding-bottom: 60px;
 		}
 	}
 
 	@media (min-width: 1024px) and (max-width: 1139px) {
 		.hero-section {
-			padding-top: 40px;
-			padding-bottom: 80px;
+			padding-top: 50px;
+			padding-bottom: 90px;
+		}
+
+		.hero-title {
+			font-size: 64px;
+			padding-top: 90px;
+		}
+
+		.hero-subtitle {
+			font-size: 22px;
+			padding-bottom: 60px;
+			width: 40ch;
 		}
 
 		.beyond-section {
@@ -483,6 +525,10 @@
 		}
 	}
 	@media (min-width: 1140px) {
+		.hero-section {
+			padding-top: 50px;
+			padding-bottom: 90px;
+		}
 		.hero-title {
 			font-size: 64px;
 			padding-top: 90px;

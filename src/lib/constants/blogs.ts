@@ -1,6 +1,6 @@
 import BlogCardEmailDeliverability from '$lib/assets/images/blog-card-email-deliverability.png';
-import BlogCardBuildEmails from '$lib/assets/images/blog-card-build-emails.png';
 import BlogCardPricingScale from '$lib/assets/images/blog-card-pricing-scale.png';
+import BlogCardCube from '$lib/assets/images/blog-card-cube.png';
 
 export interface BlogPost {
 	id: string;
@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
 		lastUpdated: 'August 11, 2025',
 		description:
 			'While businesses are rapidly building AI products, monetization remains a challenge. In this post, we share a framework for building a successful pricing strategy with key decision points on charge metrics, billing models, and guardrails.',
-		featuredImage: BlogCardEmailDeliverability,
+		featuredImage: BlogCardPricingScale,
 		tableOfContents: [
 			{ id: 'overview', title: 'Overview' },
 			{ id: 'experiment', title: 'The Experiment' },
@@ -71,7 +71,7 @@ export const blogPosts: BlogPost[] = [
 		date: 'Sep 07, 2025',
 		description:
 			'While businesses are rapidly building AI products, monetization remains a challenge. In this post, we share a framework for building a successful pricing strategy with key decision points on charge metrics, billing models, and guardrails.',
-		featuredImage: BlogCardBuildEmails,
+		featuredImage: BlogCardCube,
 		tableOfContents: [
 			{ id: 'context', title: 'Market context' },
 			{ id: 'patterns', title: 'Growth patterns' },
@@ -99,7 +99,7 @@ export const blogPosts: BlogPost[] = [
 		date: 'Oct 21, 2024',
 		description:
 			'While businesses are rapidly building AI products, monetization remains a challenge. In this post, we share a framework for building a successful pricing strategy with key decision points on charge metrics, billing models, and guardrails.',
-		featuredImage: BlogCardPricingScale,
+		featuredImage: BlogCardEmailDeliverability,
 		tableOfContents: [
 			{ id: 'problem', title: 'The problem' },
 			{ id: 'design', title: 'Design' },
