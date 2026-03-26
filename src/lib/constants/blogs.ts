@@ -67,7 +67,7 @@ export const blogPosts: BlogPost[] = [
 		title: 'Inside the growth of the top AI companies on Stripe',
 		slug: 'inside-the-growth-of-top-ai-companies-on-stripe',
 		category: 'Engineering',
-		author: 'Lauren Thomas',
+		author: 'Lauren Tom',
 		date: 'Sep 07, 2025',
 		description:
 			'While businesses are rapidly building AI products, monetization remains a challenge. In this post, we share a framework for building a successful pricing strategy with key decision points on charge metrics, billing models, and guardrails.',
@@ -95,7 +95,7 @@ export const blogPosts: BlogPost[] = [
 		title: 'How we built it: Jurisdiction resolution for Stripe Tax',
 		slug: 'jurisdiction-resolution-stripe-tax',
 		category: 'Software Development',
-		author: 'Stephanie Neill',
+		author: 'Steph Neill',
 		date: 'Oct 21, 2024',
 		description:
 			'While businesses are rapidly building AI products, monetization remains a challenge. In this post, we share a framework for building a successful pricing strategy with key decision points on charge metrics, billing models, and guardrails.',

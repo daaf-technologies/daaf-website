@@ -64,7 +64,7 @@
 	<div class="hero-section flex w-full flex-col items-center gap-[30px] px-4">
 		<Header />
 		<div class="flex flex-col gap-3 text-center">
-			<h1 class="hero-title text-[44px] font-semibold text-[#21231E]">Blogs</h1>
+			<h1 class="hero-title text-[44px] text-[#21231E]">Blogs</h1>
 			<p class="hero-subtitle text-[20px] text-[#51636F]">
 				From seamless integration to future-ready platforms, DAAF builds what tomorrow demands —
 				today.
@@ -101,14 +101,15 @@
 			<p class="beyond-label text-[14px] tracking-wider text-[#51636F] uppercase">
 				BEYOND THE CALL
 			</p>
-			<h2 class="beyond-title text-[44px] font-semibold text-[#21231E]">
-				Speak directly to the people who <span class="font-bold">plan</span> and
-				<span class="font-bold">build</span> your solutions
+			<h2 class="beyond-title text-[44px] font-medium text-[#21231E]">
+				Speak directly to the people who <span class="font-[stacion] font-light"
+					>plan and build</span
+				> your solutions
 			</h2>
 		</div>
 
 		<!-- Filters -->
-		<div class="filters-container flex w-full flex-wrap gap-3">
+		<div class="filters-container flex w-full flex-wrap gap-1 text-nowrap">
 			{#each filters as filter (filter)}
 				<button
 					class="filter-btn"
@@ -133,12 +134,12 @@
 				</h3>
 				<p class="blog-description">{blog.description}</p>
 				<a href="/blogs/{blog.slug}" class="read-more-btn">Read More</a>
+			</article>
+			<div class="blog-card-wrapper">
 				<div class="card-author-date">
 					<span class="author-icon">👤</span>
 					<span>{blog.author} → {blog.date}</span>
 				</div>
-			</article>
-			<div class="blog-card-wrapper">
 				<a href="/blogs/{blog.slug}" class="blog-card">
 					<div class="card-image">
 						<img
@@ -153,8 +154,10 @@
 	</div>
 
 	<!-- View all Blogs Button -->
-	<div class="view-all-section flex w-full justify-center pb-[60px]">
-		<Button variant="primary">View all Blogs</Button>
+	<div class="view-all-section flex w-full pb-[60px]">
+		<Button variant="primary" class="view-all-button w-full text-nowrap md:w-[150px]"
+			>View all Blogs</Button
+		>
 	</div>
 
 	<GetInTouch />
@@ -246,7 +249,7 @@
 	}
 
 	.beyond-title {
-		font-family: 'recoleta alt';
+		font-family: 'Inter Variable';
 		line-height: 130%;
 	}
 
@@ -321,6 +324,7 @@
 	}
 
 	.blog-title a {
+		font-family: 'Inter Variable';
 		color: inherit;
 		text-decoration: none;
 	}
@@ -337,12 +341,12 @@
 
 	.read-more-btn {
 		display: inline-block;
-		padding: 10px 20px;
+		padding: 10px 12px;
 		font-size: 16px;
 		color: #21231e;
 		text-decoration: none;
-		border: 1px solid #21231e;
-		border-radius: 4px;
+		border: 1px solid #c4c8cc;
+		border-radius: 50px;
 		background: #ffffff;
 		transition: all 0.2s ease;
 		width: fit-content;
@@ -354,7 +358,10 @@
 	}
 
 	.blog-card-wrapper {
-		display: block;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		gap: 20px;
 	}
 
 	.blog-card {
@@ -396,6 +403,8 @@
 		font-size: 14px;
 		color: #51636f;
 		padding-left: 4px;
+		font-family: 'Departure Mono';
+		text-align: end;
 	}
 
 	.author-icon {
@@ -409,6 +418,7 @@
 
 	@media (max-width: 819px) {
 		.hero-title {
+			font-size: 60px;
 		}
 
 		.hero-subtitle {
@@ -421,6 +431,39 @@
 		.featured-card {
 			width: 345px;
 			height: 250px;
+		}
+
+		.beyond-title {
+			font-size: 24px;
+		}
+
+		.beyond-section {
+			max-width: 345px;
+			padding-top: 60px;
+			padding-bottom: 70px;
+		}
+
+		.blog-listings {
+			max-width: 345px;
+		}
+
+		.blog-title {
+			font-size: 20px;
+		}
+
+		.read-more-btn {
+			width: 100%;
+			text-align: center;
+		}
+
+		.view-all-section {
+			max-width: 345px;
+			padding-right: 16px;
+			padding-left: 16px;
+		}
+
+		view-all-button {
+			width: 100%;
 		}
 	}
 
@@ -449,14 +492,16 @@
 		.beyond-section {
 			padding-top: 60px;
 			padding-bottom: 60px;
+			max-width: 700px;
 		}
 
 		.blog-listings {
 			display: grid;
-			grid-template-columns: 1fr 400px;
+			/* grid-template-columns: 1fr 400px; */
 			gap: 48px;
 			padding-top: 60px;
 			padding-bottom: 80px;
+			max-width: 700px;
 		}
 
 		.blog-listings > *:nth-child(odd) {
@@ -489,6 +534,7 @@
 		.view-all-section {
 			padding-top: 50px;
 			padding-bottom: 60px;
+			max-width: 700px;
 		}
 	}
 
@@ -510,13 +556,21 @@
 		}
 
 		.beyond-section {
-			padding-top: 100px;
-			padding-bottom: 80px;
+			padding-top: 120px;
+			padding-bottom: 90px;
+			gap: 60px;
+			width: 895px;
 		}
 
+		.view-all-section {
+			padding-top: 70px;
+			padding-bottom: 120px;
+			width: 895px;
+		}
 		.blog-listings {
 			padding-top: 80px;
 			padding-bottom: 100px;
+			width: 895px;
 		}
 
 		.view-all-section {
@@ -547,11 +601,28 @@
 		.beyond-section {
 			max-width: 910px;
 			margin-inline: auto;
+			padding-top: 125px;
+			gap: 60px;
 		}
 
 		.blog-listings {
 			max-width: 910px;
 			margin-inline: auto;
+		}
+
+		.view-all-section {
+			padding-top: 60px;
+			padding-bottom: 115px;
+			max-width: 910px;
+			justify-content: flex-start;
+		}
+
+		.blog-title {
+			font-size: 30px;
+		}
+
+		.blog-description {
+			font-size: 14px;
 		}
 	}
 </style>
