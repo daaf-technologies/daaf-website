@@ -96,8 +96,8 @@
 	</div>
 
 	<!-- Beyond the Call Section -->
-	<div class="beyond-section flex w-full flex-col items-center gap-8 px-4">
-		<div class="flex max-w-[900px] flex-col gap-4 text-center">
+	<div class="beyond-section flex w-full flex-col gap-8 px-4">
+		<div class="flex max-w-[900px] flex-col gap-4">
 			<p class="beyond-label text-[14px] tracking-wider text-[#51636F] uppercase">
 				BEYOND THE CALL
 			</p>
@@ -108,7 +108,7 @@
 		</div>
 
 		<!-- Filters -->
-		<div class="filters-container flex w-full max-w-[910px] flex-wrap justify-center gap-3">
+		<div class="filters-container flex w-full flex-wrap gap-3">
 			{#each filters as filter (filter)}
 				<button
 					class="filter-btn"
@@ -122,7 +122,7 @@
 	</div>
 
 	<!-- Blog Listings: mobile = stacked (text, author+date, image); desktop = two columns -->
-	<div class="blog-listings flex w-full max-w-[910px] px-4">
+	<div class="blog-listings flex w-full px-4">
 		{#each filteredBlogs as blog, i (blog.slug)}
 			<article class="blog-summary">
 				<div class="category-tag" data-category={blog.category.toLowerCase()}>
@@ -542,6 +542,16 @@
 
 		.featured-card {
 			width: 330px;
+		}
+
+		.beyond-section {
+			max-width: 910px;
+			margin-inline: auto;
+		}
+
+		.blog-listings {
+			max-width: 910px;
+			margin-inline: auto;
 		}
 	}
 </style>
