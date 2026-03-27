@@ -75,15 +75,27 @@
 		<div class="featured-blogs mt-8 flex w-full max-w-[1200px] gap-6 px-4">
 			{#each featuredCards as card, i (i)}
 				{#if card.type === 'blog'}
-					<a href="/blogs/{card.blog.slug}" class="featured-card">
-						<div class="featured-image">
-							<img
-								src={card.blog.featuredImage || blogCardImages[0]}
-								alt={card.blog.title}
-								class="featured-img"
-							/>
+					{#if card.blog.detailEnabled}
+						<a href="/blogs/{card.blog.slug}" class="featured-card">
+							<div class="featured-image">
+								<img
+									src={card.blog.featuredImage || blogCardImages[0]}
+									alt={card.blog.title}
+									class="featured-img"
+								/>
+							</div>
+						</a>
+					{:else}
+						<div class="featured-card featured-card--no-link">
+							<div class="featured-image">
+								<img
+									src={card.blog.featuredImage || blogCardImages[0]}
+									alt={card.blog.title}
+									class="featured-img"
+								/>
+							</div>
 						</div>
-					</a>
+					{/if}
 				{:else}
 					<div class="featured-card featured-card--no-link">
 						<div class="featured-image">
@@ -109,7 +121,7 @@
 		</div>
 
 		<!-- Filters -->
-		<div class="filters-container flex w-full flex-wrap gap-1 text-nowrap">
+		<div class="filters-container flex w-full flex-wrap gap-x-1 gap-y-5 text-nowrap">
 			{#each filters as filter (filter)}
 				<button
 					class="filter-btn"
@@ -130,25 +142,45 @@
 					{blog.category.toUpperCase()}
 				</div>
 				<h3 class="blog-title">
-					<a href="/blogs/{blog.slug}">{blog.title}</a>
+					{#if blog.detailEnabled}
+						<a href="/blogs/{blog.slug}">{blog.title}</a>
+					{:else}
+						<span>{blog.title}</span>
+					{/if}
 				</h3>
 				<p class="blog-description">{blog.description}</p>
-				<a href="/blogs/{blog.slug}" class="read-more-btn">Read More</a>
+				{#if blog.detailEnabled}
+					<a href="/blogs/{blog.slug}" class="read-more-btn">Read More</a>
+				{:else}
+					<span class="read-more-btn read-more-btn--disabled">Coming soon</span>
+				{/if}
 			</article>
 			<div class="blog-card-wrapper">
 				<div class="card-author-date">
 					<span class="author-icon">👤</span>
 					<span>{blog.author} → {blog.date}</span>
 				</div>
-				<a href="/blogs/{blog.slug}" class="blog-card">
-					<div class="card-image">
-						<img
-							src={blog.featuredImage || (blogCardImages[i] ?? blogCardImages[0])}
-							alt={blog.title}
-							class="card-img"
-						/>
+				{#if blog.detailEnabled}
+					<a href="/blogs/{blog.slug}" class="blog-card">
+						<div class="card-image">
+							<img
+								src={blog.featuredImage || (blogCardImages[i] ?? blogCardImages[0])}
+								alt={blog.title}
+								class="card-img"
+							/>
+						</div>
+					</a>
+				{:else}
+					<div class="blog-card blog-card--no-link">
+						<div class="card-image">
+							<img
+								src={blog.featuredImage || (blogCardImages[i] ?? blogCardImages[0])}
+								alt={blog.title}
+								class="card-img"
+							/>
+						</div>
 					</div>
-				</a>
+				{/if}
 			</div>
 		{/each}
 	</div>
@@ -357,6 +389,12 @@
 		color: #ffffff;
 	}
 
+	.read-more-btn--disabled {
+		cursor: default;
+		opacity: 0.65;
+		pointer-events: none;
+	}
+
 	.blog-card-wrapper {
 		display: flex;
 		flex-direction: column;
@@ -381,6 +419,11 @@
 	.blog-card:hover {
 		transform: translateY(-4px);
 		box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+	}
+
+	.blog-card--no-link {
+		cursor: default;
+		pointer-events: none;
 	}
 
 	.card-image {
@@ -623,6 +666,10 @@
 
 		.blog-description {
 			font-size: 14px;
+		}
+
+		.filters-container {
+			width: 910px;
 		}
 	}
 </style>

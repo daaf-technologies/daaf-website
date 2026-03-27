@@ -6,6 +6,7 @@ export interface BlogPost {
 	id: string;
 	title: string;
 	slug: string;
+	detailEnabled: boolean;
 	category: string;
 	author: string;
 	date: string;
@@ -21,6 +22,7 @@ export const blogPosts: BlogPost[] = [
 		id: '1',
 		title: 'DAAF Tax: An all-in-one global tax compliance',
 		slug: 'daaf-tax-global-tax-compliance',
+		detailEnabled: true,
 		category: 'Corporate',
 		author: 'Cip Blujdea',
 		date: 'Aug 11, 2025',
@@ -66,6 +68,7 @@ export const blogPosts: BlogPost[] = [
 		id: '2',
 		title: 'Inside the growth of the top AI companies on Stripe',
 		slug: 'inside-the-growth-of-top-ai-companies-on-stripe',
+		detailEnabled: false,
 		category: 'Engineering',
 		author: 'Lauren Tom',
 		date: 'Sep 07, 2025',
@@ -94,6 +97,7 @@ export const blogPosts: BlogPost[] = [
 		id: '3',
 		title: 'How we built it: Jurisdiction resolution for Stripe Tax',
 		slug: 'jurisdiction-resolution-stripe-tax',
+		detailEnabled: false,
 		category: 'Software Development',
 		author: 'Steph Neill',
 		date: 'Oct 21, 2024',

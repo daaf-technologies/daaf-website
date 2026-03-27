@@ -118,7 +118,8 @@
 
 	<div class="view-all-section flex w-full justify-center">
 		<div class="view-all-btn">
-			<Button class="w-full" variant="primary" onclick={() => goto('/blogs')}>View all Blogs</Button
+			<Button class="w-full" variant="primary" onclick={() => goto('/blogs')}
+				>View all Case Studies</Button
 			>
 		</div>
 	</div>

@@ -23,9 +23,9 @@
 	];
 
 	let slug = $derived($page.params.slug);
-	let blog = $derived(slug ? blogPosts.find((b) => b.slug === slug) : null);
+	let blog = $derived(slug ? blogPosts.find((b) => b.slug === slug && b.detailEnabled) : null);
 
-	// Redirect to blogs listing if slug not found
+	// Redirect to blogs listing if slug not found or not yet published
 	$effect(() => {
 		if (slug && !blog) {
 			goto('/blogs');
@@ -183,22 +183,41 @@
 			<div class="recent-grid flex w-full max-w-[1200px] gap-6">
 				{#each recentCards as card, i (i)}
 					{#if card.type === 'blog'}
-						<a href="/blogs/{card.blog.slug}" class="recent-card">
-							<div class="recent-image">
-								<img
-									src={card.blog.featuredImage || blogCardImages[0]}
-									alt={card.blog.title}
-									class="recent-img"
-								/>
-							</div>
-							<div class="recent-content">
-								<h3 class="recent-card-title">{card.blog.title}</h3>
-								<div class="recent-author">
-									<span class="author-icon">👤</span>
-									<span>{card.blog.author}</span>
+						{#if card.blog.detailEnabled}
+							<a href="/blogs/{card.blog.slug}" class="recent-card">
+								<div class="recent-image">
+									<img
+										src={card.blog.featuredImage || blogCardImages[0]}
+										alt={card.blog.title}
+										class="recent-img"
+									/>
+								</div>
+								<div class="recent-content">
+									<h3 class="recent-card-title">{card.blog.title}</h3>
+									<div class="recent-author">
+										<span class="author-icon">👤</span>
+										<span>{card.blog.author}</span>
+									</div>
+								</div>
+							</a>
+						{:else}
+							<div class="recent-card recent-card--no-link">
+								<div class="recent-image">
+									<img
+										src={card.blog.featuredImage || blogCardImages[0]}
+										alt={card.blog.title}
+										class="recent-img"
+									/>
+								</div>
+								<div class="recent-content">
+									<h3 class="recent-card-title">{card.blog.title}</h3>
+									<div class="recent-author">
+										<span class="author-icon">👤</span>
+										<span>{card.blog.author}</span>
+									</div>
 								</div>
 							</div>
-						</a>
+						{/if}
 					{:else}
 						<div class="recent-card recent-card--no-link">
 							<div class="recent-image">
