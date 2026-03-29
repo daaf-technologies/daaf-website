@@ -53,6 +53,10 @@
 			? caseStudies
 			: caseStudies.filter((study) => study.category === selectedFilter)
 	);
+
+	function goToBlogs() {
+		goto('/blogs');
+	}
 </script>
 
 <svelte:head>
@@ -118,9 +122,7 @@
 
 	<div class="view-all-section flex w-full justify-center">
 		<div class="view-all-btn">
-			<Button class="w-full" variant="primary" onclick={() => goto('/blogs')}
-				>View all Case Studies</Button
-			>
+			<Button class="w-full" variant="primary" onclick={goToBlogs}>View all Case Studies</Button>
 		</div>
 	</div>
 

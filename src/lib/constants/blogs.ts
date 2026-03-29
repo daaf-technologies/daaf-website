@@ -38,13 +38,13 @@ export const blogPosts: BlogPost[] = [
 			{ id: 'disabling', title: 'Disabling Liftoff' }
 		],
 		content: `<h2 id="overview">Overview</h2>
-<p>While troubleshooting a performance anomaly in our Node.js application, we discovered unexpected slowdowns when running multiple worker threads. The issue led us deep into WebAssembly execution and V8's compiler optimizations.</p>
-<p>We had developed a custom JavaScript runtime for the secure execution of untrusted third-party code. The runtime uses QuickJS for JavaScript and WebAssembly (WASM) for isolation and performance-critical paths. As we scaled the number of worker threads, execution times became wildly inconsistent.</p>
-
+<p>Every once in a while, you run into a bug that that sends you down a rabbit hole, questioning everything you thought you knew about how your system works. This is the story of one such bug - a performance anomaly that took us deep into the internals of Node.js worker threads, WebAssembly execution, and V8’s compiler optimizations.</p>
+<p>At Attio, we have developed a custom JavaScript runtime that allows us to run untrusted third-party code in a secure way. The runtime is based on QuickJS and runs entirely in WebAssembly (WASM). On every execution of third-party code, we spin up a WASM module, run the code inside it, and then discard the module. This helps to ensure safe isolation between different executions.</p>
+<p>While deciding on the best way to deploy this service, we experimented with using Node.js worker threads. However, once we deployed the thread based solution into production, we found extremely surprising results.</p>
 <h2 id="experiment">The experiment</h2>
 <p>We set up an experiment to measure the performance impact of parallelization. Each worker would spawn its own runtime context and run a simple loop to assess whether we could benefit from multi-threaded execution.</p>
 <figure class="content-embedded-image">
-	<img src="/images/blog-embed-verification-apis.png" alt="Top Email Verification APIs" />
+	<img src="${BlogCardEmailDeliverability}" alt="Top Email Verification APIs" />
 </figure>
 <h3>But when we ran the script, the results were surprising:</h3>
 <p class="content-bullet">→ Running a single worker took a quite reasonable 330ms.</p>

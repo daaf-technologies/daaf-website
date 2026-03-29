@@ -58,21 +58,17 @@
 		<!-- First section: green gradient; includes Header + title + description + featured image -->
 		<div class="hero-section flex w-full flex-col items-center gap-[30px] px-4">
 			<Header />
-			<div class="flex flex-col gap-4 text-center max-w-[900px]">
+			<div class="flex max-w-[900px] flex-col items-center gap-4 text-center">
 				<h1 class="blog-title text-[44px] font-semibold text-[#21231E]">{blog.title}</h1>
 				<p class="blog-description text-[20px] text-[#51636F]">{blog.description}</p>
 			</div>
 
 			<!-- Featured Image -->
-			<div class="featured-image-container w-full max-w-[1200px] mt-8">
+			<div class="featured-image-container mt-8 w-full max-w-[1200px]">
 				{#if blog.featuredImage}
-					<img
-						src={blog.featuredImage}
-						alt={blog.title}
-						class="featured-hero-img"
-					/>
+					<img src={blog.featuredImage} alt={blog.title} class="featured-hero-img" />
 				{:else}
-					<div class="featured-image-placeholder bg-[#21231E] rounded-lg w-full h-[400px]"></div>
+					<div class="featured-image-placeholder h-[400px] w-full rounded-lg bg-[#21231E]"></div>
 				{/if}
 			</div>
 		</div>
@@ -81,11 +77,16 @@
 		<div class="main-content flex w-full max-w-[1200px] px-4">
 			<!-- Author & Date (first on mobile) -->
 			<div class="author-date">
-				<span class="author-icon">👤</span>
-				<span class="author-name">{blog.author}</span>
+				<div>
+					<span class="author-icon">👤</span>
+					<span class="author-name">{blog.author}</span>
+				</div>
+
 				{#if blog.lastUpdated}
-					<span class="date-separator">•</span>
-					<span class="last-updated">LAST UPDATED: {blog.lastUpdated.toUpperCase()}</span>
+					<!-- <span class="date-separator">•</span> -->
+					<div>
+						<span class="last-updated">LAST UPDATED: {blog.lastUpdated.toUpperCase()}</span>
+					</div>
 				{/if}
 			</div>
 
@@ -111,7 +112,8 @@
 				<div class="analytics-card">
 					<h3 class="analytics-title">Analytics, Simplified.</h3>
 					<p class="analytics-text">
-						Every once in a while, you run into a bug that sends you down a rabbit hole. Our team is here to help.
+						Every once in a while, you run into a bug that sends you down a rabbit hole. Our team is
+						here to help.
 					</p>
 					<Button variant="primary" onclick={() => goto('/contact-us')} class="contact-btn">
 						Contact now
@@ -157,15 +159,15 @@
 						</p>
 
 						<blockquote class="content-quote">
-							Liftoff's goal is to generate code quickly, prioritizing compilation speed over execution
-							speed. This makes it ideal for startup performance but can be problematic for hot code
-							paths.
+							Liftoff's goal is to generate code quickly, prioritizing compilation speed over
+							execution speed. This makes it ideal for startup performance but can be problematic
+							for hot code paths.
 						</blockquote>
 
 						<h2 id="disabling" class="content-heading">Disabling Liftoff</h2>
 						<p class="content-paragraph">
-							After identifying the issue, we disabled Liftoff for our critical code paths, resulting in
-							a 40% performance improvement.
+							After identifying the issue, we disabled Liftoff for our critical code paths,
+							resulting in a 40% performance improvement.
 						</p>
 					{/if}
 				</div>
@@ -174,7 +176,9 @@
 
 		<!-- Recent Blogs Section (before footer): DAAF Tax (link) + 2 placeholders (no link) -->
 		<div class="recent-blogs flex w-full flex-col items-center gap-8 px-4 pb-[60px]">
-			<div class="recent-header flex w-full max-w-[1200px] flex-col gap-3 md:flex-row md:items-center md:justify-between">
+			<div
+				class="recent-header flex w-full max-w-[1200px] flex-col gap-3 md:flex-row md:items-center md:justify-between"
+			>
 				<h2 class="recent-title text-[44px] font-semibold text-[#21231E]">Recent Blogs</h2>
 				<Button variant="primary" onclick={() => goto('/blogs')} class="view-all-btn">
 					View all Blogs
@@ -247,18 +251,21 @@
 
 		/* Only the first (hero) section: linear gradient #E1FBDC → #FFFFFF */
 		.hero-section {
-			background: linear-gradient(160deg, #E1FBDC 0%, #FFFFFF 100%);
+			background: linear-gradient(160deg, #e1fbdc 0%, #ffffff 100%);
 			padding-top: 24px;
 			padding-bottom: 48px;
 		}
 
 		.blog-title {
-			font-family: 'recoleta alt';
+			font-family: 'Stacion';
 			line-height: 130%;
+			width: 15ch;
+			padding-top: 40px;
 		}
 
 		.blog-description {
 			line-height: 150%;
+			width: 63ch;
 		}
 
 		.featured-image-container {
@@ -323,7 +330,9 @@
 			padding: 8px 16px;
 			border-radius: 9999px;
 			background: #f0f0f0;
-			transition: background 0.2s, color 0.2s;
+			transition:
+				background 0.2s,
+				color 0.2s;
 		}
 
 		.toc-link:first-child {
@@ -372,9 +381,9 @@
 
 		.author-date {
 			display: flex;
-			align-items: center;
+			flex-direction: column;
 			gap: 8px;
-			margin-bottom: 32px;
+			margin-bottom: 30px;
 			font-size: 14px;
 			color: #51636f;
 		}
@@ -551,7 +560,9 @@
 			border-radius: 12px;
 			overflow: hidden;
 			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-			transition: transform 0.2s ease, box-shadow 0.2s ease;
+			transition:
+				transform 0.2s ease,
+				box-shadow 0.2s ease;
 			cursor: pointer;
 			text-decoration: none;
 			display: block;
@@ -712,9 +723,13 @@
 				color: #21231e !important;
 				border-color: #ffffff;
 			}
+
+			.blog-title {
+				padding-top: 90px;
+			}
 		}
 
-		@media (min-width: 1024px) {
+		@media (min-width: 1024px) and (max-width: 1139px) {
 			.hero-section {
 				padding-top: 40px;
 				padding-left: 24px;
@@ -753,6 +768,14 @@
 				background: #21231e !important;
 				color: #ffffff !important;
 				border-color: #21231e;
+			}
+		}
+		@media (min-width: 1140px) {
+			.blog-title {
+				width: 15ch;
+			}
+
+			.blog-description {
 			}
 		}
 	</style>

@@ -187,9 +187,7 @@
 
 	<!-- View all Blogs Button -->
 	<div class="view-all-section flex w-full pb-[60px]">
-		<Button variant="primary" class="view-all-button w-full text-nowrap md:w-[150px]"
-			>View all Blogs</Button
-		>
+		<Button variant="primary" class="w-full text-nowrap md:w-[150px]">View all Blogs</Button>
 	</div>
 
 	<GetInTouch />
@@ -503,10 +501,6 @@
 			max-width: 345px;
 			padding-right: 16px;
 			padding-left: 16px;
-		}
-
-		view-all-button {
-			width: 100%;
 		}
 	}
 
