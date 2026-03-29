@@ -261,6 +261,7 @@
 			line-height: 130%;
 			width: 15ch;
 			padding-top: 40px;
+			font-size: 30px;
 		}
 
 		.blog-description {
@@ -621,6 +622,11 @@
 			padding: 12px 32px;
 		}
 
+		.blog-description {
+			font-size: 14px;
+			width: 35ch;
+		}
+
 		@media (min-width: 820px) {
 			.hero-section {
 				padding-top: 32px;
@@ -726,6 +732,7 @@
 
 			.blog-title {
 				padding-top: 90px;
+				font-size: 60px;
 			}
 		}
 
@@ -768,6 +775,12 @@
 				background: #21231e !important;
 				color: #ffffff !important;
 				border-color: #21231e;
+			}
+			.blog-title {
+				font-size: 64px;
+			}
+			.blog-description {
+				font-size: 20px;
 			}
 		}
 		@media (min-width: 1140px) {
