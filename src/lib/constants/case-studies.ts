@@ -296,7 +296,7 @@ export const caseStudiesData: Record<string, CaseStudyData> = {
 export const recentCaseStudies = [
 	{
 		title: 'DAAF: An all-in-one global tax compliance solution',
-		author: 'Stephanie Neill',
+		author: 'Steph Neill',
 		slug: 'drone-analytics'
 	},
 	{

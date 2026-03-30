@@ -299,7 +299,7 @@
 		}
 
 		.nav a.active {
-			font-weight: 600;
+			font-weight: 600 !important;
 		}
 
 		.active-dot {
@@ -308,24 +308,6 @@
 			border-radius: 50%;
 			background-color: #38b543;
 			flex-shrink: 0;
-		}
-
-		.about {
-			font-size: 14px;
-			line-height: 16px;
-			font-weight: 300;
-		}
-
-		.blogs {
-			font-size: 14px;
-			line-height: 16px;
-			font-weight: 300;
-		}
-
-		.cases {
-			font-size: 14px;
-			line-height: 16px;
-			font-weight: 300;
 		}
 	}
 </style>

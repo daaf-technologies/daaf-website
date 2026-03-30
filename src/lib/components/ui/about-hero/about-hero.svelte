@@ -32,7 +32,12 @@
 		background-repeat: no-repeat;
 		background-blend-mode: luminosity;
 	}
-	@media (max-width: 768px) {
+
+	.hyphen {
+		font-family: 'Inter';
+	}
+
+	@media (max-width: 819px) {
 		.about-card {
 			height: 720px;
 			background-size:
